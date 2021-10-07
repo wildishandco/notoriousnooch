@@ -118,7 +118,22 @@
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
 
+
+
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+    {{ 'custom_variables.css' | asset_url | stylesheet_tag }}
+    {{ 'custom_typography.css' | asset_url | stylesheet_tag }}
+    {{ 'custom_header.css' | asset_url | stylesheet_tag }}
+    {{ 'custom_menu.css' | asset_url | stylesheet_tag }}
+    {{ 'custom_footer.css' | asset_url | stylesheet_tag }}
+    {{ 'custom_form.css' | asset_url | stylesheet_tag }}
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
+
+
   </head>
 
   <body class="gradient">
@@ -126,7 +141,7 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {% section 'announcement-bar' %}
+    <!-- {% section 'announcement-bar' %} -->
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
