@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Balgin";
+  src: url(assets/fonts/StudioSun-BalginBlack.otf) format("opentype");
+}
+@font-face {
+  font-family: "Thunder";
+  src: url(assets/fonts/Thunder-BlackLC.otf) format("opentype");
+}
+@font-face {
+  font-family: "Brice";
+  src: url(assets/fonts/BriceGX.ttf) format("truetype");
+}
+*{
+  font-family: "Balgin";
+}
+.menu-container nav ul li a,
+footer.footer .footer-title h3 {
+  font-family: "Thunder";
+  text-transform: uppercase;
+}
+
+footer.footer .footer-block--newsletter h2.footer-block__heading {
+  font-family: "Brice";
+}
