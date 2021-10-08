@@ -22,3 +22,16 @@ footer.footer .footer-title h3 {
 footer.footer .footer-block--newsletter h2.footer-block__heading {
   font-family: "Brice";
 }
+
+.home-section h1 {
+  font-family: "Thunder";
+  text-transform: uppercase;
+  color: var(--yellow);
+  font-size: 49vw;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  line-height: 0.55;
+  position: relative;
+  top: 60px;
+}

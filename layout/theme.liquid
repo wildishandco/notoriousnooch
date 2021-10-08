@@ -128,15 +128,22 @@
     {{ 'custom_menu.css' | asset_url | stylesheet_tag }}
     {{ 'custom_footer.css' | asset_url | stylesheet_tag }}
     {{ 'custom_form.css' | asset_url | stylesheet_tag }}
+    {{ 'custom_home.css' | asset_url | stylesheet_tag }}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
-
+    
+    {{ 'drawer.css' | asset_url | stylesheet_tag }}
+    {{ 'drawer.js' | asset_url | script_tag }}
 
 
   </head>
 
   <body class="gradient">
+
+    {% section 'drawer' %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
