@@ -14,12 +14,14 @@
   font-family: "Balgin";
 }
 .menu-container nav ul li a,
-footer.footer .footer-title h3 {
+footer.footer .footer-title h3,
+.home-blog h3 {
   font-family: "Thunder";
   text-transform: uppercase;
 }
 
-footer.footer .footer-block--newsletter h2.footer-block__heading {
+footer.footer .footer-block--newsletter h2.footer-block__heading,
+.home-blog .home-blog-bottom p, .home-blog .home-blog-bottom p a {
   font-family: "Brice";
 }
 

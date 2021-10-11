@@ -15,10 +15,8 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class="blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop{% if posts_displayed < 3 %} page-width-tablet{% endif %}">
+<div class="home-blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
     <div class="title-wrapper-with-link{% if section.settings.heading == blank %} title-wrapper-with-link--no-heading{% endif %} {% if posts_displayed > 2 %}title-wrapper--self-padded-tablet-down{% else %}title-wrapper--self-padded-mobile{% endif %}">
-      <h2 class="blog__title">{{ section.settings.heading | escape }}</h2>
 
       {%- if section.settings.blog != blank and section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
         <a href="{{ section.settings.blog.url }}"
@@ -67,16 +65,16 @@
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
         <div class="blog-placeholder__content">
-          <h2>
+          <h3>
             {{ 'sections.featured_blog.onboarding_title' | t }}
-          </h2>
-          <p class="rte-width">
-            {{ 'sections.featured_blog.onboarding_content' | t }}
-          </p>
+          </h3>
         </div>
       </div>
     {%- endif -%}
-  </div>
+    <div class="home-blog-bottom">
+      <p>With Notorious Nooch, there's really no recipe required. But we've worked with the awesome <a href="#">@beardedvegan</a> to give you some ideas to get going. Tag us in your creations and let us know what you think!</p>
+      <a href="#" class="clear-button">Recipes</a>
+    </div>
 </div>
 
 {% schema %}
