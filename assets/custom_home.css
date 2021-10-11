@@ -156,19 +156,21 @@ body {
 .home-blog {
 	background-color: var(--green);
 }
-.home-blog h3 {
+.home-blog h2 {
 	color: var(--yellow);
 	font-size: 20rem;
 	margin: 0;
-
 }
-.home-blog .blog-placeholder {
+.home-blog .article-content {
 	position: relative;
 }
-.home-blog .blog-placeholder:hover .blog-placeholder__content {
+.home-blog .article-content .article-card__excerpt {
+	display: none;
+}
+.home-blog .article-content:hover .article-card__info {
 	opacity: 1;
 }
-.home-blog .blog-placeholder__content {
+.home-blog .article-card__info {
 	background: rgba(0, 100, 80, 0.5);
 	position: absolute;
 	top: 0;
