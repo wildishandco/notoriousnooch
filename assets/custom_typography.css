@@ -23,7 +23,7 @@ footer.footer .footer-block--newsletter h2.footer-block__heading {
   font-family: "Brice";
 }
 
-.home-section h1 {
+.lettering {
   font-family: "Thunder";
   text-transform: uppercase;
   color: var(--yellow);
@@ -34,4 +34,10 @@ footer.footer .footer-block--newsletter h2.footer-block__heading {
   line-height: 0.55;
   position: relative;
   top: 60px;
+}
+.lettering.pink {
+  color: var(--pink);
+}
+.lettering.yellow {
+  color: var(--yellow);
 }
