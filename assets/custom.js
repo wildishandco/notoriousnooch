@@ -66,3 +66,80 @@ jQuery(document).mousemove(function(event){
   })   
 
 });
+
+
+gsap.registerPlugin(ScrollTrigger)
+
+let container = document.getElementById("container");
+
+gsap.to(container, {
+  x: () => `${-(container.scrollWidth - document.documentElement.clientWidth)}px`,
+  ease: "none",
+  scrollTrigger: {
+    trigger: container,
+    invalidateOnRefresh: true,
+    pin: true,
+    scrub: 0.2,
+    start: "top top",
+    end: () => `+=${container.scrollWidth - document.documentElement.clientWidth}`
+  }
+});
+
+window.addEventListener("load", function() {
+  const scrollColorElems = document.querySelectorAll(".horizontal-container .module");
+  scrollColorElems.forEach((colorSection, i) => {
+    ScrollTrigger.create({
+      trigger: colorSection,
+      start: "bottom +50%",
+      onEnter: () => gsap.to(".home-featured-product", {backgroundColor: '#006450', overwrite: 'auto'}),
+      onLeaveBack: () => gsap.to(".home-featured-product", {backgroundColor: '#CE0F69', overwrite: 'auto'})
+    });
+    ScrollTrigger.create({
+      trigger: colorSection,
+      start: "bottom +50%",
+      onEnter: () => gsap.to(".lettering-container p", {color: '#FCDC3E', overwrite: 'auto'}),
+      onLeaveBack: () => gsap.to(".lettering-container p", {color: '#F7CED7', overwrite: 'auto'})
+    });
+  });
+
+  // HOME SMOKY PACKET
+	var rotate = gsap.timeline({
+	  scrollTrigger:{
+	    trigger: ".home-featured-product",
+	    scrub:0.5,
+	    start: 'top top +=200',
+	    end:'+=10000',
+	  }
+	})
+	.to('.home-featured-product.bacon .content-container img', {
+	  rotation:-360*5,
+	  duration:1, ease:'none',
+	})
+
+
+	gsap.set('.home-featured-product.cheese .content-container img', {rotate:-300});
+
+	// HOME CHEESE PACKET
+	var rotate = gsap.timeline({
+	  scrollTrigger:{
+	    trigger: ".home-featured-product",
+	    scrub:0.5,
+	    start: "bottom +25%",
+	    end: "bottom 0%",
+	  }
+	})
+	.to('.home-featured-product.cheese .content-container img', {
+	  rotation:-360,
+	  duration:1, ease:'none',
+	})
+
+
+});
+
+
+
+
+
+
+
+

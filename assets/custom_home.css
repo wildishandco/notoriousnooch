@@ -77,8 +77,87 @@ a.clear-button {
 	display: block;
 }
 
+section.home-featured-product {
+	height: 100vh;
+	width: 100%;
+	left: 0!important;
+	position: relative;
+	justify-content: center;
+}
+/*section.home-featured-product.bacon {
+	background-color: var(--darkpink);
+}*/
+section.home-featured-product.bacon a.clear-button {
+	color: var(--pink);
+	border: 1px solid var(--pink); 
+}
+section.home-featured-product.bacon .content-container img {
+	transform-origin: -500px 800px;
+}
+section.home-featured-product.cheese {
+	overflow: hidden;
+}
+section.home-featured-product.cheese .content-container img {
+	transform-origin: 1200px 800px;
+}
+/*section.home-featured-product.cheese {
+	background-color: var(--green);
+}*/
+section.home-featured-product.cheese a.clear-button {
+	color: var(--yellow);
+	border: 1px solid var(--yellow); 
+}
+/*section.home-featured-product.bacon .content-container img {
+	transform-origin: top left;
+}*/
+.lettering-container {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: auto;
+}
+.content-container {
+	height: 100%;
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content-container img {
+	max-height: 80%;
+}
+.content-container .button-container {
+	z-index: 2;
+}
 
 
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+#container {
+  /*background-color:grey;*/
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:column;
+  height:100vh;
+  top: 0!important;
+}
+
+.module{
+  height:100%;
+  display:flex;
+  width:100%;
+}
+.horizontal-container .module {
+	background-color: var(--darkpink);
+}
 
 
 
