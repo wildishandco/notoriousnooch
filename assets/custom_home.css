@@ -163,6 +163,7 @@ body {
     font-family: Balgin;
     text-transform: uppercase;
     text-align: center;
+    line-height: 4rem;
 }
 .home-blog .article-content {
 	position: relative;
