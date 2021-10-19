@@ -1,21 +1,29 @@
 @font-face {
   font-family: "Balgin";
-  src: url(assets/fonts/StudioSun-BalginBlack.otf) format("opentype");
+  src: url(assets/StudioSun-BalginBlack.otf) format("opentype");
 }
 @font-face {
   font-family: "Thunder";
-  src: url(assets/fonts/Thunder-BlackLC.otf) format("opentype");
+  src: url(assets/Thunder-BlackLC.otf) format("opentype");
 }
 @font-face {
   font-family: "Brice";
-  src: url(assets/fonts/BriceGX.ttf) format("truetype");
+  src: url(assets/BriceGX.ttf) format("truetype");
 }
+@font-face {
+  font-family: "ITCAvantGardeGothicStd";
+  src: url(ITCAvantGardeGothicStd.woff2) format("woff2"),
+      url(ITCAvantGardeGothicStd.woff) format("woff"),
+      url(ITCAvantGardeGothicStd.ttf) format("truetype");
+}
+
 *{
   font-family: "Balgin";
 }
 .menu-container nav ul li a,
 footer.footer .footer-title h3,
-.home-blog h3 {
+.home-blog h3, 
+body.product h1.product__title {
   font-family: "Thunder";
   text-transform: uppercase;
 }
@@ -42,4 +50,9 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
 }
 .lettering.yellow {
   color: var(--yellow);
+}
+
+body.product .product__description,
+body.product fieldset.product-form__input .form__label {
+    font-family: ITCAvantGardeGothicStd;
 }

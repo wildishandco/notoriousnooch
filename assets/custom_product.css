@@ -1,0 +1,177 @@
+body.product {
+    background-color: var(--pink);
+}
+body.product .spaced-section {
+    margin-top: 0;
+}
+body.product .product__info-wrapper {
+    padding-right: 4rem;
+}
+body.product .product__info-container--sticky {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+body.product a.header__icon--cart {
+    color: var(--green);
+}
+
+body.product h1.product__title {
+    font-size: 14rem;
+    line-height: 13rem;
+    margin-bottom: 0;
+    color: var(--green);
+    width: 100%;
+}
+
+body.product fieldset.product-form__input .form__label {
+    text-transform: uppercase;
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+body.product variant-radios {
+    width: 100%;
+}
+body.product .product-form__input {
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    display: flex;
+}
+
+body.product .product-form__input input[type='radio'] + label {
+    border-color: var(--green);
+    border-radius: 0;
+    margin:0;
+    color: var(--green);
+    width:100%;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    background: linear-gradient(to left, var(--pink) 50%, var(--green) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+body.product .product-form__input input[type='radio'] + label:nth-child(3) {
+    background: linear-gradient(to right, var(--pink) 50%, var(--green) 50%) left;
+    background-size: 200%;
+}
+body.product .product-form__input input[type='radio']:checked + label:nth-child(3) {
+    background-position: right;
+}
+
+
+body.product .product-form__input input[type='radio'] + label:hover {
+    background-color: var(--darkpink);
+    color: var(--pink);
+}
+body.product .product-form__input input[type='radio']:checked + label {
+    background-color: var(--green);
+    color: var(--pink);
+    background-position: left;
+}
+
+body.product .product-form__input input[type='radio']:checked + label:hover {
+    cursor: auto;
+}
+
+body.product .buy-buttons {
+    margin: 0;
+    flex: 0 75%;
+}
+body.product .buy-buttons .product-form {
+    margin: 0;
+}
+body.product .product-form__buttons button {
+    background-color: var(--darkpink);
+    border: 0;
+    box-shadow: none;
+    color: var(--pink);
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 1em 20px;
+    margin-bottom: 0;
+    
+}
+body.product .product-form__buttons button .button-price {
+    margin-left: 5px;
+}
+body.product .product-form__buttons button .price {
+    color: var(--pink);
+    display: inline;
+}
+body.product .product-form__buttons button .price dl, body.product .product-form__buttons button .price dd, body.product .product-form__buttons button .price dt {
+    display: inline;
+    margin-right: 0;
+}
+body.product .product-form__buttons button .price--sold-out body.product .product-form__buttons button .price__availability, body.product .product-form__buttons button .price__regular {
+    display: inline;
+}
+body.product .product-form__buttons button:hover {
+    background-color: var(--green);
+    box-shadow: none;
+}
+
+body.product .product__description {
+    color: var(--green);
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+body.product .quantity-cart {
+    display: flex;
+    border: 1px solid var(--green);
+    justify-content: space-between;
+    border-radius: 3px;
+    overflow: hidden;
+}
+body.product .product-form__input.product-form__quantity {
+    width: auto;
+    max-width: none;
+    flex: 0;
+    margin-bottom: 0;
+    min-width: 120px;
+    padding: 0 15px;
+}
+body.product .product-form__quantity .quantity {
+    border: 0;
+    width: auto;
+    height: auto;
+}
+body.product .product-form__quantity .quantity button.quantity__button {
+    color: var(--green);
+    opacity: 1;
+    width:auto;
+    padding: 1rem;
+}
+body.product .product-form__quantity .quantity button.quantity__button svg {
+    width: 1.2rem;
+}
+body.product .product-form__quantity .quantity .quantity__input {
+    color: var(--green);
+    padding: 0;
+    font-size: 2rem;
+}
+
+
+/*LEFT HAND SIDE*/
+body.product .product .grid__item {
+    padding-bottom: 0;
+}
+body.product .product__media-list .product__media-item {
+    background-color: var(--green);
+}
+body.product .product__media-item .media img {
+    width: 500px;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
