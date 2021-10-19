@@ -75,18 +75,6 @@
         "enable_video_looping": false
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "heading": "You may also like",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
-      }
-    },
     "1634652920aa9e3bca": {
       "type": "featured-blog",
       "settings": {
@@ -99,11 +87,24 @@
         "soft_background": false,
         "show_view_all": true
       }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
-    "1634652920aa9e3bca"
+    "1634652920aa9e3bca",
+    "product-recommendations"
   ]
 }
