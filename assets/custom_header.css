@@ -38,6 +38,7 @@ header-drawer {
 }
 header-drawer .header__icon {
 	position: relative;
+    z-index: 1000;
 }
 @keyframes rotate {
     from {transform: rotate(0deg);}

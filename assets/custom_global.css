@@ -20,3 +20,57 @@ a.clear-button:hover {
     color: var(--green);
     border-color: var(--pink);
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.marquee {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100vw;
+    max-width: 100%;
+    height: 45px;
+    overflow-x: hidden;
+    background-color: var(--yellow);
+}
+.marquee .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 45s linear infinite;
+}
+
+.marquee .track .content {
+    color: var(--green);
+    line-height: 1;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.marquee .track .content span {
+    margin: 0 20px;
+}
+
+.marquee .track .content span > img {
+    height: 20px;
+    position: relative;
+    top: 5px
+}
