@@ -36,6 +36,11 @@
         "show_text_below": true
       }
     },
+    "1634738421a7a517ac": {
+      "type": "home-video",
+      "settings": {
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "disabled": true,
@@ -203,6 +208,7 @@
   },
   "order": [
     "image_banner",
+    "1634738421a7a517ac",
     "rich_text",
     "featured_products",
     "collage",
