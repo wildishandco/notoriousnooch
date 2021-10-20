@@ -181,7 +181,7 @@ body {
 	width: 800px;
 	margin: auto;
 	text-align: center;
-	padding: 50px 0 100px 0;
+	padding: 20px 0 100px 0;
 }
 .home-blog .home-blog-bottom a.clear-button {
 	margin-top: 30px;
@@ -204,8 +204,13 @@ body {
     overflow: hidden;
 }
 .home-blog .recipes-slider.marquee {
-    background-color: var(--green);
+    background-color: transparent;
     position: relative;
+    z-index: 10;
+    top: -57px;
+}
+.home-blog .recipes-slider.marquee.top {
+    top: auto;
 }
 .home-blog .recipes-slider.marquee .track {
     animation: marquee 25s linear infinite;
