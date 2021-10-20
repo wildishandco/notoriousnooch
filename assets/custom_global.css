@@ -1,0 +1,22 @@
+.spaced-section {
+    margin-top: 0 !important;
+}
+
+a.clear-button {
+	color: var(--yellow);
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 1px solid var(--yellow);
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 30px 5px 30px;
+	font-size: 3rem;
+	display: inline-block;
+    transition: 0.5s;
+}
+
+a.clear-button:hover {
+    background-color: var(--pink);
+    color: var(--green);
+    border-color: var(--pink);
+}
