@@ -60,6 +60,9 @@
         </div>
       {%- endif -%}
     {%- else -%}
+    <div class="recipes-slider">
+        <span>Recipes</span><img src="{{ 'nooch-spagetti.png' | asset_url }}"/><span>Recipes</span><img src="{{ 'nooch-spagetti.png' | asset_url }}"/><span>Recipes</span><img src="{{ 'nooch-spagetti.png' | asset_url }}"/><span>Recipes</span><img src="{{ 'nooch-spagetti.png' | asset_url }}"/><span>Recipes</span><img src="{{ 'nooch-spagetti.png' | asset_url }}"/><span>Recipes</span>
+    </div>
       <div class="blog-placeholder">
         <div class="placeholder media media--landscape">
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -70,11 +73,15 @@
           </h3>
         </div>
       </div>
+    <div class="recipes-slider">
+        <span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span><span>Recipes</span>
+    </div>
     {%- endif -%}
     <div class="home-blog-bottom">
       <p>With Notorious Nooch, there's really no recipe required. But we've worked with the awesome <a href="#">@beardedvegan</a> to give you some ideas to get going. Tag us in your creations and let us know what you think!</p>
       <a href="#" class="clear-button">Recipes</a>
     </div>
+    
 </div>
 
 {% schema %}

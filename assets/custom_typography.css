@@ -23,7 +23,8 @@
 .menu-container nav ul li a,
 footer.footer .footer-title h3,
 .home-blog h3, 
-body.product h1.product__title {
+body.product h1.product__title,
+.home-blog .recipes-slider span {
   font-family: "Thunder";
   text-transform: uppercase;
 }

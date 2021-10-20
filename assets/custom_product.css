@@ -3,6 +3,7 @@ body.product {
 }
 body.product .spaced-section {
     margin-top: 0;
+    margin-bottom: 0; 
 }
 body.product .product__info-wrapper {
     padding-right: 4rem;
