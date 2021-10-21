@@ -68,8 +68,7 @@ body.product .product-form__input input[type='radio']:checked + label:nth-child(
 
 
 body.product .product-form__input input[type='radio'] + label:hover {
-    background-color: var(--darkpink);
-    color: var(--pink);
+    color: var(--darkpink);
 }
 body.product .product-form__input input[type='radio']:checked + label {
     background-color: var(--green);

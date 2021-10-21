@@ -84,6 +84,31 @@ section.home-featured-product.bacon a.clear-button {
 section.home-featured-product.bacon .content-container img {
 	transform-origin: -500px 800px;
 }
+section.home-featured-product.bacon .content-container img.badge-pink {
+    position: absolute;
+    top: 85px;
+    left: -400px;
+    right: 0;
+    margin: auto;
+    max-width: 200px;
+}
+/*
+section.home-featured-product.bacon .content-container img.pink-star {
+    position: absolute;
+}
+section.home-featured-product.bacon .content-container img.pink-star#pink-star-one {
+    left: -800px;
+    top: 100px;
+    right: 0;
+    margin: auto;
+}
+*/
+section.home-featured-product.bacon .content-container img.pink-star#pink-star-two {
+    left: 800px;
+    top: 0;
+    right: 0;
+    margin: auto;
+}
 section.home-featured-product.cheese {
 	overflow: hidden;
 }

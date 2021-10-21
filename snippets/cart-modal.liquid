@@ -1,0 +1,73 @@
+<div class="cart-modal">
+  <div class="cart-modal-inner">
+    <div class="cart-modal-heading">
+      <p>
+        Cart
+      </p>
+      <button class="close button" onclick="handleModalClose()"><img src="{{ 'pink-close.svg' | asset_url }}"/>
+        <img class="green-star-menu" src="{{ 'green-star-menu.svg' | asset_url }}"/><img class="green-star" src="{{ 'green-star.svg' | asset_url}}"/></button>
+    </div>
+
+    <div data-cart-view="data-cart-view" class="cart-modal-table">
+      <div class="no-items" rv-show="cart.item_count | lt 1">
+        You don't have any items in your cart.
+      </div>
+
+      <div class="table-items" rv-each-item="cart.items">
+        <div class="image-title">
+          <div class="image">
+            <a rv-href="item.url">
+              <img rv-src="item.image | productImageSize 'small'" />
+            </a>
+          </div>
+          <div class="title">
+            <a rv-href="item.url">
+              <p rv-text="item.title"></p>
+            </a>
+          </div>
+        </div>
+        <div class="rest">
+          <div
+            class="price"
+            rv-html="item.price | money Currency.currentCurrency"
+          ></div>
+          <div class="quantity">
+            <a
+              href="#"
+              rv-data-cart-update="index | plus 1"
+              rv-data-cart-quantity="item.quantity | minus 1"
+              >-</a
+            >
+            <span class="border" rv-text="item.quantity"></span>
+            <a
+              href="#"
+              rv-data-cart-update="index | plus 1"
+              rv-data-cart-quantity="item.quantity | plus 1"
+              >+</a
+            >
+          </div>
+          <div class="remove">
+            <a href="#" rv-data-cart-remove="index | plus 1">Remove</a>
+          </div>
+          <div
+            class="line-total"
+            rv-html="item.line_price | money Currency.currentCurrency"
+          ></div>
+        </div>
+      </div>
+      <div class="total" rv-show="cart.item_count | gt 0">
+        <h4>Subtotal</h4>
+        <div rv-html="cart.total_price | money Currency.currentCurrency"></div>
+      </div>
+    </div>
+
+    <div data-cart-view="data-cart-view">
+      <div class="no-items" rv-show="cart.item_count | mt 1">
+        <a id="cart__checkout_btn" href="/checkout" class="green-button" style="width: 100%"
+          >Checkout</a
+        >
+      </div>
+      
+    </div>
+  </div>
+</div>

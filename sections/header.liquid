@@ -70,7 +70,7 @@
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
 
-    <img class="logo" src="{{ 'nooch-man.svg' | asset_url }}"/>
+    <a href="/"><img class="logo" src="{{ 'nooch-man.svg' | asset_url }}"/></a>
     
     <div>
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
@@ -236,8 +236,9 @@
           </span>
         </a>
       {%- endif -%}
-
-      <a href="#" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {% render 'cart-modal' %}
+      <div onclick="handleModalOpen()" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+          
         {%- liquid
           if cart == empty
             echo 'cart (0)'
@@ -254,7 +255,7 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a>
+      </div>
     </div>
 
     {%- if section.settings.menu != blank -%}

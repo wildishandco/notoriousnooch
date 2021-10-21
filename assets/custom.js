@@ -1,3 +1,46 @@
+gsap.registerPlugin(ScrollTrigger)
+
+//CART MODAL
+const tl = gsap.timeline({});
+
+gsap.set(".cart-modal", {
+  duration: 0,
+  xPercent: 100,
+  autoAlpha: 0,
+});
+
+jQuery(document).on("cart.requestComplete", function (event, cart) {
+  tl.to(".cart-modal", {
+    duration: 0,
+    autoAlpha: 1,
+  }).to(".cart-modal", {
+    duration: 0.4,
+    xPercent: 0,
+    ease: "circ.out",
+  });
+});
+
+function handleModalOpen() {
+  tl.to(".cart-modal", {
+    duration: 0,
+    autoAlpha: 1,
+  }).to(".cart-modal", {
+    duration: 0.4,
+    xPercent: 0,
+    ease: "circ.out",
+  });
+}
+
+function handleModalClose() {
+  tl.to(".cart-modal", {
+    duration: 0.4,
+    xPercent: 100,
+    ease: "circ.out",
+  });
+}
+
+
+
 jQuery(document).mousemove(function(event){
 
 	var xPos = (event.clientX/jQuery(window).width())-0.5,
@@ -68,7 +111,9 @@ jQuery(document).mousemove(function(event){
 });
 
 
-gsap.registerPlugin(ScrollTrigger)
+
+
+
 
 let container = document.getElementById("container");
 
