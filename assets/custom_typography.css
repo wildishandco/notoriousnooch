@@ -55,6 +55,8 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
 }
 
 body.product .product__description,
-body.product fieldset.product-form__input .form__label {
+body.product fieldset.product-form__input .form__label,
+.cart-modal .no-items,
+.cart-modal .total h4 {
     font-family: ITCAvantGardeGothicStd;
 }

@@ -33,7 +33,7 @@
 }
 .menu-container nav ul li {
 	display: inline-block;
-	padding-right: 23px;
+	padding-right: 60px;
 	border-bottom: 0;
 	position: relative;
 }
@@ -66,8 +66,9 @@
 }
 .menu-container nav ul li img {
     width: 40px;
-    top: -33px;
-    position: relative;
+    position: absolute;
+    top: 30%;
+    right: 8px;
 }
 .menu-container .menu-drawer__utility-links, 
 .menu-container .menu-drawer__menu-item--active, 

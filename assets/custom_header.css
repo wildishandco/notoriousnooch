@@ -48,7 +48,7 @@ header-drawer .header__icon {
 .header__icon--menu .icon {
 	z-index: 1;
 }
-a.header__icon--cart {
+.header__icon--cart {
 	color: var(--yellow);
 	text-decoration: none;
 	text-transform: uppercase;
