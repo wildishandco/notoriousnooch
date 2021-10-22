@@ -31,9 +31,15 @@
               </div>
               <div
                 class="price"
-                rv-html="item.price | money Currency.currentCurrency"
+                rv-html="item.line_price | money Currency.currentCurrency"
               ></div>
+<!--
+                <div
+            class="line-total"
+            rv-html="item.line_price | money Currency.currentCurrency"
+          ></div>
                 
+-->
             </div>
             <div>
           <div class="quantity">
@@ -44,17 +50,10 @@
               >-</a
             >
             <span class="border" rv-text="item.quantity"></span>
-<!--
-            <a
+              <a
               href="#"
               rv-data-cart-update="index | plus 1"
               rv-data-cart-quantity="item.quantity | plus 1"
-              >+</a>
--->
-              <a
-              href="#"
-              data-cart-update="index | plus 1"
-              data-cart-quantity="item.quantity | plus 1"
               >+</a>
           </div>
           <div class="remove">
@@ -62,28 +61,18 @@
           </div>
                 
             </div>
-<!--
-          <div
-            class="line-total"
-            rv-html="item.line_price | money Currency.currentCurrency"
-          ></div>
--->
+          
         </div>
       </div>
-      
-    </div>
-      
-      
-      
-  
-  </div>
-    
-    <div class="cart-bottom">
+        
       <div class="total" rv-show="cart.item_count | gt 0">
         <h4>Subtotal</h4>
         <div rv-html="cart.total_price | money Currency.currentCurrency"></div>
       </div>
 
+    </div>
+      
+    <div class="cart-bottom">
         <div class="checkout-button-container" data-cart-view="data-cart-view">
           <div class="no-items" rv-show="cart.item_count | mt 1">
             <a id="cart__checkout_btn" href="/checkout" class="green-button" style="width: 100%"
@@ -92,4 +81,9 @@
             </div>
         </div>
       </div>
+    </div>
 </div>
+
+
+
+

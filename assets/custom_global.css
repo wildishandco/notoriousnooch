@@ -74,3 +74,13 @@ a.clear-button:hover {
     position: relative;
     top: 5px
 }
+
+main#MainContent {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    a.clear-button {
+        font-size: 2rem;
+    }
+}

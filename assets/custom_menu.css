@@ -90,7 +90,22 @@ details.menu-opening .menu-container {
 	transform: translateY(0%);
 }
 
+@media (max-width: 1199px) {
+    .menu-container nav ul li img {
+        width: 30px;
+        top: 22%;
+    }
+}
 
-
+@media (max-width: 767px) {
+    .menu-container nav ul li img {
+        width: 30px;
+        top: 20%;
+        right: 15px;
+    }
+    .menu-container nav ul li a {
+        font-size: 10rem;
+    }
+}
 
 

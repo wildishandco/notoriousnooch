@@ -125,6 +125,8 @@
 }
 .cart-modal .table-items .rest > div .title a p {
     font-size: 1.6rem;
+    line-height: 1.2;
+    padding-right: 10px;
     margin:0;
 }
 .cart-modal .table-items .rest > div .price {
@@ -172,4 +174,13 @@
 }
 #cart__checkout_btn:hover {
     background-color: var(--green);
+}
+
+@media (max-width: 500px) {
+    .cart-modal {
+        padding: 15px 30px 50px 30px;
+    }
+    .cart-modal .table-items .rest > div:nth-child(1) {
+        margin-bottom: 20px;
+    }
 }

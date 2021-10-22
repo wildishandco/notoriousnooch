@@ -1,20 +1,30 @@
 @font-face {
   font-family: "Balgin";
-  src: url(assets/StudioSun-BalginBlack.otf) format("opentype");
+  src: url(StudioSun-BalginBlack.otf) format("opentype"),
+      url(StudioSun-BalginBlack.woff) format("woff"),
+      url(StudioSun-BalginBlack.woff2) format("woff2"),
+      url(StudioSun-BalginBlack.ttf) format("truetype");
 }
 @font-face {
   font-family: "Thunder";
-  src: url(assets/Thunder-BlackLC.otf) format("opentype");
+  src: url(Thunder-BlackLC.ttf) format("truetype"),
+    url(Thunder-BlackLC.woff) format("woff"),
+      url(Thunder-BlackLC.ttf) format("truetype"),
+      url(Thunder-BlackLC.otf) format("opentype");
 }
 @font-face {
   font-family: "Brice";
-  src: url(assets/BriceGX.ttf) format("truetype");
+  src: url(BriceGX.ttf) format("truetype"),
+      url(BriceGX.woff) format("woff"),
+      url(BriceGX.woff2) format("woff2"),
+      url(BriceGX.otf) format("opentype");
 }
 @font-face {
   font-family: "ITCAvantGardeGothicStd";
   src: url(ITCAvantGardeGothicStd.woff2) format("woff2"),
       url(ITCAvantGardeGothicStd.woff) format("woff"),
-      url(ITCAvantGardeGothicStd.ttf) format("truetype");
+      url(ITCAvantGardeGothicStd.ttf) format("truetype"),
+      url(ITCAvantGardeGothicStd.otf) format("opentype");
 }
 
 *{
@@ -43,9 +53,12 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
   width: 100%;
   text-align: center;
   margin: 0;
-  line-height: 0.55;
+  line-height: 0.75;
   position: relative;
   top: 60px;
+}
+.lettering span {
+    font-family: "Thunder";
 }
 .lettering.pink {
   color: var(--pink);
@@ -63,4 +76,27 @@ body.product fieldset.product-form__input .form__label,
 .cart-modal .table-items .rest > div .price,
 .cart-modal .total div {
     font-family: ITCAvantGardeGothicStd;
+}
+
+@media (max-width: 991px) {
+    .lettering {
+        top: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .lettering {
+        text-align: left;
+        font-size: 80vw;
+        margin-left: 17px;
+    }
+    .lettering span {
+        display: block;
+    }
+}
+
+@media (max-width: 350px) {
+    .lettering {
+        font-size: 78vw;
+    }
 }
