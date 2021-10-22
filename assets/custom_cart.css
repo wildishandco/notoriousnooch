@@ -1,7 +1,7 @@
 .cart-modal {
     position: fixed;
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -10,8 +10,20 @@
     visibility: hidden;
     font-size: .9rem;
     overflow: scroll;
-    padding: 50px;
+    padding: 50px 50px 100px 50px;
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cart-modal .cart-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.cart-modal .cart-bottom,
+.cart-modal .cart-modal-inner {
+    width: 100%;
 }
 .cart-modal .cart-modal-heading {
     display: flex;
@@ -58,8 +70,91 @@
     color: var(--green);
     font-size: 1.6rem;
 }
+.cart-modal .total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.cart-modal .checkout-button-container {
+    width: 100%;
+}
 .cart-modal .total h4 {
     color: var(--green);
+    font-size: 1.6rem;
+}
+.cart-modal .total div {
+    color: var(--green);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.cart-modal .table-items {
+    display: flex;
+    border-bottom: 1px solid var(--green);
+    margin: 25px 0 20px 0;
+    padding-bottom: 20px;
+}
+.cart-modal .table-items .rest {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.cart-modal .table-items .rest > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-modal .table-items .image-title {
+    max-width: 90px;
+    padding-right: 20px;
+}
+.cart-modal .table-items .image-title img {
+    width: 100%;
+}
+.cart-modal .table-items .rest > div .title {
+    margin: 0;
+}
+.cart-modal .table-items .rest > div .title a {
+    color: var(--green);
+    text-decoration: none;
+}
+.cart-modal .table-items .rest > div .title a:hover {
+    color: var(--darkpink);
+}
+.cart-modal .table-items .rest > div .title a p {
+    font-size: 1.6rem;
+    margin:0;
+}
+.cart-modal .table-items .rest > div .price {
+    font-size: 2rem;
+    color: var(--green);
+}
+.cart-modal .table-items .rest > div .quantity {
+    border: 0;
+}
+.cart-modal .table-items .rest > div .quantity a {
+    font-size: 4rem;
+    color: var(--green);
+    text-decoration: none;
+    line-height: 1;
+    margin-right: 15px;
+}
+.cart-modal .table-items .rest > div .quantity a:hover {
+    color: var(--darkpink);
+}
+.cart-modal .table-items .rest > div .quantity span {
+    font-size: 2.4rem;
+    color: var(--green);
+    margin-right: 15px;
+}
+.cart-modal .table-items .rest > div .remove a {
+    color: var(--green);
+    font-size: 1.2rem;
+}
+.cart-modal .table-items .rest > div .remove a:hover {
+    text-decoration: none;
 }
 
 #cart__checkout_btn {
@@ -73,4 +168,8 @@
     font-size: 2rem;
     padding: 15px;
     border-radius: 3px;
+    transition: 0.5s;
+}
+#cart__checkout_btn:hover {
+    background-color: var(--green);
 }

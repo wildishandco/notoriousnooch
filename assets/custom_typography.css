@@ -57,6 +57,10 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
 body.product .product__description,
 body.product fieldset.product-form__input .form__label,
 .cart-modal .no-items,
-.cart-modal .total h4 {
+.cart-modal .total h4, 
+.cart-modal .table-items .rest > div .title a p,
+.cart-modal .table-items .rest > div .remove a,
+.cart-modal .table-items .rest > div .price,
+.cart-modal .total div {
     font-family: ITCAvantGardeGothicStd;
 }

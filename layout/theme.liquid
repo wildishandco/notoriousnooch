@@ -134,12 +134,35 @@
     {{ 'custom_product.css' | asset_url | stylesheet_tag }}
     {{ 'custom_global.css' | asset_url | stylesheet_tag }} 
     {{ 'custom_cart.css' | asset_url | stylesheet_tag }} 
-
+      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script> 
     
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+      
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/1.1.0/cart.min.js"
+    ></script>
+      
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/shopify-cartjs/1.1.0/rivets-cart.min.js"
+    ></script>
+
+    <script type="text/javascript">
+            jQuery(function() {
+      CartJS.init({{ cart | json }}, {
+                "currency": "{{ shop.currency }}",
+                "moneyFormat": "{{ shop.money_format }}",
+                "moneyWithCurrencyFormat": "{{ shop.money_with_currency_format }}"
+                });      });
+    </script>
+
+    
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+      
+     
 
 
   </head>
