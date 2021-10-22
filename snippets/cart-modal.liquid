@@ -44,12 +44,18 @@
               >-</a
             >
             <span class="border" rv-text="item.quantity"></span>
+<!--
             <a
               href="#"
               rv-data-cart-update="index | plus 1"
               rv-data-cart-quantity="item.quantity | plus 1"
-              >+</a
-            >
+              >+</a>
+-->
+              <a
+              href="#"
+              data-cart-update="index | plus 1"
+              data-cart-quantity="item.quantity | plus 1"
+              >+</a>
           </div>
           <div class="remove">
             <a href="#" rv-data-cart-remove="index | plus 1">Delete</a>
