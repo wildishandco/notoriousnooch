@@ -20,17 +20,22 @@
               <img rv-src="item.image | productImageSize 'small'" />
             </a>
           </div>
-          <div class="title">
-            <a rv-href="item.url">
-              <p rv-text="item.title"></p>
-            </a>
-          </div>
+          
         </div>
         <div class="rest">
-          <div
-            class="price"
-            rv-html="item.price | money Currency.currentCurrency"
-          ></div>
+            <div>
+              <div class="title">
+                <a rv-href="item.url">
+                  <p rv-text="item.title"></p>
+                </a>
+              </div>
+              <div
+                class="price"
+                rv-html="item.price | money Currency.currentCurrency"
+              ></div>
+                
+            </div>
+            <div>
           <div class="quantity">
             <a
               href="#"
@@ -47,27 +52,38 @@
             >
           </div>
           <div class="remove">
-            <a href="#" rv-data-cart-remove="index | plus 1">Remove</a>
+            <a href="#" rv-data-cart-remove="index | plus 1">Delete</a>
           </div>
+                
+            </div>
+<!--
           <div
             class="line-total"
             rv-html="item.line_price | money Currency.currentCurrency"
           ></div>
+-->
         </div>
       </div>
+      
+    </div>
+      
+      
+      
+  
+  </div>
+    
+    <div class="cart-bottom">
       <div class="total" rv-show="cart.item_count | gt 0">
         <h4>Subtotal</h4>
         <div rv-html="cart.total_price | money Currency.currentCurrency"></div>
       </div>
-    </div>
 
-    <div data-cart-view="data-cart-view">
-      <div class="no-items" rv-show="cart.item_count | mt 1">
-        <a id="cart__checkout_btn" href="/checkout" class="green-button" style="width: 100%"
-          >Checkout</a
-        >
+        <div class="checkout-button-container" data-cart-view="data-cart-view">
+          <div class="no-items" rv-show="cart.item_count | mt 1">
+            <a id="cart__checkout_btn" href="/checkout" class="green-button" style="width: 100%"
+              >Checkout</a
+            >
+            </div>
+        </div>
       </div>
-      
-    </div>
-  </div>
 </div>
