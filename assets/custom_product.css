@@ -1,6 +1,12 @@
 body.product {
     background-color: var(--pink);
 }
+body.product .marquee {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    
+}
 body.product .spaced-section {
     margin-top: 0;
     margin-bottom: 0; 
@@ -163,9 +169,6 @@ body.product .product-form__quantity .quantity .quantity__input {
 body.product .product .grid__item {
     padding-bottom: 0;
 }
-body.product .product__media-list .product__media-item {
-    background-color: var(--green);
-}
 body.product .product__media-item .media img {
     width: 500px;
     height: auto;
@@ -174,4 +177,19 @@ body.product .product__media-item .media img {
     left: 0;
     right: 0;
     margin: auto;
+}
+.product__media-list-container {
+    overflow: hidden;
+}
+ul.product__media-list {
+    display: flex;
+    width: 200%;
+    left:0;
+    position: relative;
+    transition:0.5s;
+    background: linear-gradient(90deg, var(--green) 0%, var(--green) 50%, var(--darkpink) 50%, var(--darkpink) 100%);
+
+}
+ul.product__media-list > li {
+    flex: 0 50%;
 }
