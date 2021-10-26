@@ -34,220 +34,37 @@
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
         <div class="product__media-list-container">
-            <div class="product__media-list-inner-container">
-                <div class="product-images">
-                    <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
-                    {% for media in product.media %}
-                        <li class="product__media-item"><img src="{{ media | img_url: "master"}}"/></li>
-                    {% endfor %}
-                    </ul>
-                </div>
-                <div class="product-ingredients">
-                    <div class="cheese-ingredients">
-                        <div class="ingredients-inner">
-                            <h2>Ingredients</h2>
-                            <p>{{ product.metafields.nooch.cheese_ingredients.value.ingredients }}</p>
-                            <p class="italic">{{ product.metafields.nooch.cheese_ingredients.value.italic }}</p>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td>Nutritional</td>
-                                        <td>Per<br/>100g</td>
-                                        <td>Per 5g<br/>Serving</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Energy</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.energy.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.energy.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.energy.main_cal }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.energy.serving_cal }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Protein</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.protein.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.protein.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fat</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.fat.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.fat.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>of which saturates</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.saturated.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.saturated.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Carbohydrates</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.carbohydrates.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.carbohydrates.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>of which sugars</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.sugars.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.sugars.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sodium</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.sodium.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.sodium.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Salt</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.salt.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.salt.serving }}</td>
-                                    </tr>
-                                    <tr></tr>
-                                    <tr>
-                                        <td>B1 Thiamin</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b1.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b1.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B2 Riboflavin</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b2.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b2.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B3 Niacin</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b3.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b3.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B5 Pantothenic acid</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b5.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b5.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B6 Pyridoxine</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b6.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b6.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B8 Biotine</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b8.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b8.serving }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B9 Folates</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b9.main }}</td>
-                                        <td>{{ product.metafields.nooch.cheese_ingredients.value.list.b9.serving }}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <div class="bacon-ingredients">
-                    <div class="ingredients-inner">
-                        <h2>Ingredients</h2>
-            
-                        <p>{{ product.metafields.nooch.bacon_ingredients.value.ingredients }}</p>
-                        <p class="italic">{{ product.metafields.nooch.bacon_ingredients.value.italic }}</p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Nutritional</td>
-                                    <td>Per<br/>100g</td>
-                                    <td>Per 5g<br/>Serving</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Energy</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.energy.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.energy.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.energy.main_cal }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.energy.serving_cal }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Protein</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.protein.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.protein.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Fat</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.fat.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.fat.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>of which saturates</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.saturated.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.saturated.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Carbohydrates</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.carbohydrates.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.carbohydrates.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>of which sugars</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.sugars.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.sugars.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Sodium</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.sodium.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.sodium.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Salt</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.salt.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.salt.serving }}</td>
-                                </tr>
-                                <tr></tr>
-                                <tr>
-                                    <td>B1 Thiamin</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b1.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b1.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>B2 Riboflavin</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b2.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b2.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>B3 Niacin</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b3.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b3.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>B5 Pantothenic acid</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b5.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b5.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>B6 Pyridoxine</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b6.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b6.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>B8 Biotine</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b8.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b8.serving }}</td>
-                                </tr>
-                                <tr>
-                                    <td>B9 Folates</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b9.main }}</td>
-                                    <td>{{ product.metafields.nooch.bacon_ingredients.value.list.b9.serving }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
             
             
+            {% for media in product.media %}
+                <img src="{{ media | img_url}}"/>
+            {% endfor %}
             
-        
+            
+        <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
+          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+          {%- if product.selected_or_first_available_variant.featured_media != null -%}
+            {%- assign media = product.selected_or_first_available_variant.featured_media -%}
+            <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}">
+              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false %}
+                
+                <p class="variant_shipping_info" style="display: none;"></p>     
+                
+                {{ product.metafields.nooch.cheese_ingredients.energy }}
+               
+                
+            </li> 
+          {%- endif -%}
+          {%- for media in product.media -%}
+            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+              <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}">
+                {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false %}
+                  
+          
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+        </ul>
             
         
             
@@ -296,8 +113,6 @@
       {%- endif -%}
         
              {% render 'recipes' %}
-            
-        </div>
     </div>
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">

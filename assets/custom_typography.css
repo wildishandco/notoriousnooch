@@ -74,7 +74,11 @@ body.product fieldset.product-form__input .form__label,
 .cart-modal .table-items .rest > div .title a p,
 .cart-modal .table-items .rest > div .remove a,
 .cart-modal .table-items .rest > div .price,
-.cart-modal .total div {
+.cart-modal .total div,
+.product-ingredients h2,
+.product-ingredients p,
+.product-ingredients table thead tr td,
+.product-ingredients table tr td {
     font-family: ITCAvantGardeGothicStd;
 }
 
