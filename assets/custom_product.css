@@ -169,27 +169,116 @@ body.product .product-form__quantity .quantity .quantity__input {
 body.product .product .grid__item {
     padding-bottom: 0;
 }
-body.product .product__media-item .media img {
-    width: 500px;
+body.product .product__media-item .media {
+    height: 100vh;
+    padding-top: 0 !important;
+}
+body.product .product__media-item {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+body.product .product__media-item img {
     height: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    max-height: 85vh;
+    width:auto;
 }
 .product__media-list-container {
     overflow: hidden;
 }
-ul.product__media-list {
+.product__media-list-inner-container {
     display: flex;
     width: 200%;
     left:0;
     position: relative;
     transition:0.5s;
+    flex-wrap: wrap;
     background: linear-gradient(90deg, var(--green) 0%, var(--green) 50%, var(--darkpink) 50%, var(--darkpink) 100%);
-
+}
+body.product ul.product__media-list {
+    margin-left: 0;
 }
 ul.product__media-list > li {
     flex: 0 50%;
 }
+body.product .product__media-toggle {
+    display: none;
+}
+body.product span.product__media-icon.motion-reduce {
+    display: none
+}
+.product-images {
+    width: 100%;
+}
+
+/*INGREDIENTS TABLE*/
+
+.product-ingredients {
+    width: 100%;
+    display: flex;
+}
+.product-ingredients > div {
+    flex: 0 50%;
+}
+.product-ingredients > div .ingredients-inner {
+    max-width: 50%;
+    margin: auto;
+}
+.product-ingredients h2 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--yellow);
+}
+.product-ingredients p {
+    font-size: 1rem;
+    color: var(--yellow);
+}
+.product-ingredients p.italic {
+    font-style: italic;
+}
+.product-ingredients table {
+    border: 0;
+    box-shadow: none;
+    width: 100%;
+    margin-bottom: 150px;
+}
+.product-ingredients table thead tr td {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.product-ingredients table tr td {
+    border: 0;
+    color: var(--yellow);
+    padding: 5px 10px 5px 0;
+    text-align: right;
+}
+.product-ingredients table tr td:nth-child(1) {
+    padding-right: 20px;
+    text-align: left;
+    width: 200px;
+}
+.product-ingredients table tr td {
+    text-align: right;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
