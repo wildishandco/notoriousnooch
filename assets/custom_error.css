@@ -1,0 +1,96 @@
+.error-packet {
+    width: 30%;
+    min-width: 700px;
+    position: absolute;
+}
+.error-bg {
+    width: 100%;
+}
+.error-container {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    width: 100%;
+    background-color: var(--green);
+    max-width: 100%;
+}
+
+#error-1 {
+    left: -25%; 
+    z-index: 2;
+}
+#error-2 {
+    left: 0%; 
+    top: -40%;
+    z-index: 2;
+}
+#error-3 {
+    left: 0; 
+    top: 20%;
+    transform: rotate(30deg);
+    z-index: 2;
+}
+#error-4 {
+    left: 25%;
+    top: 10%;
+    transform: rotate(-30deg);
+    z-index: 2;
+}
+#error-5 {
+    left: 25%;; 
+    top: -20%;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+#error-6 {
+    left: -15%;; 
+    bottom: -18%;
+    transform: rotate(-30deg);
+    z-index: 1;
+}
+#error-7 {
+    left: 20%;; 
+    bottom: -18%;
+    z-index: 1;
+    transform: rotate(30deg);
+}
+#error-8 {
+    left: 45%;
+    bottom: -18%;
+    z-index: 1;
+}
+#error-9 {
+    left: 65%;
+    bottom: -18%;
+    z-index: 1;
+}
+#error-10 {
+    left: 75%;
+    top: -18%;
+    z-index: 1;
+    transform: rotate(-30deg);
+}
+#error-11 {
+    left: 50%;
+    top: -28%;
+    z-index: 1;
+    transform: rotate(30deg);
+}
+
+.error-content {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-content h1 {
+    color: var(--pink);
+    font-size: 40vw;
+    margin: 60px 0 0 0;
+}
+

@@ -57,7 +57,8 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
   position: relative;
   top: 60px;
 }
-.lettering span {
+.lettering span,
+.error-content h1 {
     font-family: "Thunder";
 }
 .lettering.pink {

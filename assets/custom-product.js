@@ -18,6 +18,7 @@ jQuery(document).ready(function(){
         jQuery('body.product .product-form__input.flavours').addClass('both');
         jQuery('.product__media-list-inner-container').css('width','100%');
         jQuery('.product__media-list-inner-container').css('left','0%');
+        jQuery('.product__media-list-inner-container').addClass('both-selected');
     }
     
     
