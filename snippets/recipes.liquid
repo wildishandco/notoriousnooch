@@ -6,6 +6,24 @@
   endif
 -%}
 <div class="home-blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
+    <div class="recipes-slider marquee top">
+        <div class="track">
+            <div class="content">
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti-right.gif' | asset_url }}"/></span>
+            </div>
+        </div>
+    </div>
     <div class="title-wrapper-with-link{% if section.settings.heading == blank %} title-wrapper-with-link--no-heading{% endif %} {% if posts_displayed > 2 %}title-wrapper--self-padded-tablet-down{% else %}title-wrapper--self-padded-mobile{% endif %}">
 
       {%- if section.settings.blog != blank and section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
@@ -50,6 +68,7 @@
         </div>
       {%- endif -%}
     {%- else -%}
+    
       <div class="blog-placeholder">
         <div class="placeholder media media--landscape">
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -60,11 +79,31 @@
           </h3>
         </div>
       </div>
+   
     {%- endif -%}
+    <div class="recipes-slider marquee">
+        <div class="track">
+            <div class="content">
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+                <span><span>Recipes</span><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/></span>
+            </div>
+        </div>
+    </div>
     <div class="home-blog-bottom">
       <p>With Notorious Nooch, there's really no recipe required. But we've worked with the awesome <a href="#">@beardedvegan</a> to give you some ideas to get going. Tag us in your creations and let us know what you think!</p>
       <a href="#" class="clear-button">Recipes</a>
     </div>
+    
 </div>
 
 
