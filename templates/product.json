@@ -56,6 +56,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "c02b185a-0cb4-42ae-abb8-9be6a310194a": {
+          "type": "recipes",
+          "settings": {
+            "recipes": ""
+          }
         }
       },
       "block_order": [
@@ -67,7 +73,8 @@
         "price",
         "quantity_selector",
         "buy_buttons",
-        "share"
+        "share",
+        "c02b185a-0cb4-42ae-abb8-9be6a310194a"
       ],
       "settings": {
         "enable_sticky_info": true,
