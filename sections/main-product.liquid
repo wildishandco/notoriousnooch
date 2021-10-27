@@ -239,7 +239,7 @@
               
         </div>
         
-             {% render 'recipes' %}
+             
             
         </div>
         <div class="slider-buttons no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
@@ -290,6 +290,8 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
+          {%- when 'recipes' -%}
+            {% render 'recipes' %}
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
