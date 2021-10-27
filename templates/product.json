@@ -36,7 +36,6 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
           }
         },
@@ -72,7 +71,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "hide_variants": false,
+        "hide_variants": true,
         "enable_video_looping": false
       }
     },
