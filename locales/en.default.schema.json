@@ -634,6 +634,14 @@
             }
           }
         },
+        "recipes": {
+          "name": "Recipes",
+          "settings": {
+            "recipes": {
+              "label": "Recipes"
+            }
+          }
+        },
         "rating": {
           "name": "Product rating",
           "settings": {
@@ -1398,6 +1406,15 @@
             "custom_liquid": {
               "label": "Custom liquid",
               "info": "Add app snippets or other Liquid code to create advanced customizations."
+            }
+          }
+        },
+        "recipes": {
+          "name": "Recipes",
+          "settings": {
+            "recipes": {
+              "label": "Recipes",
+              "info": "Add Recipes."
             }
           }
         },
