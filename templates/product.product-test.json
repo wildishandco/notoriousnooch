@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "c02b185a-0cb4-42ae-abb8-9be6a310194a": {
+          "type": "recipes",
+          "settings": {
+            "recipes": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "description",
+        "subtitle",
+        "variant_picker",
+        "price",
+        "quantity_selector",
+        "buy_buttons",
+        "share",
+        "c02b185a-0cb4-42ae-abb8-9be6a310194a"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "1634652920aa9e3bca": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "Blog posts",
+        "blog": "recipes",
+        "post_limit": 2,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "soft_background": false,
+        "show_view_all": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "1634652920aa9e3bca"
+  ]
+}
