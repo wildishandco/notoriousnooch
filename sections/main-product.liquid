@@ -236,7 +236,14 @@
                     </div>
                 </div>
             </div>
-              
+                
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'recipes' -%}
+                        {% render 'recipes' %}
+                
+                    {%- endcase -%}
+                {%- endfor -%}
         </div>
         
              
@@ -290,8 +297,7 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
-          {%- when 'recipes' -%}
-            {% render 'recipes' %}
+          
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
@@ -841,7 +847,7 @@
           "type": "blog",
           "id": "blog",
           "label": "t:sections.featured-blog.settings.blog.label"
-        },
+        }
       ]
     },
     {
