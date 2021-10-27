@@ -90,7 +90,6 @@
     },
     "1634652920aa9e3bca": {
       "type": "featured-blog",
-      "disabled": true,
       "settings": {
         "heading": "Blog posts",
         "blog": "recipes",
@@ -99,7 +98,7 @@
         "show_date": false,
         "show_author": false,
         "soft_background": false,
-        "show_view_all": true
+        "show_view_all": false
       }
     }
   },
