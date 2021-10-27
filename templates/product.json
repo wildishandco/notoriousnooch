@@ -97,7 +97,6 @@
     },
     "1634652920aa9e3bca": {
       "type": "featured-blog",
-      "disabled": true,
       "settings": {
         "heading": "Blog posts",
         "blog": "recipes",
