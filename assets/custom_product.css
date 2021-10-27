@@ -27,10 +27,11 @@ body.product a.header__icon--cart {
 
 body.product h1.product__title {
     font-size: 14rem;
-    line-height: 13rem;
+    line-height: 11rem;
     margin-bottom: 0;
     color: var(--green);
     width: 100%;
+    margin-top: 20px;
 }
 
 body.product fieldset.product-form__input .form__label {
@@ -40,7 +41,6 @@ body.product fieldset.product-form__input .form__label {
     letter-spacing: 1px;
     font-size: 1rem;
 }
-
 body.product variant-radios {
     width: 100%;
 }
@@ -60,30 +60,60 @@ body.product .product-form__input input[type='radio'] + label {
     text-transform: uppercase;
     font-size: 1.6rem;
     padding: 1.5rem;
+    background-color: transparent;
+    transition: .5s;
+}
+body.product .product-form__input input[type='radio']:checked + label {
+    color: var(--pink);
+}
+body.product .product-form__input input[type='radio'] + label:hover {
+    color: var(--darkpink);
+}
+body.product .product-form__input.flavours {
+    position: relative;
+}
+body.product .product-form__input.flavours::after {
+    content:'';
+    position: absolute;
+    left:0;
+    width:33.3%;
+    height:100%;
+    background-color: var(--green);
+    transition:.5s;
+    z-index: -1;
+}
+body.product .product-form__input.flavours.cheese::after {
+    left: 0;
+}
+body.product .product-form__input.flavours.bacon::after {
+    left: 33.3%;
+}
+body.product .product-form__input.flavours.both::after {
+    left: 66.6%;
+}
+
+body.product .product-form__input.quantity-selector input[type='radio'] + label {
     background: linear-gradient(to left, var(--pink) 50%, var(--green) 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
 }
-body.product .product-form__input input[type='radio'] + label:nth-child(3) {
+body.product .product-form__input.quantity-selector input[type='radio'] + label:nth-child(3) {
     background: linear-gradient(to right, var(--pink) 50%, var(--green) 50%) left;
     background-size: 200%;
 }
-body.product .product-form__input input[type='radio']:checked + label:nth-child(3) {
+body.product .product-form__input.quantity-selector input[type='radio']:checked + label:nth-child(3) {
     background-position: right;
 }
-
-
-body.product .product-form__input input[type='radio'] + label:hover {
-    color: var(--darkpink);
-}
-body.product .product-form__input input[type='radio']:checked + label {
+body.product .product-form__input.quantity-selector input[type='radio']:checked + label {
     background-color: var(--green);
-    color: var(--pink);
     background-position: left;
 }
 
+
+
 body.product .product-form__input input[type='radio']:checked + label:hover {
     cursor: auto;
+    color: var(--pink);
 }
 
 body.product .buy-buttons {
@@ -127,6 +157,9 @@ body.product .product__description {
     color: var(--green);
     font-size: 1.5rem;
     width: 100%;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 body.product .quantity-cart {
@@ -188,6 +221,7 @@ body.product .product__media-item img {
     margin: auto;
     max-height: 85vh;
     width:auto;
+    max-width: 100%;
 }
 .product__media-list-container {
     overflow: hidden;
@@ -200,6 +234,12 @@ body.product .product__media-item img {
     transition:0.5s;
     flex-wrap: wrap;
     background: linear-gradient(90deg, var(--green) 0%, var(--green) 50%, var(--darkpink) 50%, var(--darkpink) 100%);
+}
+.product__media-list-inner-container.both-selected .ingredients-inner {
+    max-width: 90%;
+}
+.product__media-list-inner-container.both-selected .ingredients-inner table tr td:nth-child(1) {
+    width:auto;
 }
 body.product ul.product__media-list {
     margin-left: 0;
@@ -240,6 +280,7 @@ body.product span.product__media-icon.motion-reduce {
 .product-ingredients p {
     font-size: 1rem;
     color: var(--yellow);
+    line-height: 1.5;
 }
 .product-ingredients p.italic {
     font-style: italic;
@@ -249,6 +290,7 @@ body.product span.product__media-icon.motion-reduce {
     box-shadow: none;
     width: 100%;
     margin-bottom: 150px;
+    margin-top: 30px;
 }
 .product-ingredients table thead tr td {
     text-transform: uppercase;

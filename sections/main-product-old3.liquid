@@ -19,6 +19,14 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{% render 'marquee' %}
+
+{% capture 'meta_data' %}
+{% for variant in product.variants %}
+{{variant.id}}:{{ variant.metafields.nooch.ingredients_list | json }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endcapture %}
+
 <section>
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
@@ -238,10 +246,6 @@
             </div>
               
         </div>
-        
-             {% render 'recipes' %}
-            
-        </div>
         <div class="slider-buttons no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
           <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
           <div class="slider-counter caption">
@@ -252,8 +256,24 @@
           </div>
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
-      
+      {%- if first_3d_model -%}
+        <button
+          class="button button--full-width product__xr-button"
+          type="button"
+          aria-label="{{ 'products.product.xr_button_label' | t }}"
+          data-shopify-xr
+          data-shopify-model3d-id="{{ first_3d_model.id }}"
+          data-shopify-title="{{ product.title | escape }}"
+          data-shopify-xr-hidden
+        >
+          {% render 'icon-3d-model' %}
+          {{ 'products.product.xr_button' | t }}
+        </button>
+      {%- endif -%}
         
+             {% render 'recipes' %}
+            
+        </div>
     </div>
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
@@ -464,7 +484,7 @@
                   <span class="product-form__error-message"></span>
                 </div>
 
-                {%- form 'product', product, id: 'AddToCartForm', class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', data-cart-submit:'true' -%}
+                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                   <div class="product-form__buttons">
                     <button
@@ -487,10 +507,8 @@
                           </svg>
                         </div>
                         <div class="button-price">
-                            
-                            (<span class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-                              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-                            </span>)
+                            {{ variant.price | money | strip_html }}
+                            ({%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%})
                         </div>
                     </button>
                     {%- if block.settings.show_dynamic_checkout -%}
@@ -554,7 +572,7 @@
 
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
-      <button id="ModalClose-{{ section.id }}" type="button" class="product-media-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+      
 
       <div class="product-media-modal__content" role="document" aria-label="{{ 'products.modal.label' | t }}" tabindex="0">
         {%- liquid
@@ -585,7 +603,7 @@
   {%- for block in popups -%}
     <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal" {{ block.shopify_attributes }}>
       <div role="dialog" aria-label="{{ block.settings.text }}" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
-        <button id="ModalClose-{{ block.id }}" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+        
         <div class="product-popup-modal__content-info">
           <h1 class="h2">{{ block.settings.page.title }}</h1>
           {{ block.settings.page.content }}
@@ -612,7 +630,7 @@
 
     showActiveMedia() {
       this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute("data-media-id")}"])`).forEach((element) => {
-          element.classList.remove('active');
+          element.classList.add('test');
         }
       )
       const activeMedia = this.querySelector(`[data-media-id="${this.openedBy.getAttribute("data-media-id")}"]`);
@@ -828,18 +846,6 @@
           "id": "custom_liquid",
           "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
           "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
-        }
-      ]
-    },
-    {
-      "type": "recipes",
-      "name": "t:sections.main-product.blocks.recipes.name",
-      "settings": [
-        {
-          "type": "liquid",
-          "id": "recipes",
-          "label": "t:sections.main-product.blocks.recipes.settings.recipes.label",
-          "info": "t:sections.main-product.blocks.recipes.settings.recipes.info"
         }
       ]
     },

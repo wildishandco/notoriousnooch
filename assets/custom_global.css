@@ -78,6 +78,9 @@ a.clear-button:hover {
 main#MainContent {
     overflow: hidden;
 }
+body.product main#MainContent {
+    overflow: initial;
+}
 
 @media (max-width: 767px) {
     a.clear-button {
