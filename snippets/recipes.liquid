@@ -15,7 +15,8 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class="home-blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
+                                                                       <div class="product-recipes-wrapper">
+<div class="product-recipes home-blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
     <div class="recipes-slider marquee top">
         <div class="track">
             <div class="content">
@@ -111,9 +112,10 @@
     </div>
     <div class="home-blog-bottom">
       <p>With Notorious Nooch, there's really no recipe required. But we've worked with the awesome <a href="#">@beardedvegan</a> to give you some ideas to get going. Tag us in your creations and let us know what you think!</p>
-      <a href="#" class="clear-button">Recipes</a>
+      <a href="/blogs/recipes" class="clear-button">Recipes</a>
     </div>
     
 </div>
 
+</div>
 

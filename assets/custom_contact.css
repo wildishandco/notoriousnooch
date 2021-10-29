@@ -1,0 +1,130 @@
+
+.contact-container {
+    display: flex;
+    background-color: var(--green);
+}
+.contact-container .contact-left {
+    flex: 0 40%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--darkpink);
+}
+.contact-container .contact-right h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 30vw;
+    text-align: center;
+    color: #fcdc3e;
+    position: relative;
+    z-index: 1;
+    line-height: 0.6;
+    margin-top: 190px;
+/*    left: -280px;*/
+    z-index: 2;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.contact-container .contact-right {
+    flex: 0 60%;
+    max-width: 60%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 450px;
+}
+
+.contact-container .contact-right form {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.contact-container .contact-right form input,
+.contact-container .contact-right form textarea {
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    box-shadow: none;
+    width: 100%;
+    font-size: 2rem;
+    height: auto;
+    color: var(--yellow);
+}
+.contact-container .contact-right form label {
+    color: var(--yellow);
+    top: 21px;
+}
+.field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label, .field__input:-webkit-autofill ~ .field__label, .customer .field input:focus ~ label, .customer .field input:not(:placeholder-shown) ~ label, .customer .field input:-webkit-autofill ~ label {
+    top: 10px!important;
+}
+.contact-container .contact-right form textarea {
+    max-height: 200px;
+}
+.contact-container .contact-right form input:placeholder {
+    color: white;
+}
+.contact__fields {
+    display: block;
+}
+.contact__button {
+    text-align: center;
+}
+button.clear-button {
+    border-width: 2px;
+    min-width: 200px;
+}
+
+
+
+.contact-container .contact-left .error-packet {
+    width: 25%;
+    min-width: 500px;
+    position: absolute;
+}
+.contact-container .contact-left .error-packet#error-1 {
+    left: -23%; 
+    z-index: 2;
+    top: -6%;
+}
+.contact-container .contact-left .error-packet#error-2 {
+    left: 25%;
+    top: -10%;
+    z-index: 2;
+}
+.contact-container .contact-left .error-packet#error-3 {
+    left: 6%; 
+    bottom: -10%;
+/*    transform: rotate(30deg);*/
+    z-index: 2;
+}
+.contact-container .contact-left .error-packet#error-4 {
+    left: 40%;
+    top: 20%;
+/*    transform: rotate(-30deg);*/
+    z-index: 2;
+}
+.contact-container .contact-left .error-packet#error-5 {
+    left: 40%;
+    bottom: 0%;
+    z-index: 1;
+}
+.contact-container .contact-left .error-packet#error-6 {
+    left: -25%;
+    bottom: -2%;
+/*    transform: rotate(-30deg);*/
+    z-index: 1;
+}
+
+
+.error-content {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-content h1 {
+    color: var(--pink);
+    font-size: 40vw;
+    margin: 60px 0 0 0;
+}
+

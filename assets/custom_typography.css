@@ -27,9 +27,14 @@
       url(ITCAvantGardeGothicStd.otf) format("opentype");
 }
 
-*{
+*,
+h1.article-template__title,
+.article-template__content h2,
+footer.footer .footer-links ul li a,
+a.clear-button {
   font-family: "Balgin";
 }
+
 .menu-container nav ul li a,
 footer.footer .footer-title h3,
 .home-blog h3, 
@@ -40,7 +45,8 @@ body.product h1.product__title,
 }
 
 footer.footer .footer-block--newsletter h2.footer-block__heading,
-.home-blog .home-blog-bottom p, .home-blog .home-blog-bottom p a,
+.home-blog .home-blog-bottom p,
+.home-blog .home-blog-bottom p a,
 .marquee .track .content {
   font-family: "Brice";
 }
@@ -57,7 +63,10 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
   position: relative;
   top: 60px;
 }
-.lettering span {
+.lettering span,
+.error-content h1,
+.main-blog h1,
+.contact-container .contact-right h1 {
     font-family: "Thunder";
 }
 .lettering.pink {
@@ -67,6 +76,12 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
   color: var(--yellow);
 }
 
+p,
+p u, 
+ul li,
+ul li i,
+strong,
+a, 
 body.product .product__description,
 body.product .product__description span,
 body.product fieldset.product-form__input .form__label,
@@ -79,8 +94,25 @@ body.product fieldset.product-form__input .form__label,
 .product-ingredients h2,
 .product-ingredients p,
 .product-ingredients table thead tr td,
-.product-ingredients table tr td {
+.product-ingredients table tr td,
+.blog-articles .blog-articles__article.article a.article-content .article-card__info .article-card__excerpt,
+.article-template__content p,
+.blog-header-container p span,
+.ingredients-container ul li,
+.contact-container .contact-right form label,
+.contact-container .contact-right form input,
+.contact-container .contact-right form label span {
     font-family: ITCAvantGardeGothicStd;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul li,
+a,
+.rte a {
+    color: var(--yellow);
 }
 
 @media (max-width: 991px) {

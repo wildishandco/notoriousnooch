@@ -31,7 +31,7 @@
       {%- endif -%}
 
       <div class="footer-title">
-        <img id="footer-nooch-man" src="{{ 'footer-nooch-man.png' | asset_url }}"/>
+        <img id="footer-nooch-man" src="{{ 'Nooch_Macaroni.gif' | asset_url }}"/>
         <h3>Sign Up</h3>
 
       </div>
@@ -258,19 +258,19 @@
       <div class="footer__column footer__column--info">
         <div class="footer-links">
           <ul class="social">
-            <li><a href="https://www.instagram.com/notoriousnoochco/" target="_blank"><img src="{{ 'instagram.svg' | asset_url }}"/></a></li>
-            <li class="test"><a href="/pages/contact" target="_blank"><img src="{{ 'email.svg' | asset_url }}"/> </a></li>
+            <li><a href="https://www.instagram.com/notoriousnoochco/" target="_blank">{% render 'icon-instagram' %}</a></li>
+            <li><a href="/pages/contact" target="_blank">{% render 'icon-email' %} </a></li>
           </ul>
           <ul class="footer-menu">
-            <li><a href="#">Media Kit</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="https://www.dropbox.com/sh/98ycarg1duvtxo4/AADfuPtZOAbFDGHylLVQ_SeDa?dl=0" target="_blank">Media Kit</a></li>
+            <li><a href="/pages/privacy">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="footer-logo">
           <img src="{{ 'nooch-logo.svg' | asset_url }}"/>
         </div>
         <div class="footer__copyright caption">
-          &copy; Notorious Nooch Co {{ 'now' | date: "%Y" }}  |  Designed by <img src="{{ 'wildish.svg' | asset_url }}"/>
+          &copy; Notorious Nooch Co {{ 'now' | date: "%Y" }}  |  Designed by <a href="https://www.wildishandco.co.uk/" target="_blank"><img src="{{ 'wildish.svg' | asset_url }}"/></a>
         </div>
       </div>
     </div>
