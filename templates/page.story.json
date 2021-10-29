@@ -6,7 +6,9 @@
       }
     },
     "story": {
-      "type": "story"
+      "type": "story",
+      "settings": {
+      }
     }
   },
   "order": [
