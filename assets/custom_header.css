@@ -72,6 +72,9 @@ header-drawer .header__icon {
 .logo {
 	width: 100px;
 }
+.logo.alt {
+    display: none;
+}
 
 
 @media (max-width: 500px) {

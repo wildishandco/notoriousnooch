@@ -19,7 +19,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-{% render 'marquee' %}
+
 
 
 <section>
@@ -564,6 +564,8 @@
       </div>
     </div>
   </div>
+        
+        {% render 'marquee' %}
 
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">

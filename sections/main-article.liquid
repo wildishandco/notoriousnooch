@@ -1,18 +1,29 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'custom_blog.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
-        <div class="page-width page-width--narrow">
+        <div class="page-width--narrow">
           {% render block %}
         </div>
       {%- when 'featured_image'-%}
         {%- if article.image -%}
           <div class="article-template__hero-container" {{ block.shopify_attributes }}>
+             <div class="blog-header-container">
+                 <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+                 {% if article.metafields.accentuate.cooking_time %}
+                    <p><img src="{{ 'clock.png' | asset_url }}"/><span>{{ article.metafields.accentuate.cooking_time }}</span></p> 
+                {% endif %} 
+
+                {% if article.metafields.accentuate.difficulty %}
+                    <p><img src="{{ 'difficulty.png' | asset_url }}"/><span>{{ article.metafields.accentuate.difficulty }}</span></p>
+                {% endif %}
+              </div>
             <div class="article-template__hero-{{ block.settings.image_height }} media"
               itemprop="image"
-              {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
+              {% if block.settings.image_height == 'adapt' and article.image %}{% endif %}
             >
               <img
                 srcset="{% if article.image.width >= 350 %}{{ article.image | img_url: '350x' }} 350w,{% endif %}
@@ -32,9 +43,10 @@
           </div>
         {%- endif -%}
 
+<!--
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-            <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+            
             {%- if block.settings.blog_show_date -%}
               <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
@@ -44,13 +56,31 @@
               </span>
             {%- endif -%}
           </header>
+-->
 
         {%- when 'content'-%}
-          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
-              {{ article.content }}
+          <div class="article-template__content" itemprop="articleBody" {{ block.shopify_attributes }}>
+              <div class="ingredients-container">
+                {% if article.metafields.accentuate.ingredients %}
+                  <div class="content-left">
+                    <h2>Ingredients</h2>
+
+                    <ul>
+                    {% for ingredient in article.metafields.accentuate.ingredients %} 
+                      <li>{{ ingredient }}</li>
+                    {% endfor %} 
+                    </ul>
+                  </div>
+                  {% endif %}
+              </div>
+              <div class="method-container">
+                  <h2>Method</h2>
+                  {{ article.content }}
+              </div>
           </div>
 
         {%- when 'share' -%}
+<!--
           <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
@@ -89,13 +119,13 @@
             </share-button>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
           </div>
+-->
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="element-margin center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+  <div class="element-margin center all-button">
+    <a href="{{ blog.url }}" class="clear-button article-template__link link animate-arrow{% if blog.comments_enabled? == false %} spaced-section{% endif %}">
+      All Recipes
     </a>
   </div>
   {%- if blog.comments_enabled? -%}
@@ -242,6 +272,40 @@
       </div>
   </div>
   {%- endif -%}
+    
+  {% assign current_found = false %}
+    {% assign done = false %}
+    {% for a in blog.articles %}
+    	{% if current_found and done == false %}
+    		{% assign next_article = a %}
+    		{% assign done = true %}
+    	{% endif %}
+    	{% unless done %}
+    		{% if a.id == article.id %}
+    			{% assign current_found = true %}
+    		{% else %}
+    			{% assign prev_article = a %}
+    		{% endif %}
+    	{% endunless %}
+    {% endfor %}
+
+    <ul class="blog-buttons">
+        {% if prev_article %}
+            <li class="nextPreviousBtn">
+              <a href="{{ prev_article.url }}">
+                Previous Recipe
+              </a>
+            </li>
+        {% endif %}
+
+        {% if next_article %}
+            <li class="nextPreviousBtn">
+              <a href="{{ next_article.url }}">
+                Next Recipe	
+              </a>
+            </li>
+        {% endif %}
+    </ul>
 </article>
 
 <script type="application/ld+json">

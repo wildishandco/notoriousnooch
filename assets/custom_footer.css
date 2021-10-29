@@ -1,3 +1,9 @@
+#shopify-section-footer {
+    position: fixed;
+    bottom: 0;
+    left:0;
+}
+
 footer.footer {
 	background-color: var(--pink);
 }
@@ -20,9 +26,9 @@ footer.footer .footer-title {
 }
 footer.footer #footer-nooch-man {
 	position: absolute;
-	max-width: 200px;
+	width: 250px;
 	left: 50px;
-    bottom: 20px;
+    bottom: -20px;
 }
 footer.footer .footer-block--newsletter {
 	justify-content: flex-start;
@@ -92,9 +98,19 @@ footer.footer .footer-links ul li a {
 	text-transform: uppercase;
 	line-height: 1;
 	display: block;
+    transition: .5s;
 }
-footer.footer .footer-links ul li a img {
+footer.footer .footer-links ul li a:hover {
+    color: var(--darkpink);
+}
+footer.footer .footer-links ul li a:hover svg * {
+    fill: var(--darkpink);
+}
+footer.footer .footer-links ul li a svg {
 	width: 30px;
+}
+footer.footer .footer-links ul li a svg * {
+    transition: .5s;
 }
 
 

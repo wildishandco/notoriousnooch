@@ -1,12 +1,13 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{{ 'custom_blog.css' | asset_url | stylesheet_tag }}
 
 
-{%- paginate blog.articles by 6 -%}
+<!--{%- paginate blog.articles by 6 -%}-->
 
-  <div class="main-blog page-width">
-    <h1 class="title--primary">{{ blog.title | escape }}</h1>
+  <div class="main-blog">
+    <h1 class="title--primary"><img src="{{ 'nooch-spagetti.gif' | asset_url }}"/>{{ blog.title | escape }}</h1>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
@@ -20,7 +21,7 @@
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
   </div>
-{%- endpaginate -%}
+<!--{%- endpaginate -%}-->
 
 {% schema %}
 {
