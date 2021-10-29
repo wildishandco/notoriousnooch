@@ -4,9 +4,13 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "story": {
+      "type": "story"
     }
   },
   "order": [
-    "main"
+    "main",
+    "story"
   ]
 }
