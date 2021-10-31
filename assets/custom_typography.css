@@ -31,7 +31,8 @@
 h1.article-template__title,
 .article-template__content h2,
 footer.footer .footer-links ul li a,
-a.clear-button {
+a.clear-button,
+ul.blog-buttons li a {
   font-family: "Balgin";
 }
 
@@ -39,7 +40,9 @@ a.clear-button {
 footer.footer .footer-title h3,
 .home-blog h3, 
 body.product h1.product__title,
-.home-blog .recipes-slider span {
+.home-blog .recipes-slider span,
+.story-header p,
+.main-page-content h1 {
   font-family: "Thunder";
   text-transform: uppercase;
 }
@@ -101,7 +104,9 @@ body.product fieldset.product-form__input .form__label,
 .ingredients-container ul li,
 .contact-container .contact-right form label,
 .contact-container .contact-right form input,
-.contact-container .contact-right form label span {
+.contact-container .contact-right form label span,
+table tr td,
+table tr td i{
     font-family: ITCAvantGardeGothicStd;
 }
 h1,

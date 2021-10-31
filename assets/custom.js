@@ -1,3 +1,32 @@
+//FOOTER 
+jQuery(document).ready(function(){
+    footerHeight();
+    jQuery(window).resize(function(){
+        footerHeight();
+    });
+});
+
+function footerHeight() {
+    var footerHeight = $('footer').height();
+    jQuery('body.gradient').css('padding-bottom', footerHeight);
+}
+
+//BLOG
+
+jQuery(document).ready(function(){
+    var distance = jQuery('.article-template__content').offset().top,
+    $window = jQuery(window);
+
+    $window.scroll(function() {
+        if ( $window.scrollTop() >= distance ) {
+            jQuery('.article-template__hero-container').hide();
+        } else {
+            jQuery('.article-template__hero-container').show();
+        }
+    });
+})
+
+
 gsap.registerPlugin(ScrollTrigger)
 
 //CART MODAL
@@ -113,8 +142,6 @@ jQuery(document).mousemove(function(event){
 
 
 
-
-
 let container = document.getElementById("container");
 
 gsap.to(container, {
@@ -180,6 +207,8 @@ window.addEventListener("load", function() {
 
 
 });
+
+
 
 
 

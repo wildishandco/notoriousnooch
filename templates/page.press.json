@@ -6,13 +6,13 @@
       }
     },
     "story": {
-      "type": "story",
+      "type": "press",
       "settings": {
       }
     }
   },
   "order": [
     "main",
-    "story"
+    "press"
   ]
 }

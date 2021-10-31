@@ -155,7 +155,7 @@ body.blog .logo.alt {
     top: 0;
     width:100%;
     height: 100vh;
-    z-index: -1;
+    z-index: -2;
 }
 .article-template .article-template__hero-container .article-template__hero-adapt {
     padding-bottom: 100vh;
