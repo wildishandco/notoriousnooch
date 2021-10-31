@@ -213,6 +213,7 @@ body.product .product-form__quantity .quantity .quantity__input {
 /*LEFT HAND SIDE*/
 body.product .product .grid__item {
     padding-bottom: 0;
+    background-color: var(--pink);
 }
 body.product .product__media-item .media {
     height: 100vh;
@@ -297,25 +298,10 @@ body.product span.product__media-icon.motion-reduce {
 .product-ingredients p.italic {
     font-style: italic;
 }
+
 .product-ingredients table {
-    border: 0;
-    box-shadow: none;
-    width: 100%;
     margin-bottom: 250px;
     margin-top: 30px;
-}
-.product-ingredients table thead tr td {
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-}
-
-.product-ingredients table tr td {
-    border: 0;
-    color: var(--yellow);
-    padding: 5px 10px 5px 0;
-    text-align: right;
 }
 .product-ingredients table tr td:nth-child(1) {
     padding-right: 20px;
@@ -325,6 +311,9 @@ body.product span.product__media-icon.motion-reduce {
 .product-ingredients table tr td {
     text-align: right;
     line-height: 1;
+}
+.product-ingredients table tr td {
+    text-align: right
 }
 
 

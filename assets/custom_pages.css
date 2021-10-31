@@ -1,0 +1,118 @@
+/*STORY*/
+
+.story-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    top: 0!important;
+    background-color: var(--green);   
+}
+.story-header p {
+    color: var(--yellow);
+    width: 300%;
+    font-size: 69vw;
+    line-height: 0.75;
+    margin: 0;
+}
+
+.content-container {
+    width: 95%;
+    margin: auto;
+    display: block;
+}
+
+.story-intro p {
+    font-family: 'Thunder';
+    width: 800px;
+    font-size: 15rem;
+    line-height: 0.85;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 0;
+}
+.story-intro p.right {
+    margin-left: auto;
+    text-align: right;
+    position: relative;
+}
+/*
+.story-intro p.right img {
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    width: 500px;
+    height: auto;
+    max-height: none;
+}
+*/
+#tumbleweed {
+    width: 200px;
+}
+
+
+
+
+
+
+.story-bottom {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 100px;
+/*
+    padding-left: 5%;
+    padding-right: 5%;
+*/
+    padding-top: 100px;
+}
+.story-bottom p {
+    position: relative;
+    z-index: 2;
+    font-family: "Balgin";
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    margin: 70px auto;
+    max-width: 600px;
+}
+.story-bottom .nooch-packets {
+    position: absolute;
+    bottom: -200px;
+    max-width: 500px;
+}
+.story-bottom .nooch-packets#bacon {
+    right: 20px;
+}
+.story-bottom .nooch-packets#cheese {
+    left: 20px;
+    bottom: -250px;
+}
+.story-bottom .marquee {
+    position: absolute;
+    bottom: 0;
+    
+}
+
+/*GENERIC PAGE E.G. PRIVACY*/
+
+.main-page-content {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
+}
+.main-page-content h1 {
+    font-size: 20rem;
+    line-height: 0.8;
+    margin-bottom: 0;
+}
+.main-page-content .rte a {
+    color: var(--yellow);
+}
+.main-page-content .rte a:hover {
+    color: var(--pink);
+}
+
+

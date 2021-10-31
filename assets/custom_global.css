@@ -106,3 +106,28 @@ body.blog main#MainContent {
         font-size: 2rem;
     }
 }
+
+/*TABLE*/
+
+table {
+    border: 0 !important;
+    box-shadow: none !important;
+    width: 100%;
+    
+}
+table thead tr td {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+table tr td,
+table tr th,
+table:not([class]) td,
+table:not([class]) th {
+    border: 0;
+    color: var(--yellow);
+    padding: 5px 10px 5px 0;
+    
+}
