@@ -191,6 +191,9 @@
 #press-content .partner-container.quote .content-container {
     height: auto;
     flex: 0 95%;
+    max-height: 100%;
+    overflow: auto;
+    align-content: flex-start;
 }
 #press-content .partner-container.quote p {
     color: var(--green);
@@ -200,4 +203,17 @@
     line-height: 0.75;
     margin: 0;
 }
-
+#press-content .partner-container.quote .content-container .quote-star {
+    position: relative;
+    margin-bottom: 30px;
+}
+#press-content .partner-container.quote .content-container .quote-star #quote-star {
+    position: absolute;
+    width: 30px;
+    top: 23px;
+    left: 20px;
+}
+#press-content .partner-container.quote .content-container .quote-star #quote-star-bg {
+    width: 75px;
+    height: 75px;
+}
