@@ -2,19 +2,67 @@ gsap.registerPlugin(ScrollTrigger)
 
 let presscontent = document.getElementById("press-content");
 
-gsap.to(presscontent, {
-  x: () => `${-(presscontent.scrollWidth - document.documentElement.clientWidth)}px`,
-  ease: "none",
-  scrollTrigger: {
-    trigger: presscontent,
-    invalidateOnRefresh: true,
-    pin: true,
-    scrub: 0.2,
-    start: "top top",
-    end: () => `+=${presscontent.scrollWidth - document.documentElement.clientWidth}`
-  }
+function pressScrolling() {
+
+    gsap.to(presscontent, {
+      x: () => `${-(presscontent.scrollWidth - document.documentElement.clientWidth)}px`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: presscontent,
+        invalidateOnRefresh: true,
+        pin: true,
+        scrub: 0.2,
+        start: "top top",
+        end: () => `+=${presscontent.scrollWidth - document.documentElement.clientWidth}`
+      }
+    });
+}
+
+jQuery(document).ready(function(){
+    
+    if(jQuery(window).width() > 991) {
+        pressScrolling(); 
+    } else {
+//        do nothing
+    }
+    
+    var currentWidth = jQuery(window).width();
+    
+    jQuery(window).resize(function(){
+        
+        if((jQuery(window).width() > 990) && (currentWidth <= 990)) {
+            
+            pressScrolling(); 
+
+        } else {
+            
+            TweenMax.killTweensOf(presscontent);
+            //do nothing
+        }
+        
+        currentWidth = jQuery(window).width();
+        
+        
+
+    });
+    
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TweenMax.killTweensOf(myObject);
 
 
 //let storyheader = document.getElementById("story-header");
