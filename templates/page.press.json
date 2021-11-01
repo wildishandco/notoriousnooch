@@ -4,9 +4,15 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "press": {
+      "type": "press",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "press"
   ]
-}
+}  

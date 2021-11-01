@@ -1,19 +1,38 @@
 gsap.registerPlugin(ScrollTrigger)
 
-let storyheader = document.getElementById("story-header");
+let presscontent = document.getElementById("press-content");
 
-gsap.to(storyheader, {
-  x: () => `${-(storyheader.scrollWidth - document.documentElement.clientWidth)}px`,
+gsap.to(presscontent, {
+  x: () => `${-(presscontent.scrollWidth - document.documentElement.clientWidth)}px`,
   ease: "none",
   scrollTrigger: {
-    trigger: storyheader,
+    trigger: presscontent,
     invalidateOnRefresh: true,
     pin: true,
     scrub: 0.2,
     start: "top top",
-    end: () => `+=${storyheader.scrollWidth - document.documentElement.clientWidth}`
+    end: () => `+=${presscontent.scrollWidth - document.documentElement.clientWidth}`
   }
 });
+
+
+
+//let storyheader = document.getElementById("story-header");
+//
+//gsap.to(storyheader, {
+//  x: () => `${-(storyheader.scrollWidth - document.documentElement.clientWidth)}px`,
+//  ease: "none",
+//  scrollTrigger: {
+//    trigger: storyheader,
+//    invalidateOnRefresh: true,
+//    pin: true,
+//    scrub: 0.2,
+//    start: "top top",
+//    end: () => `+=${storyheader.scrollWidth - document.documentElement.clientWidth}`
+//  }
+//});
+
+
 
 jQuery(document).ready(function(){
     

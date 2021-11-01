@@ -32,7 +32,8 @@ h1.article-template__title,
 .article-template__content h2,
 footer.footer .footer-links ul li a,
 a.clear-button,
-ul.blog-buttons li a {
+ul.blog-buttons li a,
+#press-content .partner-container .content-container h2 {
   font-family: "Balgin";
 }
 
@@ -42,7 +43,8 @@ footer.footer .footer-title h3,
 body.product h1.product__title,
 .home-blog .recipes-slider span,
 .story-header p,
-.main-page-content h1 {
+.main-page-content h1,
+.press-title {
   font-family: "Thunder";
   text-transform: uppercase;
 }
@@ -69,7 +71,8 @@ footer.footer .footer-block--newsletter h2.footer-block__heading,
 .lettering span,
 .error-content h1,
 .main-blog h1,
-.contact-container .contact-right h1 {
+.contact-container .contact-right h1,
+#press-content .partner-container.quote p {
     font-family: "Thunder";
 }
 .lettering.pink {

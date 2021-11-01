@@ -1,47 +1,58 @@
-{{ 'custom_pages.css' | asset_url | stylesheet_tag }}
 
-<div class="story-header" id="story-header">
-    <p>We Love Nooch</p>
-</div>
-<div class="story-intro">
-    <div class="content-container">
-        <p class="right">
-            No really, we LOVE nooch
-<!--            <img src="{{ 'Nooch_CheeseGuy_yellow_outline.gif' | asset_url }}"/>-->
-        </p>
-        <p>We began wondering why the nooch landscape was so barren, and generic.</p>
+
+
+<section class="wrapper trade-wrapper">
+    
+    <h1 class="press-title">{{ page.title }}</h1>
+
+    <div class="page-template-trade" >
+
+        <div class="content" id="press-content">
+            
+            {% for screenshot in page.metafields.accentuate.screenshot %} 
+                <div class="partner-container pr">
+                    
+                    {% for screenshot in page.metafields.accentuate.screenshot[forloop.index0] %} 
+                    <div class="image-container" style="background-image:url('{{ screenshot.src }}')">
+<!--                            <img class="screenshot" src="{{ screenshot.src }}"/>-->
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="content-container">
+                        <h2 class="title">{{ page.metafields.accentuate.title[forloop.index0]}}</h3>
+                        <p class="firstline">{{ page.metafields.accentuate.first_line[forloop.index0]}}...</p>
+                        <p class="">{{ page.metafields.accentuate.author[forloop.index0]}}</p>
+                        <p class="">{{ page.metafields.accentuate.publication[forloop.index0]}}</p>
+                        <p class=""><a class="clear-button" href="{{ page.metafields.accentuate.link[forloop.index0 ]}}" target="_blank">Read More</a></p>
+                    </div>
+                        
+                </div>
+            
+                {% if page.metafields.accentuate.quote[forloop.index0] != blank %}
+                    
+                    <div class="partner-container pr quote">
+
+                        <div class="content-container">
+
+                            <p class="">{{ page.metafields.accentuate.quote[forloop.index0]}}</p>
+
+                        </div>
+
+                    </div>
+
+                {% endif %} 
+
+            {% endfor %} 
+            
+        </div>
+
     </div>
-    
-    <img id="tumbleweed" src="{{ 'tumbleweed.png' | asset_url}}"/> 
-    
-</div>
-<div class="story-main">
-    <p>So we began experimenting with flavouring nooch in our studio. Our first experiments with garlic powder and off-the-shelf seasonings were not cutting the mustard (we didn’t try mustard). Then we discovered a top yeasty secret. You can flavour nooch with nooch!</p>
-</div>
-<!--
-    
-
-    <p>We take nooch, toast it until the flavour profiles develop and then add it back into normal nooch. Voila, nooch flavoured nooch.</p>
--->
-
-
-    
-    
-    <div class="story-bottom">
-        
-        <p>The rest is history, well its not because its still happening. Just buy it ok? Then we can retire in our nooch mansions driving Nooch-mobiles, please?</p>
-        <img class="nooch-packets" id="cheese" src="{{ 'cheesy-nooch.png' | asset_url}}"/>
-        <img class="nooch-packets" id="bacon" src="{{ 'bacon-nooch.png' | asset_url}}"/>
-        <p><a href="/shop/nooch" class="clear-button">Shop Now</a></p>
-        {% render 'marquee' %}
-    </div>
-    
-    
-    
-    
-
+  
+</section>
 
 {{ 'custom-pages.js' | asset_url | script_tag }}
+
+
 
 
 
