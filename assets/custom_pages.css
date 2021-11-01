@@ -115,4 +115,87 @@
     color: var(--pink);
 }
 
+/*PRESS*/
+
+.wrapper.trade-wrapper {
+    position: relative;
+}
+.press-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 30vw;
+    text-align: right;
+    color: var(--yellow);
+    position: absolute;
+    z-index: 1;
+    line-height: 0.6;
+    padding-right: 10px;
+    margin-top: 0px;
+    right: 0;
+}
+#press-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    top: 0!important;
+}
+
+#press-content .partner-container {
+    width:100%;
+    display: flex;
+    height: 100vh;
+}
+#press-content .partner-container .image-container {
+    flex: 0 65%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: top;
+}
+#press-content .partner-container .content-container {
+    flex: 0 35%;
+    display: flex;
+    align-content: flex-end;
+    padding: 30px;
+}
+#press-content .partner-container .content-container h2 {
+    text-align: left;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#press-content .partner-container .content-container p {
+    text-align: left;
+    width: 100%;
+    margin: 0 0 0px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+#press-content .partner-container .content-container p.firstline {
+    margin-bottom: 20px;
+}
+#press-content .partner-container .content-container p a {
+    margin: 30px 0 0px 0;
+}
+#press-content .partner-container.quote {
+    background-color: var(--pink);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#press-content .partner-container.quote .content-container {
+    height: auto;
+    flex: 0 95%;
+}
+#press-content .partner-container.quote p {
+    color: var(--green);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20rem;
+    line-height: 0.75;
+    margin: 0;
+}
 
