@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger)
 
+
+//PRESS SIDE SCROLLING
 let presscontent = document.getElementById("press-content");
 
 function pressScrolling() {
@@ -31,30 +33,16 @@ jQuery(document).ready(function(){
     jQuery(window).resize(function(){
         
         if((jQuery(window).width() > 990) && (currentWidth <= 990)) {
-            
-            pressScrolling(); 
-
+            pressScrolling();
         } else {
-            
             TweenMax.killTweensOf(presscontent);
-            //do nothing
         }
-        
         currentWidth = jQuery(window).width();
-        
-        
-
     });
     
 });
 
-
-
-
-
-
-
-
+//PRESS SIDE SCROLLING --- END
 
 
 

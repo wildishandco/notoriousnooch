@@ -75,8 +75,7 @@ body.blog .logo.alt {
     font-size: 1.5rem;
     line-height: 1.6;
     color: var(--yellow);
-    margin-bottom: 40px;
-    
+    margin-bottom: 20px;
 }
 .blog-articles .blog-articles__article.article a.article-content .article-card__info .article-card__header {
     margin-bottom: 0;
@@ -95,9 +94,36 @@ body.blog .logo.alt {
     margin: auto;
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+.blog-articles .blog-articles__article.article a.article-content .article-card__info:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    z-index: 1;
 }
 .blog-articles .blog-articles__article.article a.article-content .article-card__info .article-card__excerpt {
     display: none;
+}
+.blog-articles .blog-articles__article.article a.article-content .article-card__info button {
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border: 0;
+    text-decoration: underline;
+    text-underline-position: under;
+    font-size: 2rem;
+}
+.blog-articles .blog-articles__article.article a.article-content .article-card__info button:hover {
+    cursor: pointer;
+    background-color: transparent;
+}
+.blog-articles .blog-articles__article.article a.article-content .article-card__info .article-card__info-container {
+    z-index: 2;
 }
 
 
@@ -124,9 +150,13 @@ body.blog .logo.alt {
     bottom: auto;
     margin: 0;
 }
+.blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info:before {
+    display: none;
+}
 .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info .article-card__info-container {
     position: sticky;
     bottom: 0;
+    text-align: left;
 }
 
 .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info h2 {
@@ -138,10 +168,97 @@ body.blog .logo.alt {
     font-size: 1.5rem;
     line-height: 1.6;
     color: var(--yellow);
-    margin-bottom: 40px;
     display: block;
 }
+.blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info button {
+    margin-bottom: 50px;
+    border: 1px solid var(--yellow);
+    text-decoration: none;
+    font-size: 3rem;
+}
+.blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info button:hover {
+    border: 1px solid var(--pink);
+    background-color: var(--pink);
+}
 
+@media (max-width: 991px) {
+    .main-blog h1 {
+        margin-top: 150px;
+    }
+    .blog-articles {
+        padding-top: 170px;
+    }
+    .blog-articles .blog-articles__article.article {
+        flex: 0 50%;
+    }
+    .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info button {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-blog h1 img {
+        height: 120px;
+    }
+    .blog-articles .blog-articles__article.article {
+        flex: 0 100%;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__image-wrapper .article-card__image,
+    .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__image-wrapper .article-card__image {
+        padding-bottom: 30rem;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .blog-articles .blog-articles__article.article:nth-child(1) a.article-content {
+        flex-wrap: wrap;
+    }
+    .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__image-wrapper {
+        flex: 0 100%;
+    }
+    .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info {
+        flex: 0 100%;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info {
+        padding-top: 50px;
+    }
+    .blog-articles .blog-articles__article.article:nth-child(1) a.article-content .article-card__info h2 {
+        line-height: 3rem;
+        font-size: 3rem;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info {
+        position: relative;
+        background-color: var(--green);
+        text-align: left;
+        padding-bottom: 0;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info h2 {
+        text-align: left;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info:before {
+        display: none;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info button {
+        border: 1px solid var(--yellow);
+        text-decoration: none;
+        margin-bottom: 50px;
+    }
+    .blog-articles .blog-articles__article.article a.article-content .article-card__info .article-card__excerpt {
+        display: block;
+    }
+}
+@media (max-width: 500px) {
+    .main-blog h1 {
+        margin-top: 100px;
+    }
+    .blog-articles {
+        padding-top: 120px;
+    }
+    .main-blog h1 img {
+        display: none;
+    }
+}
 
 
 /*BLOG ITEM*/
@@ -170,6 +287,7 @@ body.blog .logo.alt {
 .article-template__content .content-left {
     position: sticky;
     top: 50px;
+    padding-right: 20px;
 }
 .article-template__content h2 {
     text-transform: uppercase;
@@ -269,8 +387,47 @@ ul.blog-buttons li a:hover {
     background-color: #a90753;
 }
 
-
-
+@media (max-width: 991px) {
+    .article-template__content {
+        padding: 30px 70px 70px 70px;
+    }
+}
+@media (max-width: 767px) {
+    h1.article-template__title {
+        font-size: 10vw;
+    }
+    .article-template__content {
+        flex-wrap: wrap;
+    }
+    .ingredients-container,
+    .method-container {
+        flex: 0 100%;
+    }
+    .article-template__content {
+        padding: 30px 50px 70px 50px;
+    } 
+    ul.blog-buttons {
+        flex-wrap: wrap;
+    }
+    ul.blog-buttons li {
+        flex: 0 100%;
+    }
+    ul.blog-buttons li a {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .blog-header-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    h1.article-template__title {
+        font-size: 12vw;
+    }
+    .article-template__content {
+        padding: 0px 5% 50px 5%;
+    }
+}
 
 
 
