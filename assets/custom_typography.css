@@ -32,8 +32,11 @@ h1.article-template__title,
 .article-template__content h2,
 footer.footer .footer-links ul li a,
 a.clear-button,
-ul.blog-buttons li a,
-#press-content .partner-container .content-container h2 {
+ul.blog-buttons li a, 
+#press-content .partner-container.trade-partners ul.trade-buttons li a, 
+#press-content .partner-container .content-container h2,
+#press-content .partner-container.trade-partners h2,
+#press-content .partner-container.first-container p a {
   font-family: "Balgin";
 }
 
@@ -109,7 +112,8 @@ body.product fieldset.product-form__input .form__label,
 .contact-container .contact-right form input,
 .contact-container .contact-right form label span,
 table tr td,
-table tr td i{
+table tr td i, 
+#press-content .partner-container.first-container p span {
     font-family: ITCAvantGardeGothicStd;
 }
 h1,

@@ -284,3 +284,230 @@
         top: -50px;
     }
 }
+
+/*TRADE */
+
+#shopify-section-template--15109231050957__main {
+    display: none;
+}
+
+.wrapper.trade-wrapper.trade {
+    margin-top: 0;
+}
+#press-content .partner-container.trade-partners {
+    width: 50%;
+}
+#press-content .partner-container.trade-partners {
+    height: 100vh;
+    background-color: var(--pink);
+    position: relative;
+    padding: 50px 50px 120px 50px;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+#press-content .partner-container.trade-partners h2, 
+#press-content .partner-container.trade-partners p {
+    color: var(--green);
+    text-align: center;
+    width: 100%;
+}
+#press-content .partner-container.trade-partners h2 {
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+}
+#press-content .partner-container.trade-partners p {
+    margin-top: 5px;
+    line-height: 1.5;
+    max-width: 600px;
+}
+#press-content .partner-container.trade-partners:nth-child(3) {
+    background-color:#005861;
+}
+#press-content .partner-container.trade-partners:nth-child(3) h2, 
+#press-content .partner-container.trade-partners:nth-child(3) p {
+    color: var(--yellow);
+}
+#press-content .partner-container.trade-partners img {
+    max-height: 280px;
+}
+#press-content .partner-container.trade-partners ul.trade-buttons {
+    display: block;
+    padding-left: 0;
+    margin: 10px 0 0 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+#press-content .partner-container.trade-partners ul.trade-buttons li {
+    list-style-type: none;
+    margin: 10px 0 10px 0;
+    width: auto;
+}
+#press-content .partner-container.trade-partners ul.trade-buttons li a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--darkpink);
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    font-size: 2.6rem;
+    padding: 15px 50px;
+    min-width: 350px;
+    transition: .5s;
+}
+#press-content .partner-container.trade-partners ul.trade-buttons li a:hover {
+    background-color: #a90753;
+}
+#press-content .partner-container.trade-partners h2 {
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+#press-content .partner-container.first-container {
+    padding-top: 220px;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+#press-content .partner-container.first-container:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    bottom:0;
+    left: 0;
+    z-index: 2;
+}
+#press-content .partner-container.first-container h1 {
+    position: relative;
+    width: 100%;
+    text-align: right;
+}
+#press-content .partner-container.first-container p {
+    font-size: 3rem;
+    line-height: 1.4;
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 75%;
+}
+#press-content .partner-container.first-container h1,
+#press-content .partner-container.first-container p {
+    z-index: 4;
+    position: relative;
+}
+#press-content .partner-container.first-container p a {
+    margin-top: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#press-content .partner-container.first-container p a:hover {
+    color: var(--pink);
+}
+#press-content .partner-container.first-container .images {
+    position: absolute;
+    z-index: 1;
+    left: -15%;
+    width: 1050px;
+    top: -180px;
+    transform: rotate(-5deg); 
+}
+#press-content .partner-container.first-container .images img {
+    width: 1050px;
+    position: absolute;
+    z-index: 2;
+}
+#press-content .partner-container.first-container .images img:nth-child(2) {
+    left: 300px;
+    top: -70px;
+    z-index: 1;
+}
+
+@media (max-width: 1199px) {
+    #press-content .partner-container.first-container .images img {
+        width: 750px;
+    }
+}
+@media (max-width: 991px) {
+    #press-content .partner-container.first-container {
+        padding-bottom: 50px;
+    }
+    #press-content .partner-container.first-container p {
+        font-size: 2.4rem;
+    }
+    #press-content .partner-container.trade-partners img {
+        max-height: 200px;
+    }
+    #press-content .partner-container.trade-partners ul.trade-buttons {
+        flex-wrap: wrap;
+    }
+    #press-content .partner-container.trade-partners ul.trade-buttons li {
+        flex: 0 100%;
+    }
+    #press-content .partner-container.first-container .images img {
+        width: 550px;
+    } 
+}
+@media (max-width: 767px) {
+    #press-content .partner-container.first-container {
+        padding-top: 170px;
+        min-height: 100vh;
+    }
+    #press-content .partner-container.trade-partners {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    #press-content .partner-container.trade-partners ul.trade-buttons {
+        position: relative;
+        margin-top: 30px;
+    }
+    #press-content .partner-container.trade-partners h2,
+    #press-content .partner-container.trade-partners p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #press-content .partner-container.trade-partners img {
+        max-width: 95%;
+    }
+}
+@media (max-width: 600px) {
+    #press-content .partner-container.first-container p {
+        max-width: 100%;
+    }
+    #press-content .partner-container.first-container .images img {
+        width: 500px;
+    }
+    #press-content .partner-container.first-container .images img:nth-child(2) {
+        left: 200px;
+    }
+    #press-content .partner-container.first-container .images {
+        left: -35%;
+    }
+}
+@media (max-width: 500px) {
+    #press-content .partner-container.first-container h1 {
+        text-align: center;
+    }
+    #press-content .partner-container.first-container {
+        padding-top: 200px;
+    }
+    #press-content .partner-container.first-container .images {
+        top: auto;
+        bottom:0;
+        height: 500px;
+        transform: rotate(25deg);
+        left: auto;
+        right: -5%;
+        width: 500px;
+    }
+    #press-content .partner-container.first-container p {
+        font-size: 2rem;
+    }
+}
