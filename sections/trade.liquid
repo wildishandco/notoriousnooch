@@ -1,60 +1,41 @@
 
-{{ 'custom_pages.css' | asset_url | stylesheet_tag }}
+<!--{{ 'custom_pages.css' | asset_url | stylesheet_tag }}-->
 
+<section class="wrapper trade-wrapper trade">
 
-<section class="wrapper trade-wrapper">
-    
-    <h1 class="press-title">{{ page.title }}</h1>
-
-    <div class="page-template-trade" >
-
-        <div class="content" id="press-content">
-            
-            {% for screenshot in page.metafields.accentuate.screenshot %} 
-                <div class="partner-container pr">
-                    
-                    {% for screenshot in page.metafields.accentuate.screenshot[forloop.index0] %} 
-                    <div class="image-container" style="background-image:url('{{ screenshot.src }}')">
-<!--                            <img class="screenshot" src="{{ screenshot.src }}"/>-->
-                    </div>
-                    {% endfor %}
-                    
-                    <div class="content-container">
-                        <h2 class="title">{{ page.metafields.accentuate.title[forloop.index0]}}</h3>
-                        <p class="firstline">{{ page.metafields.accentuate.first_line[forloop.index0]}}...</p>
-                        <p>{{ page.metafields.accentuate.author[forloop.index0]}}</p>
-                        <p>{{ page.metafields.accentuate.publication[forloop.index0]}}</p>
-                        <p><a class="clear-button" href="{{ page.metafields.accentuate.link[forloop.index0 ]}}" target="_blank">Read More</a></p>
-                    </div>
-                        
-                </div>
-            
-                {% if page.metafields.accentuate.quote[forloop.index0] != blank %}
-                    
-                    <div class="partner-container pr quote">
-
-                        <div class="content-container">
-                            
-                            <div class="quote-star">
-                                <img id="quote-star" src="{{ 'quotes.png' | asset_url }}"/>
-                                <img id="quote-star-bg" src="{{ 'green-star-menu.svg' | asset_url }}"/>
-                            </div>
-
-                            <p>{{ page.metafields.accentuate.quote[forloop.index0]}}</p>
-
-                        </div>
-
-                    </div>
-
-                {% endif %} 
-
-            {% endfor %} 
-            
+    <div class="page-template-trade" id="press-content">
+        <div class="trade-left partner-container pr first-container">
+            <h1 class="press-title">{{ page.title }}</h1>
+            <p>{{page.content}}<br/><a href="#">Find out more about our partners</a></p>
+            <div class="images">
+                <img src="{{ 'cheesy-nooch.png' | asset_url }}"/>
+                <img src="{{ 'bacon-nooch.png' | asset_url }}"/>
+            </div>
         </div>
+
+        {% for name in page.metafields.accentuate.name %} 
+            <div class="page-template-trade partner-container trade-partners">
+              {% for image in page.metafields.accentuate.logo[forloop.index0] %} 
+                <img src="{{ image.src }}"/>
+              {% endfor %}
+              <h2>{{ name }}</h2>
+              <p>{{ page.metafields.accentuate.detail[forloop.index0]}}</p>
+              <ul class="trade-buttons">
+                {% if page.metafields.accentuate.instagram_link[forloop.index0] != blank %}
+                    <li class="insta"><a href="{{ page.metafields.accentuate.instagram_link[forloop.index0]}}" target="_blank">Instagram</a></li>
+                {% endif %}
+                <li><a href="{{ page.metafields.accentuate.website_link[forloop.index0 ]}}" target="_blank">Website</a></li>
+              </ul> 
+            </div>
+
+        {% endfor %}     
 
     </div>
   
 </section>
+
+
+
 
 {{ 'custom-pages.js' | asset_url | script_tag }} 
 

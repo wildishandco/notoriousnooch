@@ -5,14 +5,14 @@
       "settings": {
       }
     },
-    "trade": {
-      "type": "trade",
+    "buy": {
+      "type": "buy",
       "settings": {
       }
     }
   },
   "order": [
-    "main", 
-    "trade"
+    "main",
+    "buy"
   ]
 }  
