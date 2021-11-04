@@ -1,8 +1,861 @@
 
 <!--{{ 'custom_pages.css' | asset_url | stylesheet_tag }}-->
 
-<p>buy</p>
 
+<section class="wrapper  map-wrapper">
+  
+  <div>
+    <h1 class="press-title">{{ page.title }}</h1>
+  </div>
+
+  <div class="content">    
+      <div id="map"></div>
+      <div class="location-list">
+        <div class="location-list-inner">
+            <ul>
+                <li id="greenhealthfoods">
+                    <p>Greens Health Foods</p>
+                    <p>Essex</p>
+                </li>
+                <li id="haelancentreltd">
+                    <p>Haelan Centre Ltd</p>
+                    <p>London</p>
+                </li>
+                <li id="naturelle">
+                    <p>Naturelle</p>
+                    <p>Angus</p>
+                </li>
+                <li id="natureslarder">
+                    <p>Natures Larder</p>
+                    <p>Devon</p>
+                </li>
+                <li id="outofthisworld">
+                    <p>Out of This World</p>
+                    <p>Nottingham</p>
+                </li>
+                <li id="peppercorn">
+                    <p>Peppercorn</p>
+                    <p>East Yorkshire</p>
+                </li>
+                <li id="thegrocery">
+                    <p>The Grocery</p>
+                    <p>London</p>
+                </li>
+                <li id="thequalitydelihealthfds">
+                    <p>The Quality Deli &amp; Health Fds</p>
+                    <p>Glasgow</p>
+                </li>
+                <li id="greenbay">
+                    <p>GreenBay</p>
+                    <p>London</p>
+                </li>
+                <li id="thevspot">
+                    <p>The V Spot</p>
+                    <p>Nottingham</p>
+                </li>
+                <li id="sprouthealthfoods">
+                    <p>Sprout Health Foods</p>
+                    <p>Newquay</p>
+                </li>
+                <li id="thevegankind">
+                    <p>TheVeganKind Ltd</p>
+                    <p>Rutherglen</p>
+                </li>
+                <li id="theeigthdaycooperative">
+                    <p>The Eighth Day Co-operative Ltd</p>
+                    <p>Manchester</p>
+                </li>
+                <li id="mightywieners">
+                    <p>Mighty Wieners</p>
+                    <p>Bournemouth</p>
+                </li>
+                <li id="goodproperzero">
+                    <p>Good &amp; Proper Zero</p>
+                    <p>Weston-super-Mare</p>
+                </li>
+            </ul>
+          
+        </div>
+      </div>
+  </div>
+
+  
+</section>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfHhsLrQdptF09nftfN7bQYYrnyPh85Y8&callback=initMap&libraries=&v=weekly" async></script>
+<script>
+    // MAP JS
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: new google.maps.LatLng(54.3914302,-2.9571094),
+    zoom: 6,
+    mapTypeControl: false,
+    scaleControl: false,
+    fullscreenControl: false,
+    streetViewControl: false,
+    styles: [
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#006450"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#006450"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#528e73"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#edb5d2"
+            }
+        ]
+    }
+] 
+  });
+
+  //INFO WINDOW CONTENT  
+  const GreensHealthFoodsContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Greens Health Foods</h2>' +
+    '<div id="bodyContent">' +
+    "<p>37 Rectory Grove, " +
+    "Leigh on Sea, " +
+    "Essex, " +
+    "SS9 2HA </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><img src="{{'nooch-packets.png' | asset_url}}"/><p>Smoky Bacon Nooch</p>" +
+    "<p>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const HaelanCentreLtdContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Haelan Centre Ltd</h2>' +
+    '<div id="bodyContent">' +
+    "<p>41 The Broadway, " +
+    "Crouch End, " +
+    "London, " +
+    "N8 8DT </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const NaturelleContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Naturelle</h2>' +
+    '<div id="bodyContent">' +
+    "<p>59 Castle Street, " +
+    "Forfar, " +
+    "Angus, " +
+    "DD8 3AG </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "</div>" +
+    "</div>" +
+    "</div>";
+  const NaturesLarderContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Natures Larder</h2>' +
+    '<div id="bodyContent">' +
+    "<p>10 Glanvilles Mill, " +
+    "Ivybridge, " +
+    "Devon, " +
+    "PL21 9PS </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "</div>" +
+    "</div>" +
+    "</div>";
+  const OutofThisWorldContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Out of This World</h2>' +
+    '<div id="bodyContent">' +
+    "<p>Villa Street, " +
+    "Beeston, " +
+    "Nottingham, " +
+    "NG9 2NY </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const PeppercornContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Peppercorn</h2>' +
+    '<div id="bodyContent">' +
+    "<p>77-79 Pasture Road, " +
+    "Goole, " +
+    "East Yorkshire, " +
+    "DN14 6BP </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const TheGroceryContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">The Grocery</h2>' +
+    '<div id="bodyContent">' +
+    "<p>Shoreditch, " +
+    "London, " +
+    "E2 8DP </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const TheQualityDeliHealthFdsContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">The Quality Deli &amp; Health Fds</h2>' +
+    '<div id="bodyContent">' +
+    "<p>123 Douglas Street, " +
+    "(off Sauchiehall Street ), " +
+    "Glasgow, " +
+    "G2 4HF </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "</div>" +
+    "</div>" +
+    "</div>";
+  const GreenBayContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">GreenBay</h2>' +
+    '<div id="bodyContent">' +
+    "<p>228 North End Road, " +
+    "West Kensington, " +
+    "W14 9NU </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const TheVSpotContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">The V Spot</h2>' +
+    '<div id="bodyContent">' +
+    "<p>515 Mansfield Road, " +
+    "Sherwood, " +
+    "Nottingham, " +
+    "NG5 2JL </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const SproutHealthFoodsContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Sprout Health Foods</h2>' +
+    '<div id="bodyContent">' +
+    "<p>The Old Printhouse, " +
+    "Crescent Lane, " +
+    "Newquay, " +
+    "TR7 1FZ </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const TheVeganKindLtdContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">TheVeganKind Ltd</h2>' +
+    '<div id="bodyContent">' +
+    "<p>Herschel House, " +
+    "8 Ashton Road, " +
+    "Rutherglen, " +
+    "G73 1UB </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+   const EighthDayContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">The Eighth Day Co-operative Ltd</h2>' +
+    '<div id="bodyContent">' +
+    "<p>111 Oxford Road, " +
+    "Manchester, " +
+    "M1 7DU </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const MightyWienersContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Mighty Wieners</h2>' +
+    '<div id="bodyContent">' +
+    "<p>23 Poole Hill, " +
+    "Bournemouth , " +
+    "BH2 5PW </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+  const GoodProperContentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h2 id="firstHeading" class="firstHeading">Good &amp; Proper Zero</h2>' +
+    '<div id="bodyContent">' +
+    "<p>57 Regent Street, " +
+    "Weston-super-Mare, " +
+    "BS23 1JS </p> " +
+    "<p>Available Flavours:</p> " +
+    "<div class='popup-nooch'><p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/smoky-bacon-nooch.png'/>Smoky Bacon Nooch</p>" +
+    "<p><img src='https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/cheesy-nooch.png'/>Cheesy Immature Nooch</p></div>" +
+    "</div>" +
+    "</div>";
+    
+  const GreensHealthFoodsInfowindow = new google.maps.InfoWindow({
+    content: GreensHealthFoodsContentString,
+  });
+  const HaelanCentreLtdInfowindow = new google.maps.InfoWindow({
+    content: HaelanCentreLtdContentString,
+  });
+  const NaturelleInfowindow = new google.maps.InfoWindow({
+    content: NaturelleContentString,
+    pixelOffset: new google.maps.Size(0, 300)
+  });
+  const NaturesLarderInfowindow = new google.maps.InfoWindow({
+    content: NaturesLarderContentString,
+  });
+  const OutofThisWorldInfowindow = new google.maps.InfoWindow({
+    content: OutofThisWorldContentString,
+  });
+  const PeppercornInfowindow = new google.maps.InfoWindow({
+    content: PeppercornContentString,
+  });
+  const TheGroceryInfowindow = new google.maps.InfoWindow({
+    content: TheGroceryContentString,
+  });
+  const TheQualityDeliHealthFdsInfowindow = new google.maps.InfoWindow({
+    content: TheQualityDeliHealthFdsContentString,
+    pixelOffset: new google.maps.Size(0, 300)
+  });
+  const GreenBayInfowindow = new google.maps.InfoWindow({
+    content: GreenBayContentString,
+  });
+  const TheVSpotInfowindow = new google.maps.InfoWindow({
+    content: TheVSpotContentString,
+  });
+  const SproutHealthFoodsInfowindow = new google.maps.InfoWindow({
+    content: SproutHealthFoodsContentString,
+  });
+  const TheVeganKindLtdInfowindow = new google.maps.InfoWindow({
+    content: TheVeganKindLtdContentString,
+    pixelOffset: new google.maps.Size(0, 300)
+  });
+  const EighthDayInfowindow = new google.maps.InfoWindow({
+    content: EighthDayContentString,
+    pixelOffset: new google.maps.Size(0, 300)
+  });
+  const MightyWienersInfowindow = new google.maps.InfoWindow({
+    content: MightyWienersContentString,
+    pixelOffset: new google.maps.Size(0, 300)
+  });
+  const GoodProperInfowindow = new google.maps.InfoWindow({
+    content: GoodProperContentString,
+    pixelOffset: new google.maps.Size(0, 300)
+  });
+
+  const GreensHealthFoodsMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(51.5425492,0.6530483),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const HaelanCentreLtdMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(51.5797418,-0.1242023),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const NaturelleMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(56.6452272,-2.8890898),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const NaturesLarderMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(50.3889534,-3.9209275),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const OutofThisWorldMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(52.9286623,-1.2161961),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const PeppercornMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(53.7058768,-0.8754522),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const TheGroceryMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(51.5289244,-0.0777682),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const TheQualityDeliHealthFdsMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(55.8651089,-4.263600),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const GreenBayMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(51.4858979,-0.2030304),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const TheVSpotMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(52.9805488,-1.1471443),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const SproutHealthFoodsMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(50.4138702,-5.0840865),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const TheVeganKindLtdMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(55.8329055,-4.2163013),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const EighthDayMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(53.4710639,-2.2376962),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const MightyWienersMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(50.719523,-1.887116),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+  const GoodProperMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(51.3474412,-2.9776988),
+    map,
+    icon: "https://cdn.shopify.com/s/files/1/0529/2461/2804/t/5/assets/location-pin-yellow-small.png",
+  });
+    
+  GreensHealthFoodsMarker.addListener("click", () => {
+    GreensHealthFoodsInfowindow.open({
+      anchor: GreensHealthFoodsMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  HaelanCentreLtdMarker.addListener("click", () => {
+    HaelanCentreLtdInfowindow.open({
+      anchor: HaelanCentreLtdMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  NaturelleMarker.addListener("click", () => {
+    NaturelleInfowindow.open({
+      anchor: NaturelleMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  NaturesLarderMarker.addListener("click", () => {
+    NaturesLarderInfowindow.open({
+      anchor: NaturesLarderMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  OutofThisWorldMarker.addListener("click", () => {
+    OutofThisWorldInfowindow.open({
+      anchor: OutofThisWorldMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  PeppercornMarker.addListener("click", () => {
+    PeppercornInfowindow.open({
+      anchor: PeppercornMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  TheGroceryMarker.addListener("click", () => {
+    TheGroceryInfowindow.open({
+      anchor: TheGroceryMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  TheQualityDeliHealthFdsMarker.addListener("click", () => {
+    TheQualityDeliHealthFdsInfowindow.open({
+      anchor: TheQualityDeliHealthFdsMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  GreenBayMarker.addListener("click", () => {
+    GreenBayInfowindow.open({
+      anchor: GreenBayMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  TheVSpotMarker.addListener("click", () => {
+    TheVSpotInfowindow.open({
+      anchor: TheVSpotMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  SproutHealthFoodsMarker.addListener("click", () => {
+    SproutHealthFoodsInfowindow.open({
+      anchor: SproutHealthFoodsMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  TheVeganKindLtdMarker.addListener("click", () => {
+    TheVeganKindLtdInfowindow.open({
+      anchor: TheVeganKindLtdMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  EighthDayMarker.addListener("click", () => {
+    EighthDayInfowindow.open({
+      anchor: EighthDayMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  MightyWienersMarker.addListener("click", () => {
+    MightyWienersInfowindow.open({
+      anchor: MightyWienersMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  GoodProperMarker.addListener("click", () => {
+    GoodProperInfowindow.open({
+      anchor: GoodProperMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+    
+    const greenhealthfoodsLink = document.getElementById('greenhealthfoods');
+    const haelancentreltdLink = document.getElementById('haelancentreltd');
+    const naturelleLink = document.getElementById('naturelle');
+    const natureslarderLink = document.getElementById('natureslarder');
+    const outofthisworldLink = document.getElementById('outofthisworld');
+    const peppercornLink = document.getElementById('peppercorn');
+    const thegroceryLink = document.getElementById('thegrocery');
+    const thequalitydelihealthfdsLink = document.getElementById('thequalitydelihealthfds');
+    const greenbayLink = document.getElementById('greenbay');
+    const thevspotLink = document.getElementById('thevspot');
+    const sprouthealthfoodsLink = document.getElementById('sprouthealthfoods');
+    const thevegankindLink = document.getElementById('thevegankind');
+    const theeigthdaycooperativeLink = document.getElementById('theeigthdaycooperative');
+    const mightywienersLink = document.getElementById('mightywieners');
+    const goodproperzeroLink = document.getElementById('goodproperzero');
+    
+   greenhealthfoodsLink.addEventListener("click", () => {
+    GreensHealthFoodsInfowindow.open({
+      anchor: GreensHealthFoodsMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  haelancentreltdLink.addEventListener("click", () => {
+    HaelanCentreLtdInfowindow.open({
+      anchor: HaelanCentreLtdMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  naturelleLink.addEventListener("click", () => {
+    NaturelleInfowindow.open({
+      anchor: NaturelleMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  natureslarderLink.addEventListener("click", () => {
+    NaturesLarderInfowindow.open({
+      anchor: NaturesLarderMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  outofthisworldLink.addEventListener("click", () => {
+    OutofThisWorldInfowindow.open({
+      anchor: OutofThisWorldMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  peppercornLink.addEventListener("click", () => {
+    PeppercornInfowindow.open({
+      anchor: PeppercornMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  thegroceryLink.addEventListener("click", () => {
+    TheGroceryInfowindow.open({
+      anchor: TheGroceryMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  thequalitydelihealthfdsLink.addEventListener("click", () => {
+    TheQualityDeliHealthFdsInfowindow.open({
+      anchor: TheQualityDeliHealthFdsMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  greenbayLink.addEventListener("click", () => {
+    GreenBayInfowindow.open({
+      anchor: GreenBayMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  thevspotLink.addEventListener("click", () => {
+    TheVSpotInfowindow.open({
+      anchor: TheVSpotMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  sprouthealthfoodsLink.addEventListener("click", () => {
+    SproutHealthFoodsInfowindow.open({
+      anchor: SproutHealthFoodsMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  thevegankindLink.addEventListener("click", () => {
+    TheVeganKindLtdInfowindow.open({
+      anchor: TheVeganKindLtdMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  theeigthdaycooperativeLink.addEventListener("click", () => {
+    EighthDayInfowindow.open({
+      anchor: EighthDayMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  mightywienersLink.addEventListener("click", () => {
+    MightyWienersInfowindow.open({
+      anchor: MightyWienersMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+  goodproperzeroLink.addEventListener("click", () => {
+    GoodProperInfowindow.open({
+      anchor: GoodProperMarker,
+      map,
+      shouldFocus: false,
+    });
+  });
+    
+}
+
+</script>
 
 
 
