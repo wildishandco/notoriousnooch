@@ -36,7 +36,8 @@ ul.blog-buttons li a,
 #press-content .partner-container.trade-partners ul.trade-buttons li a, 
 #press-content .partner-container .content-container h2,
 #press-content .partner-container.trade-partners h2,
-#press-content .partner-container.first-container p a {
+#press-content .partner-container.first-container p a,
+#map h2#firstHeading {
   font-family: "Balgin";
 }
 

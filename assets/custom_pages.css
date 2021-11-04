@@ -511,3 +511,63 @@
         font-size: 2rem;
     }
 }
+
+
+/*MAP*/
+
+#shopify-section-template--15112822587597__main {
+    display: none;
+}
+
+#map {
+    height: 1000px;
+    flex: 0 70%;
+}
+.wrapper.map-wrapper h1 {
+    font-size: 24vw;
+}
+.wrapper.map-wrapper .content {
+    display: flex;
+}
+.wrapper.map-wrapper .content .location-list {
+    flex: 0 30%;
+}
+.location-list .location-list-inner ul {
+    padding-left: 0;
+}
+.location-list .location-list-inner ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    display: block;
+}
+.location-list .location-list-inner ul li p {
+    margin: 0;
+}
+
+#map h2#firstHeading {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: center
+}
+.popup-nooch img {
+    max-width: 80px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.gm-style .gm-style-iw-c {
+    background-color: var(--darkpink);
+}
+.gm-style .gm-style-iw-d {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
