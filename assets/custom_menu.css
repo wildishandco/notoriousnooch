@@ -41,11 +41,6 @@
 	content: '';
 	height: 30px;
 	width: 30px;
-	background-image: url(images/menu-star.svg);
-	position: absolute;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
 	top: 50%;
 	left: 20px;
 	transform: translateY(-50%);
@@ -63,6 +58,9 @@
 	padding: 0;
 	text-transform: uppercase;
     display: inline;
+}
+.menu-container nav ul li a:hover {
+    color: var(--pink);
 }
 .menu-container nav ul li img {
     width: 40px;

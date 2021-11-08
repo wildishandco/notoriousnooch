@@ -1,42 +1,86 @@
-{{ 'custom_pages.css' | asset_url | stylesheet_tag }}
+<!--{{ 'custom_pages.css' | asset_url | stylesheet_tag }}-->
+{{ 'custom_error.css' | asset_url | stylesheet_tag }}
+{{ 'custom-error.js' | asset_url | script_tag }}
 
-<div class="story-header" id="story-header">
+<div class="story-header panel" id="story-header">
+        
     <p>We Love Nooch</p>
-</div>
-<div class="story-intro">
-    <div class="content-container">
-        <p class="right">
-            No really, we LOVE nooch
-<!--            <img src="{{ 'Nooch_CheeseGuy_yellow_outline.gif' | asset_url }}"/>-->
-        </p>
-        <p>We began wondering why the nooch landscape was so barren, and generic.</p>
+    <img src="{{ 'cheesy-nooch.png' | asset_url }}" class="story-header-image" id="story-header-image-1"/>
+    <img src="{{ 'bacon-nooch.png' | asset_url }}" class="story-header-image" id="story-header-image-2"/>
+<!--
+    <div class="error-bg">
+        <img src="{{ 'cheesy-nooch.png' | asset_url }}" id="error-1" class="error-packet"/>
+        <img src="{{ 'bacon-nooch.png' | asset_url }}" id="error-2" class="error-packet"/>
+        <img src="{{ 'cheesy-nooch.png' | asset_url }}" id="error-3" class="error-packet"/>
+        <img src="{{ 'bacon-nooch.png' | asset_url }}" id="error-4" class="error-packet"/>
+        <img src="{{ 'cheesy-nooch.png' | asset_url }}" id="error-5" class="error-packet"/>
+        <img src="{{ 'bacon-nooch.png' | asset_url }}" id="error-6" class="error-packet"/>
+        <img src="{{ 'cheesy-nooch.png' | asset_url }}" id="error-7" class="error-packet"/>
+        <img src="{{ 'bacon-nooch.png' | asset_url }}" id="error-8" class="error-packet"/>
+        <img src="{{ 'cheesy-nooch.png' | asset_url }}" id="error-9" class="error-packet"/>
+        <img src="{{ 'bacon-nooch.png' | asset_url }}" id="error-10" class="error-packet"/>
+        <img src="{{ 'cheesy-nooch.png' | asset_url }}" id="error-11" class="error-packet"/>
     </div>
+-->
+</div>
+
+<div class="story-pour-intro panel">
+
+    <p>No really, we <span class="pink">LOVE</span> nooch</p>
+    <p>We began wondering why the nooch landscape was so barren, and generic.</p>
+</div>
+
+<div class="story-intro panel tumbleweed">
     
     <img id="tumbleweed" src="{{ 'tumbleweed.png' | asset_url}}"/> 
     
 </div>
-<div class="story-main">
+<div class="story-main story-pour-intro panel">
     <p>So we began experimenting with flavouring nooch in our studio. Our first experiments with garlic powder and off-the-shelf seasonings were not cutting the mustard (we didn’t try mustard). Then we discovered a top yeasty secret. You can flavour nooch with nooch!</p>
 </div>
-<!--
+
+<div class="story-pour-intro panel" id="process">
+
+    <p>We take nooch, toast it until the flavour profiles develop and then add it back into normal nooch.</p>
+    <p>And ... </p>
+</div>
+
+<div class="story-pour">
     
 
-    <p>We take nooch, toast it until the flavour profiles develop and then add it back into normal nooch. Voila, nooch flavoured nooch.</p>
--->
-
 
     
+    <span>
+        <img class="plainnooch" id="plainnooch" src="{{ 'plain-nooch-packet.png' | asset_url }}"/>
+        <div class="dust" style="transform: 10px 10px"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+        <div class="dust"></div>
+    </span>
+    <img class="plainnooch" id="plainnooch2" src="{{ 'plain-nooch-packet.png' | asset_url }}"/>
     
-    <div class="story-bottom">
-        
-        <p>The rest is history, well its not because its still happening. Just buy it ok? Then we can retire in our nooch mansions driving Nooch-mobiles, please?</p>
-        <img class="nooch-packets" id="cheese" src="{{ 'cheesy-nooch.png' | asset_url}}"/>
-        <img class="nooch-packets" id="bacon" src="{{ 'bacon-nooch.png' | asset_url}}"/>
-        <p><a href="/shop/nooch" class="clear-button">Shop Now</a></p>
-        {% render 'marquee' %}
-    </div>
+    <span class="voila">
+        <p>Voila</p>
+        <img class="plainnooch" id="cheesenooch" src="{{ 'bacon-nooch-packet.png' | asset_url }}"/>
+    </span>
     
+
     
+</div>
+<div class="story-pour-intro panel history">
+
+    <p>The rest is history...</p>
+    <p>well its not because its still happening. Just buy it ok? Then we can retire in our nooch mansions driving Nooch-mobiles, please?</p>
+    <p><a href="/shop/nooch" class="clear-button">Shop Now</a></p>
+</div>
+
     
     
 

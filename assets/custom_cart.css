@@ -128,6 +128,7 @@
     line-height: 1.2;
     padding-right: 10px;
     margin:0;
+    color: var(--green);
 }
 .cart-modal .table-items .rest > div .price {
     font-size: 2rem;

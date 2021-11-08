@@ -65,9 +65,63 @@ jQuery(document).ready(function(){
     
     //PRODUCT PRICE
     
+    
+    
+    //ADD PRODUCT TO CART WITHOUT REFRESHING PAGE
+    
+    productVariable();
+    
+    jQuery('fieldset label').click(function(){
+                
+        productVariable();
+        
+    });
+    
+    jQuery('.quantity__button').click(function(){
+                
+        productQuantity();
+        
+    });
+    
+    function productVariable() {
+        setTimeout(function(){
+            
+            var quantityCheckedItem = jQuery('fieldset.quantity-selector').children("input:checked + label").html().trim();
+            var flavourCheckedItem = jQuery('fieldset.flavours').children("input:checked + label").html().trim();
+            var quantityNumber = quantityCheckedItem.match(/\d+/);
+            var selectedString = flavourCheckedItem + ' ' + quantityNumber; 
+            
+            jQuery('.variant-container').each(function(){
+                
+                var selectedVar = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-id').html();
+                
+                var selectedVarPrice = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-cost').html();
+                
+                jQuery('button.mybutton').attr('data-cart-add', selectedVar);
+                jQuery('button.mybutton span.item-price').html(selectedVarPrice);
+                  
+            });
+            
+        }, 500);
+    }
+    
+    function productQuantity() {
+        setTimeout(function(){
+        
+            var quantityValue = jQuery('.quantity__input').val();
+            jQuery('button.mybutton').attr('data-cart-quantity', quantityValue);
+            
+        }, 500);
+    }
+    
    
     
 });
+
+
+
+
+
 
 
 
