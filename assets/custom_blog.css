@@ -285,7 +285,6 @@ body.blog .logo.alt {
     background-color: var(--green);
 }
 .article-template__content .content-left {
-    position: sticky;
     top: 50px;
     padding-right: 20px;
 }
