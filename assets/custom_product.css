@@ -70,7 +70,7 @@ body.product .product-form__input input[type='radio'] + label {
     width:100%;
     text-transform: uppercase;
     font-size: 1.6rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     background-color: transparent;
     transition: .5s;
     border: 1px solid;
@@ -144,6 +144,7 @@ body.product .product-form__buttons button {
     font-size: 2rem;
     padding: 1em 20px;
     margin-bottom: 0;
+    display: block;
     
 }
 body.product .product-form__buttons button .button-price {
@@ -163,6 +164,10 @@ body.product .product-form__buttons button .price--sold-out body.product .produc
 body.product .product-form__buttons button:hover {
     background-color: var(--green);
     box-shadow: none;
+}
+body.product .product-form__buttons button span.item-price-wrapper {
+    display: inline-block;
+    margin-left: 10px;
 }
 
 body.product .product__description {
@@ -255,10 +260,20 @@ body.product .product__media-item img {
     background: linear-gradient(90deg, var(--green) 0%, var(--green) 50%, var(--darkpink) 50%, var(--darkpink) 100%);
 }
 .product__media-list-inner-container.both-selected .ingredients-inner {
-    max-width: 90%;
+    max-width: 75%;
 }
 .product__media-list-inner-container.both-selected .ingredients-inner table tr td:nth-child(1) {
     width:auto;
+}
+.product__media-list-inner-container.both-selected .product-ingredients table thead tr td:nth-child(1) {
+    font-size: 1.8rem;
+    letter-spacing: 2.5px;
+}
+.product__media-list-inner-container.both-selected .product-ingredients table tr td:nth-child(1) {
+    padding-right: 10px;
+}
+.product__media-list-inner-container.both-selected .product-ingredients table tr td:nth-child(3) {
+    padding-right: 0px;
 }
 body.product ul.product__media-list {
     margin-left: 0;
@@ -347,6 +362,31 @@ body.product span.product__media-icon.motion-reduce {
     padding-bottom: 0;
 }
 
+@media (max-width: 1300px) {
+    .product__media-list-inner-container.both-selected .product-ingredients table thead tr td:nth-child(1),
+    .product-ingredients table thead tr td {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    .product__media-list-inner-container.both-selected .product-ingredients table tr td {
+        font-size: 1.2rem;
+    }
+    body.product .product-form__buttons button span.item-price-wrapper {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .product-ingredients > div .ingredients-inner {
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 989px) {
+    
+}
 
 @media (max-width: 767px) {
     body.product .product .product__info-wrapper.grid__item {

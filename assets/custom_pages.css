@@ -113,6 +113,22 @@
     margin:auto;
     bottom: 0;
 }
+#cheesynooch {
+    position: absolute;
+    right:0;
+    margin: auto;
+    bottom: 0;
+    left: 500px;
+    z-index: 1;
+}
+#cheesynoochtwo {
+    position: absolute;
+    right:500px;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
 .voila {
     position: absolute;
     left:0;
@@ -174,7 +190,14 @@
 .tumbleweed {
     margin: 50px 0 75px 0;
 }
-
+.story-main {
+    padding-top: 50px;
+}
+.story-main p {
+    text-transform: none;
+    font-size: 3rem;
+    margin: 20px auto;
+}
 
 .story-bottom {
     position: relative;

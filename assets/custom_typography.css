@@ -41,7 +41,8 @@ ul.blog-buttons li a,
 .wrapper.map-wrapper .content .location-list h1,
 .story-pour > p,
 .story-pour-intro p,
-#cart__checkout_btn {
+#cart__checkout_btn,
+.cart-modal .cart-modal-heading p {
   font-family: "Balgin";
 }
 
@@ -119,7 +120,8 @@ body.product fieldset.product-form__input .form__label,
 .contact-container .contact-right form label span,
 table tr td,
 table tr td i, 
-#press-content .partner-container.first-container p span {
+#press-content .partner-container.first-container p span,
+.story-main p {
     font-family: ITCAvantGardeGothicStd;
 }
 h1,
@@ -140,11 +142,13 @@ a,
 }
 
 @media (max-width: 500px) {
+/*
     .lettering {
         text-align: left;
         font-size: 80vw;
         margin-left: 17px;
     }
+*/
     .lettering span {
         display: block;
     }
