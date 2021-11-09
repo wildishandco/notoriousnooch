@@ -96,6 +96,18 @@ details.menu-opening .menu-container {
 }
 
 @media (max-width: 767px) {
+    .menu-container {
+        overflow: auto;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .menu-drawer__navigation {
+        position: relative;
+        padding-bottom: 0 !important;
+    }
+    .menu-container .marquee {
+        position: relative;
+    }
     .menu-container nav ul li img {
         width: 30px;
         top: 20%;

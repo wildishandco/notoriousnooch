@@ -384,6 +384,18 @@ section.home-video {
     .home-blog .article-card__info {
         padding: 2rem;
     }
+    section.home-featured-product.bacon .content-container img.badge-pink,
+    section.home-featured-product.cheese .content-container img.badge-green {
+        left: -300px;
+        max-width: 175px;
+    }
+    section.home-featured-product.cheese .content-container img.badge-green {
+        right: -300px;
+        left: 0;
+    }
+    .content-container img {
+        max-height: 75%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -430,6 +442,17 @@ section.home-video {
     .home-blog .home-blog-bottom {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    section.home-featured-product.bacon .content-container img.badge-pink, section.home-featured-product.cheese .content-container img.badge-green {
+        max-width: 150px;
+        left: -250px;
+    }
+    section.home-featured-product.cheese .content-container img.badge-green {
+        right: -250px;
+        left: 0;
+    }
+    .content-container img {
+        max-width: 250px;
     }
 }
 
@@ -480,6 +503,9 @@ section.home-video {
     }
     .home-blog .recipes-slider.marquee .track span {
         margin: 10px!important;
+    }
+    section.home-featured-product.bacon .content-container img.badge-pink, section.home-featured-product.cheese .content-container img.badge-green {
+        max-width: 125px;
     }
 } 
 
