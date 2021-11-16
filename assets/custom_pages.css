@@ -11,7 +11,10 @@
     justify-content: center;
     height: 100vh;
     top: 0!important;
-    background-color: var(--green);   
+    background-color: var(--green); 
+    overflow: hidden;
+    width: 100%; 
+    position: relative;
 }
 .story-header p {
     color: var(--yellow);
@@ -24,11 +27,31 @@
     position: relative;
     top: 40px;
 }
+.story-header p span {
+    position: relative
+}
+.story-header p img {
+    position: absolute;
+    z-index: 2;
+    left: 33%;
+    bottom:5%;
+    max-width: 250px;
+}
+.story-header p img.spagetti {
+    right: 1%;
+    left: auto;
+    bottom: 54%;
+}
+.story-header p img.cheeseguy {
+    left: 12%;
+    bottom: 55%;
+    max-width: 350px;
+}
 .story-header-image {
     position: absolute;
     max-width: 500px;
     left: -100px;
-    bottom: -100px;
+    bottom: -35px;
 }
 .story-header-image#story-header-image-2 {
     right: 0;
@@ -76,6 +99,7 @@
 .story-pour {
     height: 1300px;
     position: relative;
+    overflow-x: clip;
 }
 .story-pour > span:not(.voila) {
     position: relative;
@@ -87,23 +111,41 @@
     z-index: 2;
     top: -50px;
 }
-#plainnooch2 {
+.toasted {
     top: 40px;
     left: auto;
     right: -50px;
-    position: absolute;
+    position: absolute!important;
+}
+.toasted-inner {
+    position: relative;
 }
 .dust {
-    height: 10px;
-    width: 10px;
+/*    height: 8px;*/
+/*    width: 8px;*/
     border-radius: 10px;
-    background-color: #fbf5c4;
+/*    background-color: #fbf5c4;*/
     display: block!important;
     position: absolute;
     right: 0;
     z-index: 1;
-    top: -300px;
+    top: -160px;
     transform-origin: -165px 96px;
+    max-width: 11px;
+}
+.toasted .dust {
+    left:0; 
+    right:auto;
+    top: -240px;
+}
+.dust:nth-child(2), .dust:nth-child(6) {
+    max-width: 6px;
+}
+.dust:nth-child(7), .dust:nth-child(9) {
+    max-width: 5px;
+}
+.dust:nth-child(4), .dust:nth-child(8) {
+    max-width: 9px;
 }
 #cheesenooch {
     position: relative;
@@ -177,8 +219,15 @@
 .story-pour-intro p a {
     margin: 100px 0;
 }
+.story-pour-intro.history {
+    padding-top: 60px;
+}
 .story-pour-intro.history p {
     color: var(--pink);
+}
+.story-pour-intro.history p:nth-child(2) {
+    text-transform: none;
+    font-size: 3rem;
 }
 .story-pour-intro.history p a.clear-button {
     color: var(--pink);
@@ -233,6 +282,196 @@
     bottom: 0;
     
 }
+
+@media (max-width: 1300px) {
+  .story-header p img {
+    max-width: 190px;
+  }
+  .story-header p img.cheeseguy {
+    max-width: 290px;
+  }
+  .story-header p img.spagetti {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .story-header p {
+    font-size: 38vw;
+  }
+  .plainnooch {
+    max-width: 250px;
+  }
+  #cheesenooch {
+    max-width: 350px;
+  }
+  #cheesynooch {
+    left: 400px;
+  }
+  #cheesynoochtwo {
+    right: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .story-header p img {
+    max-width: 140px;
+  }
+  .story-header p img.cheeseguy {
+    max-width: 220px;
+  }
+  .story-header p img.spagetti {
+    max-width: 90px;
+  }
+  .story-pour-intro p {
+    width: 80%;
+  }
+  .plainnooch {
+    max-width: 200px;
+  }
+  #cheesenooch {
+    max-width: 300px;
+  }
+  #cheesynooch {
+    left: 300px;
+  }
+  #cheesynoochtwo {
+    right: 300px;
+  }
+  .story-pour {
+    height: 1100px;
+  }
+  .voila p {
+    font-size: 30rem;
+  }
+  .story-header-image {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .story-header p {
+    font-size: 48vw;
+    text-align: left;
+    width: 95%;
+    margin: auto;
+  }
+  .story-header p img {
+    left: 26%;
+    max-width: 110px;
+    bottom: 3%;
+  }
+  .story-header p img.cheeseguy {
+    max-width: 180px;
+    bottom: 70%;
+    left: 25%;
+  }
+  .story-header p img.spagetti {
+    bottom: 30%;
+    max-width: 70px;
+  }
+  .plainnooch {
+    left: -80px;
+  }
+  #cheesenooch {
+    max-width: 250px;
+  }
+  .voila p {
+    font-size: 55vw;
+    top: -185px;
+  }
+  .story-pour {
+    height: 900px;
+  }
+  #cheesynooch {
+    left: 150px;
+    transform: rotate(10deg);
+  }
+  #cheesynoochtwo {
+    right: 150px;
+    transform: rotate(-10deg);
+  }
+  .toasted {
+    right: -150px;
+  }
+  .story-pour-intro p {
+    width: 90%;
+    font-size: 3rem;
+  }
+  .story-main p,
+  .story-pour-intro.history p:nth-child(2) {
+    font-size: 2.4rem;
+  }
+  .tumbleweed {
+    margin-top: 20px;
+  }
+  #tumbleweed {
+    width: 150px;
+  }
+  .story-pour-intro p a {
+    margin: 75px 0;
+  }
+  .story-pour-intro.history {
+    padding-top: 20px;
+  }
+  .story-pour-intro {
+    padding-top: 75px;
+  }
+  .story-header-image {
+    max-width: 350px;
+  }
+  .story-header-image#story-header-image-2 {
+    bottom:auto;
+    top:-50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .plainnooch {
+    left: -120px;
+  }
+  #plainnooch2 {
+    left: -20px;
+  }
+  #cheesenooch {
+    max-width: 200px;
+  }
+  .plainnooch {
+    max-width: 170px;
+  }
+  #cheesynooch {
+    left: 100px;
+  }
+  #cheesynoochtwo {
+    right: 100px;
+  }
+  .voila p {
+    top: -160px;
+  }
+  .story-pour {
+    height: 750px;
+  }
+  .story-pour-intro {
+    padding-top: 50px;
+  }
+  #tumbleweed {
+    width: 100px;
+  }
+  .tumbleweed {
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: 350px) {
+  .voila p {
+    top: -135px;
+  }
+  .story-header-image {
+    max-width: 300px;
+  }
+}
+
+
 
 /*GENERIC PAGE E.G. PRIVACY*/
 
