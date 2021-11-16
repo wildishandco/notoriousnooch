@@ -323,19 +323,154 @@ if(jQuery(plainNooch).length > 0) {
           }
         })
         
-//        gsap.to('.dust', {
-//          ease: "none",
-//            y: 500,
-//            x: 500,
-//            repeat: -1,
-//            duration: 2,
-//            rotate: 90,
-//          scrollTrigger: {
-//            trigger: "#plainnooch",
-//            start: "top bottom",
-//            end: "bottom center",
-//          }
-//        })
+        
+    
+
+
+        
+//        have a unique timeline for each piece of dust...
+        
+        var dustStart = "bottom center";
+        var shouldstop = false;
+        
+        let tl = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimeline,
+            markers: true,
+          }
+        });
+
+        tl.to('.dustone', {
+            ease: "power1.in", y: 300, x: 500, repeat: -1, onRepeat:checkShouldStop, duration: 4, delay: 0, rotate: 90,
+        }, 1)
+        tl.to('.dusttwo', {
+            ease: "power1.in", y: 300, x: 530, repeat: -1, onRepeat:checkShouldStop, duration: 4.2, delay: 0, rotate: 90,
+        }, 1)
+        tl.to('.dustthree', {
+            ease: "power1.in", y: 300, x: 580, repeat: -1, onRepeat:checkShouldStop, duration: 5.5, delay: 2, rotate: 90,
+        }, 1)
+        tl.to('.dustfour', {
+            ease: "power1.in", y: 300, x: 550, repeat: -1, onRepeat:checkShouldStop, duration: 4.6, delay: 0, rotate: 90,
+        }, 1)
+        tl.to('.dustfive', {
+            ease: "power1.in", y: 300, x: 670, repeat: -1, onRepeat:checkShouldStop, duration: 4.1, delay: 0, rotate: 90,
+        }, 1)
+        tl.to('.dustsix', {
+            ease: "power1.in", y: 300, x: 610, repeat: -1, onRepeat:checkShouldStop, duration: 3.7, delay: 1, rotate: 90,
+        }, 1)
+        tl.to('.dustseven', {
+            ease: "power1.in", y: 300, x: 500, repeat: -1, onRepeat:checkShouldStop, duration: 3.8, delay: 0, rotate: 90,
+        }, 1)
+        tl.to('.dusteight', {
+            ease: "power1.in", y: 300, x: 480, repeat: -1, onRepeat:checkShouldStop, duration: 3.9, delay: 0, rotate: 90,
+        }, 1)
+        tl.to('.dustnine', {
+            ease: "power1.in", y: 300, x: 450, repeat: -1, onRepeat:checkShouldStop, duration: 4.4, delay: 3, rotate: 90,
+        }, 1)
+        tl.to('.dustten', {
+            ease: "power1.in", y: 300, x: 530, repeat: -1, onRepeat:checkShouldStop, duration: 4.2, delay: 0, rotate: 90,
+        }, 1)
+
+        function repeatTimeline() {
+            console.log('repeat');
+            shouldstop = false;
+        }
+        function stopTimeline() {
+            console.log('stop');
+            shouldstop = true;
+        }
+        function checkShouldStop() {
+          if (shouldstop)
+            tl.pause();
+        }
+        
+        
+     
+        
+        
+        gsap.to('.toasted .dust', {
+          ease: "power1.in", y: 300,x: -500,repeat: -1,duration: 4, delay:2, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dusttwo', {
+          ease: "power1.in",y: 300,x: -530,repeat: -1,duration: 4.2, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustthree', {
+          ease: "power1.in",y: 300,x: -580,repeat: -1,duration: 5.5,delay:2, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustfour', {
+          ease: "power1.in",y: 300,x: -550,repeat: -1,duration: 4.6, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustfive', {
+          ease: "power1.in",y: 300,x: -670,repeat: -1,duration: 4.1, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustsix', {
+          ease: "power1.in",y: 300,x: -610,repeat: -1,duration: 3.7, delay:1, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustseven', {
+          ease: "power1.in",y: 300,x: -500,repeat: -1,duration: 3.8, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dusteight', {
+          ease: "power1.in",y: 300,x: -480,repeat: -1,duration: 3.9, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustnine', {
+          ease: "power1.in",y: 300,x: -450,repeat: -1,duration: 4.4,delay:3, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
+        gsap.to('.toasted .dustten', {
+          ease: "power1.in",y: 300,x: -530,repeat: -1,duration: 4.2, rotate: 90,
+          scrollTrigger: {
+            trigger: "#plainnooch",
+            start: "top bottom",
+            end: "bottom center",
+          }
+        })
 
     });
 }

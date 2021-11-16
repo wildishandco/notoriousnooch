@@ -51,7 +51,7 @@ footer.footer .footer-title h3,
 .home-blog h3, 
 body.product h1.product__title,
 .home-blog .recipes-slider span,
-.story-header p,
+.story-header p span,
 .main-page-content h1,
 .press-title, 
 .voila p {
@@ -121,7 +121,8 @@ body.product fieldset.product-form__input .form__label,
 table tr td,
 table tr td i, 
 #press-content .partner-container.first-container p span,
-.story-main p {
+.story-main p,
+.story-pour-intro.history p:nth-child(2) {
     font-family: ITCAvantGardeGothicStd;
 }
 h1,
