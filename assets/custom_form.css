@@ -3,13 +3,20 @@ footer.footer .footer-block--newsletter .newsletter-form {
 	margin: 0;
 	width: 45rem;
 	max-width: 45rem;
+    flex-wrap: wrap;
 }
 footer.footer .newsletter-form__field-wrapper {
 	 max-width: 100%;
 }
-footer.footer .input-group  {
+footer.footer .input-group {
     display: flex;
     width: 100%;
+    margin-bottom: 20px;
+}
+footer.footer .input-group.input-group--error {
+    margin-bottom: 0px;
+    border: 2px solid var(--darkpink);
+    border-radius: 7px;
 }
 footer.footer .footer-block--newsletter .newsletter-form input {
 	background-color: white;
@@ -21,6 +28,7 @@ footer.footer .footer-block--newsletter .newsletter-form input {
     border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
     color: var(--green);
+    flex: 1;
 }
 footer.footer .footer-block--newsletter .newsletter-form input::placeholder {
     color: var(--green);
@@ -48,6 +56,21 @@ footer.footer .footer-block--newsletter .newsletter-form button:hover {
     background-color: var(--darkpink);
     cursor: pointer;
 }
+footer.footer .footer-block--newsletter .newsletter-form p.success {
+    margin-top: 0;
+}
+
+footer.footer .input-error-message {
+    position: relative;
+    width: 100%;
+    margin-top: 3px;
+}
+footer.footer .input-error-message span {
+    color: var(--darkpink);
+    font-size: 2.2rem;
+    text-align: right;
+    width: 100%;
+} 
 
 @media (max-width: 991px) {
 	footer.footer .footer-block--newsletter .newsletter-form {

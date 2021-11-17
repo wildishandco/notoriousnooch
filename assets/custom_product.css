@@ -5,8 +5,11 @@ body.product .header__icon--cart,
 body.product .cart-count-bubble {
     color: var(--green);
 }
-body.product .menu-star polygon {
-    fill: var(--green);
+body.product .menu-star {
+    display: none;
+}
+body.product .menu-star.green {
+    display: block;
 }
 body.product .menu .cls-1 {
     fill: var(--pink);

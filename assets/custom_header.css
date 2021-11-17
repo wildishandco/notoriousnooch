@@ -22,6 +22,10 @@
     animation-duration: 3s; 
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    max-width: 48px;
+}
+.menu-star.green {
+    display: none;
 }
 /*
 .menu-star polygon {

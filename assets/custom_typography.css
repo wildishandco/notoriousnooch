@@ -63,7 +63,8 @@ body.product h1.product__title,
 footer.footer .footer-block--newsletter h2.footer-block__heading,
 .home-blog .home-blog-bottom p,
 .home-blog .home-blog-bottom p a,
-.marquee .track .content {
+.marquee .track .content,
+footer.footer .input-error-message span {
   font-family: "Brice";
 }
 

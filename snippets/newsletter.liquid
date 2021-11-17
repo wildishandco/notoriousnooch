@@ -3,7 +3,7 @@
 {% form 'customer', id: formId, novalidate: 'novalidate', class: 'newsletter-form contact-form form-single-field' %} 
 
       {%- if form.posted_successfully? -%}
-
+<p class="newslettersendconfirmed success">Success!</p>
         <script>
 
             jQuery('.success.popup').show();
@@ -11,6 +11,8 @@
         </script>
 
       {%- endif -%}
+
+
       <input type="hidden" name="contact[tags]" value="newsletter" />
       <div
         class="input-group {% if form.errors %} input-group--error{% endif %}"
