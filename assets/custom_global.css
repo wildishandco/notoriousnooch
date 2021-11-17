@@ -1,9 +1,12 @@
 body.gradient {
     background-color: var(--pink);
     padding-bottom: 438px;
+    width: 100%;
 }
 
-
+::selection {
+    background: var(--darkpink);
+}
 
 .spaced-section {
     margin-top: 0 !important;
@@ -11,7 +14,8 @@ body.gradient {
 }
 
 a.clear-button,
-button.clear-button {
+button.clear-button,
+.shopify-challenge__container .shopify-challenge__button {
 	color: var(--yellow);
 	text-decoration: none;
 	text-transform: uppercase;
@@ -25,9 +29,16 @@ button.clear-button {
     background-color: transparent;
     box-shadow: none;
 }
+.shopify-challenge__container {
+    text-align: center;
+}
+.shopify-challenge__container .shopify-challenge__button {
+    margin-top: 40px;
+}
 
 a.clear-button:hover,
-button.clear-button:hover {
+button.clear-button:hover,
+.shopify-challenge__container .shopify-challenge__button:hover {
     background-color: var(--pink);
     color: var(--green);
     border-color: var(--pink);
