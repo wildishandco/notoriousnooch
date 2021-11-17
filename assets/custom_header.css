@@ -23,8 +23,14 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+/*
 .menu-star polygon {
     fill: var(--yellow);
+}
+*/
+
+.menu-star .cls-1 {
+    fill: var(--yellow)!important;
 }
 .menu {
 	position: absolute;

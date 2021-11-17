@@ -85,6 +85,8 @@ details.menu-opening .icon-close {
     padding: 15px;
     height: 50px;
     width: 50px;
+    box-sizing: border-box;
+    transform: scale(1)!important;
 }
 details.menu-opening .menu-container {
 	transform: translateY(0%);
@@ -119,7 +121,7 @@ details.menu-opening .menu-container {
         right: 15px;
     }
     .menu-container nav ul li a {
-        font-size: 10rem;
+        font-size: 9rem;
         line-height: .75;
     }
 }
