@@ -80,6 +80,9 @@ section.home-featured-product {
 /*section.home-featured-product.bacon {
 	background-color: var(--darkpink);
 }*/
+.home-featured-product-container {
+    overflow: hidden;
+}
 section.home-featured-product.bacon a.clear-button {
 	color: var(--pink);
 	border: 1px solid var(--pink); 

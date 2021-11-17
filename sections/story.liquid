@@ -11,9 +11,9 @@
 </div>
 
 <div class="story-pour-intro panel">
+    
+    {{ page.metafields.accentuate.story_intro }}
 
-    <p>No really, we <span class="pink">LOVE</span> nooch</p>
-    <p>We began wondering why the nooch landscape was so barren, and generic.</p>
 </div>
 
 <div class="story-intro panel tumbleweed">
@@ -22,21 +22,18 @@
     
 </div>
 <div class="story-main story-pour-intro panel">
-    <p>So we began experimenting with flavouring nooch in our studio. Our first experiments with garlic powder and off-the-shelf seasonings were not cutting the mustard (we didn’t try mustard).</p>
-    <p>Then we discovered a top yeasty secret.</p>
-    <p>You can flavour nooch with nooch!</p> 
+    
+    {{ page.metafields.accentuate.story_main }}
+    
 </div>
 
 <div class="story-pour-intro panel" id="process">
+    
+    {{ page.metafields.accentuate.story_feature }}
 
-    <p>We take nooch, toast it until the flavour profiles develop and then add it back into normal nooch.</p>
-    <p>And ... </p>
 </div>
  
 <div class="story-pour">
-    
-
-
     
     <span>
         <img class="plainnooch" id="plainnooch" src="{{ 'plain-nooch-packet.png' | asset_url }}"/>
@@ -90,14 +87,11 @@
     
 </div>
 <div class="story-pour-intro panel history">
+    
+    {{ page.metafields.accentuate.story_end }}
 
-    <p>The rest is history...</p>
-    <p>Well its not because its still happening. Just buy it ok? Then we can retire in our nooch mansions driving Nooch-mobiles, please?</p>
-    <p><a href="/shop/nooch" class="clear-button">Shop Now</a></p>
 </div>
 
-    
-    
 
 
 {{ 'custom-pages.js' | asset_url | script_tag }}

@@ -114,6 +114,29 @@ jQuery(document).ready(function(){
         }, 500);
     }
     
+    //PRODUCT IMAGE HEIGHT ON MOBILE
+    
+    
+    imageHeight();
+    
+    jQuery(window).resize(function(){
+        
+        imageHeight();
+        
+    })
+    
+    function imageHeight() {
+        var windowWidth = jQuery(window).outerWidth();
+        
+        if (windowWidth < 600) {
+            var productInfoHeight = jQuery('.product__info-wrapper').outerHeight();
+            var windowHeight = jQuery(window).outerHeight();
+            
+            jQuery('body.product .product__media-item img').css('max-height',windowHeight - productInfoHeight);
+            
+        }
+    }
+    
    
     
 });

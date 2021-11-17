@@ -42,7 +42,8 @@ ul.blog-buttons li a,
 .story-pour > p,
 .story-pour-intro p,
 #cart__checkout_btn,
-.cart-modal .cart-modal-heading p {
+.cart-modal .cart-modal-heading p,
+.success.popup p {
   font-family: "Balgin";
 }
 
@@ -152,6 +153,10 @@ a,
 */
     .lettering span {
         display: block;
+    }
+    .lettering {
+        font-size: 65vw;
+        word-break: break-word;
     }
 }
 

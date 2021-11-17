@@ -13,6 +13,30 @@ function footerHeight() {
     }, 500);    
 }
 
+jQuery(document).ready(function(){ 
+    
+    gsap.to(".success.popup", {
+      rotate: -3,
+        scale: 1,
+        duration: 0.5
+    });
+
+    const popuptimeline = gsap.timeline({});
+    
+    jQuery('.success.popup .close-success').click(function(){
+        popuptimeline.to(".success.popup", {
+           rotate: 360,
+            scale: 0
+        });
+    });
+    
+    
+    
+    
+    
+    
+});
+
 //BLOG
 
 jQuery(document).ready(function(){
@@ -29,6 +53,8 @@ jQuery(document).ready(function(){
             }
         });
     }
+    
+    jQuery('.horizontal-container').parent().parent().addClass('home-featured-product-container');
     
 });
 

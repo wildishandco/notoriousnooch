@@ -7,12 +7,23 @@ footer.footer .footer-block--newsletter .newsletter-form {
 footer.footer .newsletter-form__field-wrapper {
 	 max-width: 100%;
 }
+footer.footer .input-group  {
+    display: flex;
+    width: 100%;
+}
 footer.footer .footer-block--newsletter .newsletter-form input {
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 2px solid var(--green);
-	padding: 25px;
+	padding: 17px 20px;
 	box-shadow: none;
+    font-family: Arial, sans-serif;
+    border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+    color: var(--green);
+}
+footer.footer .footer-block--newsletter .newsletter-form input::placeholder {
+    color: var(--green);
 }
 footer.footer .footer-block--newsletter .newsletter-form label {
 	color: var(--green);
@@ -31,9 +42,11 @@ footer.footer .footer-block--newsletter .newsletter-form button {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
     transition:.5s;
+    border: 0;
 }
 footer.footer .footer-block--newsletter .newsletter-form button:hover {
     background-color: var(--darkpink);
+    cursor: pointer;
 }
 
 @media (max-width: 991px) {
