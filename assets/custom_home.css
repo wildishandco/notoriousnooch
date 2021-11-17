@@ -449,6 +449,8 @@ section.home-video {
     section.home-featured-product.bacon .content-container img.badge-pink, section.home-featured-product.cheese .content-container img.badge-green {
         max-width: 150px;
         left: -250px;
+        top: -350px;
+        bottom: 0;
     }
     section.home-featured-product.cheese .content-container img.badge-green {
         right: -250px;

@@ -224,19 +224,65 @@ if(jQuery('body').hasClass('home')) {
 
         gsap.set('.home-featured-product.cheese .content-container img', {rotate:-300});
 
-        // HOME CHEESE PACKET
-        var rotate = gsap.timeline({
-          scrollTrigger:{
-            trigger: ".home-featured-product",
-            scrub:0.5,
-            start: "bottom +25%",
-            end: "bottom 0%",
-          }
-        })
-        .to('.home-featured-product.cheese .content-container img', {
-          rotation:-360,
-          duration:1, ease:'none',
-        })
+        
+        
+        
+        homeCheeseDesktop()
+        
+        jQuery(window).resize(function(){
+            homeCheeseDesktop()
+        });
+        
+        function homeCheeseDesktop() {
+            if(jQuery(window).width() > 900) {
+                // HOME CHEESE PACKET
+                var rotate = gsap.timeline({
+                  scrollTrigger:{
+                    trigger: ".home-featured-product",
+                    scrub:0.5,
+                    start: "bottom +25%",
+                    end: "bottom 0%",
+                  }
+                })
+                .to('.home-featured-product.cheese .content-container img', {
+                  rotation:-360,
+                  duration:1, ease:'none',
+                })
+            }
+            if((jQuery(window).width() < 900) && (jQuery(window).width() > 767)) {
+                // HOME CHEESE PACKET
+                var rotate = gsap.timeline({
+                  scrollTrigger:{
+                    trigger: ".home-featured-product",
+                    scrub:0.5,
+                    start: "bottom +55%",
+                    end: "bottom +200",
+                  }
+                })
+                .to('.home-featured-product.cheese .content-container img', {
+                  rotation:-360,
+                  duration:1, ease:'none',
+                })
+            }
+            if((jQuery(window).width() < 768) && (jQuery(window).width() > 100)) {
+                // HOME CHEESE PACKET
+                var rotate = gsap.timeline({
+                  scrollTrigger:{
+                    trigger: ".home-featured-product",
+                    scrub:0.5,
+                    start: "bottom +75%",
+                    end: "bottom +400",
+                  }
+                })
+                .to('.home-featured-product.cheese .content-container img', {
+                  rotation:-360,
+                  duration:1, ease:'none',
+                })
+            }
+            
+        }
+        
+        
 
     });
     
