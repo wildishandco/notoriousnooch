@@ -58,7 +58,8 @@ footer.footer .footer-block--newsletter p {
 	font-size: 1.6rem;
 	line-height: 1.4;
 	font-family: Arial, sans-serif;
-	margin-top: 30px;
+    margin-top: 0;
+/*	margin-top: 30px;*/
 }
 footer.footer .footer-logo img {
 	width: 200px;
@@ -116,7 +117,11 @@ footer.footer .footer-links ul li a svg * {
     transition: .5s;
 }
 
+
+
+
 .success.popup {
+    display: none;
     position: fixed;
     z-index: 1000;
     background-color: var(--darkpink);
