@@ -15,10 +15,15 @@
       {%- if form.errors contains 'email' -%}
 
         <script>
-            var objDiv = document.getElementById("footer-container");
-            objDiv.scrollTop = objDiv.scrollHeight;
-        </script>
+            setTimeout(function(){ 
+                console.log('test');
+                window.scrollTo(0,document.body.scrollHeight);
+            }, 500);
+        </script> 
       {%- endif -%}
+
+
+        
 
 
       <input type="hidden" name="contact[tags]" value="newsletter" />
