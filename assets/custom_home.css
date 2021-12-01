@@ -399,6 +399,15 @@ section.home-video {
     .content-container img {
         max-height: 75%;
     }
+    section.home-featured-product img.pink-star#pink-star-one {
+        left: -600px;
+    }
+    section.home-featured-product img.pink-star#pink-star-two {
+        left: 600px;
+    }
+    section.home-video {
+        height: 600px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -459,6 +468,15 @@ section.home-video {
     .content-container img {
         max-width: 250px;
     }
+    section.home-featured-product img.pink-star#pink-star-one {
+        left: -450px;
+    }
+    section.home-featured-product img.pink-star#pink-star-two {
+        left: 450px;
+    }
+    section.home-video {
+        height: 400px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -467,21 +485,21 @@ section.home-video {
         bottom: -20px;
     }
     .home-image {
-        max-width: 200px;
+        max-width: 280px;
     }
     #home-cheesy-nooch {
         top: auto;
-        bottom: 300px;
+        bottom: -85px;
         left: -80px;
     }
     #home-bacon-nooch {
-        right: -40px;
+        right: -100px;
         bottom: 325px;
         top: auto;
     }
     section.home-section .text-container img#star-one {
-        top: -35px;
-        left: 75px;
+        top: 50px;
+        left: 15px;
     }
     section.home-section .text-container img#star-three {
         top: -40px;
@@ -492,7 +510,8 @@ section.home-video {
     }
     section.home-section .text-container img#star-two {
         bottom: -50px;
-        left: 30px;
+        right: 30px;
+        left: auto;
     }
     .home-blog .recipes-slider {
         height: 113px;
@@ -512,16 +531,55 @@ section.home-video {
     section.home-featured-product.bacon .content-container img.badge-pink, section.home-featured-product.cheese .content-container img.badge-green {
         max-width: 125px;
     }
+    section.home-featured-product img.pink-star#pink-star-one {
+        left: -250px;
+        top: -100px;
+    }
+    section.home-featured-product img.pink-star#pink-star-two {
+        left: 250px;
+    }
+    section.home-video {
+        height: 300px;
+    }
+    .content-container .button-container {
+        position: absolute;
+        bottom: 50px;
+    }
+    section.home-featured-product.bacon a.clear-button {
+        color: var(--yellow);
+        border: 2px solid var(--yellow);
+        background-color: rgba(206, 15, 105, 0.75);
+    }
+    section.home-featured-product.cheese a.clear-button {
+        color: var(--pink);
+        border: 2px solid var(--pink);
+        background-color: rgba(0, 100, 80, 0.75);
+    }
+    .home-container .lettering {
+        z-index: 2;
+    }
+    #nooch-home-man {
+        z-index: 3;
+    }
 } 
 
 @media (max-width: 350px) {
+/*
     .home-image {
         max-width: 170px;
     }
+*/
     .home-blog h2 {
         font-size: 3rem;
         line-height: 3rem;
     } 
+    section.home-featured-product img.pink-star#pink-star-one {
+        left: -200px;
+    }
+    section.home-featured-product img.pink-star#pink-star-two {
+        left: 200px;
+    }
+    
 }
 
 

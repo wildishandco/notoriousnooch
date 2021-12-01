@@ -82,6 +82,22 @@ footer.footer .input-error-message span {
 		max-width: 100%;
 	}
 }
+@media (max-width: 480px) {
+    footer.footer .footer-block--newsletter .newsletter-form .input-group__btn {
+        width: 100%;
+    }
+    footer.footer .footer-block--newsletter .newsletter-form input {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    footer.footer .footer-block--newsletter .newsletter-form button {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 100%;
+    }
+}
 @media (max-width: 375px) {
 	footer.footer .footer-block--newsletter .newsletter-form button {
 		position: relative;

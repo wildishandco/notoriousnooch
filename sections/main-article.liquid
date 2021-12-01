@@ -14,11 +14,11 @@
              <div class="blog-header-container">
                  <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
                  {% if article.metafields.accentuate.cooking_time %}
-                    <p><img src="{{ 'clock.png' | asset_url }}"/><span>{{ article.metafields.accentuate.cooking_time }}</span></p> 
+                    <p><span>{{ article.metafields.accentuate.cooking_time }}</span></p> 
                 {% endif %} 
 
                 {% if article.metafields.accentuate.difficulty %}
-                    <p><img src="{{ 'difficulty.png' | asset_url }}"/><span>{{ article.metafields.accentuate.difficulty }}</span></p>
+                    <p><span>{{ article.metafields.accentuate.difficulty }}</span></p>
                 {% endif %}
               </div>
             <div class="article-template__hero-{{ block.settings.image_height }} media"

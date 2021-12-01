@@ -201,6 +201,9 @@ footer.footer .footer-links ul li a svg * {
 	}
 }
 @media (max-width: 991px) {
+    footer.footer .footer-title h3 {	
+		font-size: 17vw;
+	}
 	footer.footer .two-col {
 		align-items: flex-start;
 	}
@@ -216,7 +219,6 @@ footer.footer .footer-links ul li a svg * {
 	}
 	footer.footer .footer-block--newsletter p {
 		font-size: 1.2rem;
-		margin-top: 20px;
 	}
 	footer.footer .footer-block--newsletter h2.footer-block__heading {
 		margin-bottom: 10px;
@@ -241,9 +243,21 @@ footer.footer .footer-links ul li a svg * {
 		justify-content: center;
 	}
 }
+@media (max-width: 900px) {
+    footer.footer .footer-title h3 {	
+		font-size: 15vw;
+	}
+}
+@media (max-width: 810px) {
+    footer.footer .footer-title h3 {	
+		font-size: 13vw;
+	}
+}
 @media (max-width: 767px) {
 	footer.footer .two-col {
 		flex-wrap: wrap;
+        padding-left: 2rem;
+        padding-right: 2rem;
 	}
 	footer.footer .two-col > div.footer-title,
 	footer.footer .two-col > div.footer-block--newsletter {
@@ -321,6 +335,10 @@ footer.footer .footer-links ul li a svg * {
         bottom: -40px;
         left: -50px;
     }
+    footer.footer .input-group {
+        flex-wrap: wrap;
+    }
+    
 }
 @media (max-width: 400px) {
 	footer.footer #footer-nooch-man {
