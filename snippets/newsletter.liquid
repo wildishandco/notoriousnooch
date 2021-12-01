@@ -3,13 +3,21 @@
 {% form 'customer', id: formId, novalidate: 'novalidate', class: 'newsletter-form contact-form form-single-field' %} 
 
       {%- if form.posted_successfully? -%}
-<p class="newslettersendconfirmed success">Success!</p>
+        <p class="newslettersendconfirmed success">Success!</p>
         <script>
 
             jQuery('.success.popup').show();
 
         </script>
 
+      {%- endif -%}
+
+      {%- if form.errors contains 'email' -%}
+
+        <script>
+            var objDiv = document.getElementById("Contact_footer-email");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        </script>
       {%- endif -%}
 
 
