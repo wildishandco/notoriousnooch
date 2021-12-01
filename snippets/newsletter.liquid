@@ -12,13 +12,7 @@
 
       {%- endif -%}
 
-      {%- if form.errors contains 'email' -%}
-
-        <script>
-            var objDiv = document.getElementById("Contact_footer-email");
-            objDiv.scrollTop = objDiv.scrollHeight;
-        </script>
-      {%- endif -%}
+      
 
 
       <input type="hidden" name="contact[tags]" value="newsletter" />
@@ -64,5 +58,17 @@
           {{ form.errors.messages["email"] }}.</span
         >
       </span>
-      {%- endif -%} 
+      {%- endif -%}
+
+        {%- if form.errors contains 'email' -%}
+
+        <script>
+            var objDiv = document.getElementById("Contact_footer-email");
+            objDiv.scrollTop = objDiv.scrollHeight; 
+        </script>
+      {%- endif -%}
+
+
+
+
 {% endform %}
