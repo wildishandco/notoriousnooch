@@ -186,6 +186,9 @@
     background-color: var(--yellow);
     color: var(--darkpink);
 }
+#checkout:hover {
+    color: var(--green);
+}
 
 @media (max-width: 500px) {
     .cart-modal {
@@ -288,6 +291,7 @@ table.cart-items tbody td cart-remove-button {
 }
 table.cart-items tbody td cart-remove-button path {
     fill: var(--pink);
+    transition: 0.5s;
 }
 table.cart-items tbody td cart-remove-button a {
     height: 100%;
@@ -297,7 +301,7 @@ table.cart-items tbody td cart-remove-button a {
     margin: 0;
 }
 table.cart-items tbody td cart-remove-button a:hover path {
-    fill: var(--darkpink);
+    fill: var(--green);
 }
 table.cart-items tbody td cart-remove-button a:hover {
     background-color: var(--yellow);
@@ -305,6 +309,9 @@ table.cart-items tbody td cart-remove-button a:hover {
 table.cart-items .quantity__button {
     font-size: 3rem;
     font-family: ITCAvantGardeGothicStd;
+}
+table.cart-items .quantity__button:hover {
+    color: var(--pink)
 }
 table.cart-items .quantity__input,
 table.cart-items tbody td .price.price--end {

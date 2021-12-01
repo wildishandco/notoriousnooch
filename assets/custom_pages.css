@@ -676,7 +676,7 @@
     width: 50%;
 }
 #press-content .partner-container.trade-partners {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--pink);
     position: relative;
     padding: 50px 50px 120px 50px;
@@ -702,7 +702,7 @@
     max-width: 600px;
 }
 #press-content .partner-container.trade-partners:nth-child(3) {
-    background-color:#005861;
+    background-color:#004950;
 }
 #press-content .partner-container.trade-partners:nth-child(3) h2, 
 #press-content .partner-container.trade-partners:nth-child(3) p {
@@ -738,7 +738,8 @@
     transition: .5s;
 }
 #press-content .partner-container.trade-partners ul.trade-buttons li a:hover {
-    background-color: #a90753;
+    background-color: var(--green);
+    color: var(--yellow);
 }
 #press-content .partner-container.trade-partners h2 {
     text-transform: uppercase;
@@ -829,6 +830,9 @@
     #press-content .partner-container.first-container .images img {
         width: 550px;
     } 
+    #press-content .partner-container.trade-partners ul.trade-buttons li a {
+        min-width: 100%;
+    }
 }
 @media (max-width: 767px) {
     #press-content .partner-container.first-container {
@@ -840,7 +844,7 @@
         height: auto;
         padding-left: 0;
         padding-right: 0;
-        padding-bottom: 0;
+        padding-bottom: 50px;
     }
     #press-content .partner-container.trade-partners ul.trade-buttons {
         position: relative;

@@ -22,7 +22,9 @@
     animation-duration: 3s; 
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    max-width: 48px;
+    width: 48px;
+    transition: 0.5s;
+/*    width: 158px;*/
 }
 .menu-star.green {
     display: none;
@@ -34,7 +36,7 @@
 */
 
 .menu-star .cls-1 {
-    fill: var(--yellow)!important;
+    fill: var(--yellow);
 }
 .menu {
 	position: absolute;
@@ -52,7 +54,14 @@ header-drawer {
 header-drawer .header__icon {
 	position: relative;
     z-index: 1000;
+    width: auto;
+    height: auto;
 }
+/*
+header-drawer .header__icon:hover .menu-star{
+    width: 55px;
+}
+*/
 @keyframes rotate {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
@@ -69,6 +78,9 @@ header-drawer .header__icon {
 	width: auto;
 	height: auto;
 	font-size: 2.5rem;
+}
+.header__icon--cart:hover, .header__icon--cart:hover .cart-count-bubble {
+    color: var(--pink)
 }
 .cart-count-bubble {
 	background-color: transparent;
