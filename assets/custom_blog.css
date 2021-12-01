@@ -121,6 +121,7 @@ body.blog .logo.alt {
 .blog-articles .blog-articles__article.article a.article-content .article-card__info button:hover {
     cursor: pointer;
     background-color: transparent;
+    color: var(--darkpink)
 }
 .blog-articles .blog-articles__article.article a.article-content .article-card__info .article-card__info-container {
     z-index: 2;

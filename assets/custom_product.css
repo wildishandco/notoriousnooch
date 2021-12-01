@@ -5,11 +5,18 @@ body.product .header__icon--cart,
 body.product .cart-count-bubble {
     color: var(--green);
 }
+body.product .header__icon--cart:hover,
+body.product .header__icon--cart:hover .cart-count-bubble {
+    color: var(--darkpink);
+}
 body.product .menu-star {
     display: none;
 }
 body.product .menu-star.green {
     display: block;
+}
+.menu-container nav ul li img {
+    display: block!important;
 }
 body.product .menu .cls-1 {
     fill: var(--pink);
@@ -31,15 +38,19 @@ body.product .product__info-wrapper {
 }
 body.product .product__info-container--sticky {
     position: relative;
-/*    display: flex;*/
-/*    align-content: center;*/
-    height: 100%;
-    flex-wrap: wrap;
-    top: 0;
+/*
+    display: flex;
+    align-content: center;
+*/
+/*    height: 100%;*/
+    max-height: 100%;
+/*    flex-wrap: wrap;*/
+/*    top: 0;*/
 }
 .product__info-wrapper-inner {
-    height: 78vh;
-/*    display: flex;*/
+/*    height: 78vh;*/
+    display: flex;
+    height: 86vh;
     align-items: center;
     position: sticky;
     top: 0;
@@ -124,7 +135,7 @@ body.product .product-form__input.quantity-selector input[type='radio'] + label 
 }
 body.product .product-form__input.quantity-selector input[type='radio'] + label:nth-child(3) {
     background: linear-gradient(to right, var(--pink) 50%, var(--green) 50%) left;
-    background-size: 200%;
+    background-size: 201%;
 }
 body.product .product-form__input.quantity-selector input[type='radio']:checked + label:nth-child(3) {
     background-position: right;
@@ -158,7 +169,7 @@ body.product .product-form__buttons button {
     padding: 1em 20px;
     margin-bottom: 0;
     display: block;
-    
+    transition: 0.5s;
 }
 body.product .product-form__buttons button .button-price {
     margin-left: 5px;
@@ -207,7 +218,7 @@ body.product .product-form__input.product-form__quantity {
     flex: 0;
     margin-bottom: 0;
     min-width: 120px;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 body.product .product-form__quantity .quantity {
     border: 0;
@@ -220,9 +231,13 @@ body.product .product-form__quantity .quantity button.quantity__button {
     width:auto;
     padding: 1rem;
     font-size: 4rem;
+    transition: 0.5s;
 }
 body.product .product-form__quantity .quantity button.quantity__button svg {
     width: 1.2rem;
+}
+body.product .product-form__quantity .quantity button.quantity__button:hover {
+    color: var(--darkpink)
 }
 body.product .product-form__quantity .quantity .quantity__input {
     color: var(--green);
@@ -402,13 +417,13 @@ body.product span.product__media-icon.motion-reduce {
 @media (max-width: 991px) {
     body.product .product > .grid__item.product__media-wrapper {
         width: 62%;
-        padding-right: 0rem;
-        padding-left: 0rem;
+        padding-right: 0rem!important;
+        padding-left: 0rem!important;
     }
     body.product .product > .grid__item {
         width: 38%;
-        padding-right: 2rem;
-        padding-left: 2rem;
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
     }
     body.product h1.product__title {
         font-size: 10rem;
@@ -622,7 +637,53 @@ body.product span.product__media-icon.motion-reduce {
     }
 }
 
- 
+
+
+/*COLLECTION*/
+
+body.collection-template #MainContent {
+    padding-top: 100px;
+}
+body.collection-template #main-collection-filters .facets-container {
+    border-bottom: 1px solid var(--yellow);
+    border-top: 1px solid var(--yellow);
+    padding-top: 25px;
+}
+body.collection-template #main-collection-filters .facets-container * {
+    font-family: ITCAvantGardeGothicStd;
+    color: var(--yellow);
+}
+body.collection-template .media {
+    padding-bottom:0!important;
+}
+body.collection-template .card__inner img {
+    max-height: 500px;
+    position: relative!important;
+    width: auto!important
+}
+body.collection-template #product-grid li.grid__item {
+    width: auto;
+    padding-left: 0;
+    flex-grow: 0;
+    margin-bottom: 50px;
+}
+body.collection-template .card-wrapper .card-information {
+    text-align: center;
+}
+body.collection-template .card-wrapper .card-information .price dl {
+    width: 100%;
+    font-family: ITCAvantGardeGothicStd;
+}
+body.collection-template .card-wrapper .card-information .price dl span {
+    font-family: ITCAvantGardeGothicStd;
+}
+body.collection-template .card-wrapper .card-information h3 a {
+    font-family: "Balgin";
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+
 
 
 

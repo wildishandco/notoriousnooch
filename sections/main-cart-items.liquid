@@ -10,14 +10,14 @@
 <cart-items class="main-cart-page page-width{% if cart == empty %} is-empty{% endif %}">
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
-    <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
+    <a href="/products/nooch" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
 
   <div class="cart__warnings">
     <h1 class="cart__empty-text">Your Cart</h1>
       <p class="cart__empty-text">You don't have any items in your cart.</p>
       <img class="cart__empty-text" src="{{ 'Nooch_Macaroni.gif' | asset_url }}"/>
-    <a href="{{ routes.all_products_collection_url }}" class="button">
+    <a href="/products/nooch" class="button">
       {{ 'general.continue_shopping' | t }}
     </a>
       
