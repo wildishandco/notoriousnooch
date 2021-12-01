@@ -84,7 +84,8 @@ footer.footer .input-error-message span {
 .error-content h1,
 .main-blog h1,
 .contact-container .contact-right h1,
-#press-content .partner-container.quote p {
+#press-content .partner-container.quote p,
+.main-cart-page h1 {
     font-family: "Thunder";
 }
 .lettering.pink {
@@ -124,7 +125,10 @@ table tr td,
 table tr td i, 
 #press-content .partner-container.first-container p span,
 .story-main p,
-.story-pour-intro.history p:nth-child(2) {
+.story-pour-intro.history p:nth-child(2), 
+table.cart-items thead th,
+table.cart-items tbody td dt,
+table.cart-items tbody td dd {
     font-family: ITCAvantGardeGothicStd;
 }
 h1,
@@ -156,15 +160,16 @@ a,
         display: block;
     }
     .lettering {
-        font-size: 65vw;
+        font-size: 85vw;
         word-break: break-word;
     }
 }
 
 @media (max-width: 350px) {
     .lettering {
-        font-size: 78vw;
+        font-size: 84vw;
     }
+    
 }
 
 .pink {

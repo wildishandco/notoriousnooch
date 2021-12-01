@@ -7,20 +7,20 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
-<cart-items class="page-width{% if cart == empty %} is-empty{% endif %}">
+<cart-items class="main-cart-page page-width{% if cart == empty %} is-empty{% endif %}">
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
 
   <div class="cart__warnings">
-    <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
+    <h1 class="cart__empty-text">Your Cart</h1>
     <a href="{{ routes.all_products_collection_url }}" class="button">
       {{ 'general.continue_shopping' | t }}
     </a>
 
     {%- if shop.customer_accounts_enabled -%}
-      <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+      <h2 class="cart__login-title">Cart</h2>
       <p class="cart__login-paragraph">
         {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
       </p>
@@ -44,6 +44,8 @@
             <tbody>
               {%- for item in cart.items -%}
                 <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+                    
+                    
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
@@ -118,6 +120,7 @@
                     </div>
                   </td>
 
+<!--
                   <td class="cart-item__totals right medium-hide large-up-hide">
                     <div class="loading-overlay hidden">
                       <div class="loading-overlay__spinner">
@@ -164,6 +167,7 @@
                       {%- endif -%}
                     </div>
                   </td>
+-->
 
                   <td class="cart-item__quantity">
                     <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
@@ -189,14 +193,10 @@
                       </button>
                     </quantity-input>
 
-                    <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                      <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
-                        {% render 'icon-remove' %}
-                      </a>
-                    </cart-remove-button>
+                    
                   </td>
 
-                  <td class="cart-item__totals right small-hide">
+                  <td class="cart-item__totals right">
                     <div class="loading-overlay hidden">
                       <div class="loading-overlay__spinner">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -243,6 +243,13 @@
                       {%- endif -%}
                     </div>
                   </td>
+                    <td class="cart-remove-container">
+                        <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                      <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                        {% render 'icon-remove' %}
+                      </a>
+                    </cart-remove-button>
+                    </td>
                 </tr>
               {%- endfor -%}
             </tbody>
