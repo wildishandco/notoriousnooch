@@ -76,13 +76,4 @@
       </span>
       {%- endif -%} 
 
-
-        {%- if form.posted_successfully? -%}
-          <div class="note note--success">{{ 'general.newsletter_form.newsletter_confirmation' | t }}</div>
-        {%- elsif form.errors and form.context == snippet_context -%}
-          {{ form.errors | default_errors }}
-        {%- else -%}
-          <div class="note note--success">You are already subscribed.</div>
-        {%- endif -%}
-
 {% endform %}
