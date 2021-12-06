@@ -596,7 +596,7 @@
     height: 75px;
 }
 
-body.press {background-color:yellow}
+@media (hover: none) {body.press {background-color:yellow}}
 
 @media (max-width: 991px),
 @media (hover: none) {
