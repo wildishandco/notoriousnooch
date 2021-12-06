@@ -597,7 +597,7 @@
 }
 
 @media (max-width: 991px),
-@media (any-pointer: none) {
+@media (hover: none) {
     .wrapper.trade-wrapper {
         margin-top: 190px;
     }
