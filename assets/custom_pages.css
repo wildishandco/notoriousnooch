@@ -813,7 +813,7 @@
     }
 }
 @media (max-width: 991px), 
-@media (hover: none) {
+@media (any-pointer: none) {
     #press-content .partner-container.first-container {
         padding-bottom: 50px;
     }
