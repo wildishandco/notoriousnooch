@@ -811,8 +811,8 @@
         width: 750px;
     }
 }
-@media (max-width: 991px), 
-@media (any-pointer: none) {
+@media (max-width: 991px) {
+  
     #press-content .partner-container.first-container {
         padding-bottom: 50px;
     }
@@ -835,6 +835,13 @@
         min-width: 100%;
     }
 }
+
+@media (any-pointer: none) {
+	body.press {
+  		background-color: yellow;
+  	}
+}
+
 @media (max-width: 767px) {
     #press-content .partner-container.first-container {
         padding-top: 170px;
