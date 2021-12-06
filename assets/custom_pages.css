@@ -597,7 +597,7 @@
 }
 
 @media (max-width: 991px),
-@media (any-pointer: none) {
+@media (hover: none) {
     .wrapper.trade-wrapper {
         margin-top: 190px;
     }
@@ -813,7 +813,7 @@
     }
 }
 @media (max-width: 991px), 
-@media (any-pointer: none) {
+@media (hover: none) {
     #press-content .partner-container.first-container {
         padding-bottom: 50px;
     }
