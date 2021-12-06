@@ -70,6 +70,11 @@
     top: 30%;
     right: 8px;
 }
+.menu-container nav ul li img.first {
+    right: auto; 
+    left: 8px;
+    display: none!important;
+}
 .menu-container .menu-drawer__utility-links, 
 .menu-container .menu-drawer__menu-item--active, 
 .menu-container .menu-drawer__menu-item:focus, 
@@ -112,22 +117,52 @@ details.menu-opening .menu-container {
     .menu-drawer__navigation {
         position: relative;
         padding-bottom: 0 !important;
+        width: 100%;
     }
     .menu-container .marquee {
         position: relative;
     }
     .menu-container nav ul li {
         line-height: .75;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .menu-container nav ul li span {
+        display: inline-block;
+        position: relative;
+        padding-left: 60px;
+        padding-right: 60px;
     }
     .menu-container nav ul li img {
         width: 30px;
         top: 20%;
-        right: 15px;
+        right: 8px;
     }
     .menu-container nav ul li a {
         font-size: 9rem;
         line-height: .75;
     }
+    .menu-container nav ul li img.first {
+        display: block !important;
+    }
+    .menu-container nav ul li,
+    .menu-container nav ul li:nth-child(1) {
+        padding-left: 0px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
-
+@media (max-width: 450px) {
+    .menu-container nav ul li img {
+        width: 20px;
+    }
+    .menu-container nav ul li span {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .menu-container nav ul li a {
+        font-size: 7.5rem;
+    }
+}
 
