@@ -598,6 +598,8 @@
 
 @media (max-width: 991px),
 @media (hover: none) {
+  body.press {background-color:yellow}
+  
     .wrapper.trade-wrapper {
         margin-top: 190px;
     }
