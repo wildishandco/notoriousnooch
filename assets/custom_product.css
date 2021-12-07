@@ -158,8 +158,14 @@ body.product .buy-buttons {
 }
 body.product .buy-buttons .product-form {
     margin: 0;
+    height: 100%;
 }
+body.product .product-form__buttons {
+    height: 100%;
+}
+
 body.product .product-form__buttons button {
+    height: 100%;
     background-color: var(--darkpink);
     border: 0;
     box-shadow: none;

@@ -258,23 +258,21 @@
       </div>
     </div>
 
-<!--    {%- if section.settings.menu != blank -%}-->
+
       <header-drawer data-breakpoint="tablet">
         <details class="menu-drawer-container">
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
-              {% render 'icon-close' %}
+              {% render 'icon-close' %} 
             </span>
           </summary>
           <div class="menu-container" tabindex="-1">
 
                 <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu list-menu" role="list">
-                    {%- for link in section.settings.menu.links -%}
+                  <ul class="menu-drawer__menu list-menu test1" role="list">
+                    {%- for link in linklists.main-menu.links -%}
                       <li>
-                          <span>
-                          <img class="menu-star first" src="{{'menu-star-yellow.png' | asset_url}}"/>
                         {%- if link.links != blank -%}
                           <details>
                             <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
@@ -333,7 +331,7 @@
                           <img class="menu-star" src="{{'menu-star-yellow.png' | asset_url}}"/>
                           
 <!--                          <img class="menu-star" src="{{'yellow-menu-star.svg' | asset_url}}"/>-->
-                          </span>
+                          
                       </li>
                     {%- endfor -%}
                   </ul>
@@ -465,7 +463,7 @@
           </div>
         </details>
       </header-drawer>
-<!--    {%- endif -%}-->
+
 
   </div>
 
