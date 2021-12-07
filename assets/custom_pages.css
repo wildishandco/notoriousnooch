@@ -28,24 +28,28 @@
     top: 40px;
 }
 .story-header p span {
-    position: relative
+    position: relative;
+    display: block;
 }
 .story-header p img {
     position: absolute;
     z-index: 2;
-    left: 33%;
-    bottom:5%;
+    left: 38%;
+    bottom:0%;
     max-width: 250px;
 }
 .story-header p img.spagetti {
-    right: 1%;
-    left: auto;
+    right: 0;
+    left: 50%;
     bottom: 54%;
+    margin:auto
 }
 .story-header p img.cheeseguy {
-    left: 12%;
+    left: 0;
     bottom: 55%;
     max-width: 350px;
+    margin:auto;
+    right: 30%;
 }
 .story-header-image {
     position: absolute;
@@ -397,7 +401,7 @@
     left: 25%;
   }
   .story-header p img.spagetti {
-    bottom: 30%;
+    bottom: 36%;
     max-width: 70px;
   }
   .plainnooch {
