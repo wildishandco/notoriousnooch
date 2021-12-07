@@ -684,6 +684,7 @@
     }
 }
 
+
 @media (hover: none) {
     .wrapper.trade-wrapper {
         margin-top: 190px;
@@ -899,6 +900,7 @@
         width: 750px;
     }
 }
+
 @media (max-width: 991px) {
     #press-content .partner-container.first-container {
         padding-bottom: 50px;

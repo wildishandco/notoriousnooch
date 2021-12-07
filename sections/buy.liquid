@@ -1,5 +1,5 @@
 
-<!--{{ 'custom_pages.css' | asset_url | stylesheet_tag }}-->
+{{ 'custom_pages.css' | asset_url | stylesheet_tag }}
 
 
 <section class="wrapper  map-wrapper">
@@ -17,6 +17,8 @@
 
   
 </section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmzDJgfYNsv0N_6emAYvrU3oTtdGnfBFY&callback=initMap&libraries=&v=weekly" async></script>
 
 
 
@@ -683,118 +685,118 @@
         const mightywienersLink = document.getElementById('mightywieners');
         const goodproperzeroLink = document.getElementById('goodproperzero');
 
-        greenhealthfoodsLink.addEventListener("mouseover", () => {
-            GreensHealthFoodsInfowindow.open({
-              anchor: GreensHealthFoodsMarker,
-              map,
-              shouldFocus: false,
-            });
-          });
-       greenhealthfoodsLink.addEventListener("click", () => {
-        GreensHealthFoodsInfowindow.open({
-          anchor: GreensHealthFoodsMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      haelancentreltdLink.addEventListener("click", () => {
-        HaelanCentreLtdInfowindow.open({
-          anchor: HaelanCentreLtdMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      naturelleLink.addEventListener("click", () => {
-        NaturelleInfowindow.open({
-          anchor: NaturelleMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      natureslarderLink.addEventListener("click", () => {
-        NaturesLarderInfowindow.open({
-          anchor: NaturesLarderMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      outofthisworldLink.addEventListener("click", () => {
-        OutofThisWorldInfowindow.open({
-          anchor: OutofThisWorldMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      peppercornLink.addEventListener("click", () => {
-        PeppercornInfowindow.open({
-          anchor: PeppercornMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      thegroceryLink.addEventListener("click", () => {
-        TheGroceryInfowindow.open({
-          anchor: TheGroceryMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      thequalitydelihealthfdsLink.addEventListener("click", () => {
-        TheQualityDeliHealthFdsInfowindow.open({
-          anchor: TheQualityDeliHealthFdsMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      greenbayLink.addEventListener("click", () => {
-        GreenBayInfowindow.open({
-          anchor: GreenBayMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      thevspotLink.addEventListener("click", () => {
-        TheVSpotInfowindow.open({
-          anchor: TheVSpotMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      sprouthealthfoodsLink.addEventListener("click", () => {
-        SproutHealthFoodsInfowindow.open({
-          anchor: SproutHealthFoodsMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      thevegankindLink.addEventListener("click", () => {
-        TheVeganKindLtdInfowindow.open({
-          anchor: TheVeganKindLtdMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      theeigthdaycooperativeLink.addEventListener("click", () => {
-        EighthDayInfowindow.open({
-          anchor: EighthDayMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      mightywienersLink.addEventListener("click", () => {
-        MightyWienersInfowindow.open({
-          anchor: MightyWienersMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
-      goodproperzeroLink.addEventListener("click", () => {
-        GoodProperInfowindow.open({
-          anchor: GoodProperMarker,
-          map,
-          shouldFocus: false,
-        });
-      });
+//         greenhealthfoodsLink.addEventListener("mouseover", () => {
+//             GreensHealthFoodsInfowindow.open({
+//               anchor: GreensHealthFoodsMarker,
+//               map,
+//               shouldFocus: false,
+//             });
+//           });
+//        greenhealthfoodsLink.addEventListener("click", () => {
+//         GreensHealthFoodsInfowindow.open({
+//           anchor: GreensHealthFoodsMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       haelancentreltdLink.addEventListener("click", () => {
+//         HaelanCentreLtdInfowindow.open({
+//           anchor: HaelanCentreLtdMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       naturelleLink.addEventListener("click", () => {
+//         NaturelleInfowindow.open({
+//           anchor: NaturelleMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       natureslarderLink.addEventListener("click", () => {
+//         NaturesLarderInfowindow.open({
+//           anchor: NaturesLarderMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       outofthisworldLink.addEventListener("click", () => {
+//         OutofThisWorldInfowindow.open({
+//           anchor: OutofThisWorldMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       peppercornLink.addEventListener("click", () => {
+//         PeppercornInfowindow.open({
+//           anchor: PeppercornMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       thegroceryLink.addEventListener("click", () => {
+//         TheGroceryInfowindow.open({
+//           anchor: TheGroceryMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       thequalitydelihealthfdsLink.addEventListener("click", () => {
+//         TheQualityDeliHealthFdsInfowindow.open({
+//           anchor: TheQualityDeliHealthFdsMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       greenbayLink.addEventListener("click", () => {
+//         GreenBayInfowindow.open({
+//           anchor: GreenBayMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       thevspotLink.addEventListener("click", () => {
+//         TheVSpotInfowindow.open({
+//           anchor: TheVSpotMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       sprouthealthfoodsLink.addEventListener("click", () => {
+//         SproutHealthFoodsInfowindow.open({
+//           anchor: SproutHealthFoodsMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       thevegankindLink.addEventListener("click", () => {
+//         TheVeganKindLtdInfowindow.open({
+//           anchor: TheVeganKindLtdMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       theeigthdaycooperativeLink.addEventListener("click", () => {
+//         EighthDayInfowindow.open({
+//           anchor: EighthDayMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       mightywienersLink.addEventListener("click", () => {
+//         MightyWienersInfowindow.open({
+//           anchor: MightyWienersMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
+//       goodproperzeroLink.addEventListener("click", () => {
+//         GoodProperInfowindow.open({
+//           anchor: GoodProperMarker,
+//           map,
+//           shouldFocus: false,
+//         });
+//       });
 
     }
 
