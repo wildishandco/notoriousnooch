@@ -154,6 +154,7 @@
     right: 0;
     margin:auto;
     bottom: 0;
+    z-index: 3;
 }
 #cheesynooch {
     position: absolute;
@@ -161,7 +162,7 @@
     margin: auto;
     bottom: 0;
     left: 500px;
-    z-index: 1;
+    z-index: 2;
 }
 #cheesynoochtwo {
     position: absolute;
@@ -169,7 +170,7 @@
     margin: auto;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 .voila {
     position: absolute;
@@ -178,6 +179,18 @@
     bottom:0;
     margin:auto;
     text-align: center;
+}
+@media (max-width: 1200px) {
+    .voila:after {
+        content: '';
+        width: 100%;
+        height: 550px;
+        background-color: var(--darkpink);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
 }
 .voila p {
     font-size: 33rem;
@@ -237,7 +250,8 @@
     color: var(--green);
 }
 .tumbleweed {
-    margin: 50px 0 75px 0;
+    padding: 50px 0 75px 0;
+    overflow: hidden;
 }
 .story-main {
     padding-top: 50px;
@@ -311,6 +325,12 @@
   #cheesynoochtwo {
     right: 400px;
   }
+    .story-pour {
+        height: 1100px;
+    }
+    .voila:after {
+        height: 490px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -328,7 +348,11 @@
   }
   .plainnooch {
     max-width: 200px;
+      left: -40px;
   }
+    #plainnooch2 {
+        left: -5px;
+    }
   #cheesenooch {
     max-width: 300px;
   }
@@ -347,6 +371,12 @@
   .story-header-image {
     max-width: 400px;
   }
+    .story-pour {
+        height: 990px;
+    }
+    .voila:after {
+        height: 415px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -373,6 +403,9 @@
   .plainnooch {
     left: -80px;
   }
+    #plainnooch2 {
+        left: 10px;
+    }
   #cheesenooch {
     max-width: 250px;
   }
@@ -392,7 +425,7 @@
     transform: rotate(-10deg);
   }
   .toasted {
-    right: -150px;
+    right: -80px;
   }
   .story-pour-intro p {
     width: 90%;
@@ -403,7 +436,7 @@
     font-size: 2.4rem;
   }
   .tumbleweed {
-    margin-top: 20px;
+    padding-top: 20px;
   }
   #tumbleweed {
     width: 150px;
@@ -424,14 +457,20 @@
     bottom:auto;
     top:-50px;
   }
+    .dust {
+        right: 30px;
+    }
+    .toasted .dust {
+        right: 0;
+    }
 }
 
 @media (max-width: 400px) {
   .plainnooch {
-    left: -120px;
+    left: -100px;
   }
   #plainnooch2 {
-    left: -20px;
+    left: 20px;
   }
   #cheesenooch {
     max-width: 200px;
@@ -448,6 +487,9 @@
   .voila p {
     top: -160px;
   }
+    .voila:after {
+        height: 300px;
+    }
   .story-pour {
     height: 750px;
   }
@@ -458,8 +500,15 @@
     width: 100px;
   }
   .tumbleweed {
-    margin-bottom: 75px;
+    padding-bottom: 75px;
   }
+    .dust {
+        top: -120px;
+        left: 50px;
+    }
+    .toasted .dust {
+        top:-80px;
+    }
 }
 
 @media (max-width: 350px) {
