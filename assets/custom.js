@@ -396,153 +396,534 @@ if(jQuery(plainNooch).length > 0) {
         })
         
         
-    
-
-
-        
-//        have a unique timeline for each piece of dust...
-        
+        //DUST - LEFT
+         
         var dustStart = "bottom center";
         var shouldstop = false;
         
-        let tl = gsap.timeline({
+        let tlone = gsap.timeline({
             scrollTrigger: {
             trigger: "#plainnooch",
             start: dustStart,
             onEnter: repeatTimeline,
-            onLeaveBack: stopTimeline,
-            markers: true,
+            onLeaveBack: stopTimelineOne,
+          }
+        });
+        let tltwo = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwo,
+          }
+        });
+        let tlthree = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineThree,
+          }
+        });
+        let tlfour = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineFour,
+          }
+        });
+        let tlfive = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineFive,
+          }
+        });
+        let tlsix = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineSix,
+          }
+        });
+        let tlseven = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineSeven,
+          }
+        });
+        let tleight = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineEight,
+          }
+        });
+        let tlnine = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineNine,
+          }
+        });
+        let tlten = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTen,
+          }
+        });
+        
+        if (jQuery(window).width() < 700) {
+            var dustOneX = 250;
+            var dustTwoX = 230;
+            var dustThreeX = 280;
+            var dustFourX = 250;
+            var dustFiveX = 270;
+            var dustSixX = 210;
+            var dustSevenX = 250;
+            var dustEightX = 280;
+            var dustNineX = 250;
+            var dustTenX = 280;
+        }
+        else {
+            var dustOneX = 500;
+            var dustTwoX = 530;
+            var dustThreeX = 580;
+            var dustFourX = 550;
+            var dustFiveX = 670;
+            var dustSixX = 610;
+            var dustSevenX = 500;
+            var dustEightX = 480;
+            var dustNineX = 450;
+            var dustTenX = 530;
+        }
+
+        tlone.to('.dustone', {
+            ease: "power1.in", y: 300, x: dustOneX, repeat: -1, onRepeat:checkShouldStopOne, duration: 4, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+        tltwo.to('.dusttwo', {
+            ease: "power1.in", y: 300, x: dustTwoX, repeat: -1, onRepeat:checkShouldStopTwo, duration: 4.2, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+        tlthree.to('.dustthree', {
+            ease: "power1.in", y: 300, x: dustThreeX, repeat: -1, onRepeat:checkShouldStopThree, duration: 5.5, delay: 2, rotate: 90, opacity: 1,
+        }, 1)
+        tlfour.to('.dustfour', {
+            ease: "power1.in", y: 300, x: dustFourX, repeat: -1, onRepeat:checkShouldStopFour, duration: 4.6, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+        tlfive.to('.dustfive', {
+            ease: "power1.in", y: 300, x: dustFiveX, repeat: -1, onRepeat:checkShouldStopFive, duration: 4.1, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+        tlsix.to('.dustsix', {
+            ease: "power1.in", y: 300, x: dustSixX, repeat: -1, onRepeat:checkShouldStopSix, duration: 3.7, delay: 1, rotate: 90, opacity: 1,
+        }, 1)
+        tlseven.to('.dustseven', {
+            ease: "power1.in", y: 300, x: dustSevenX, repeat: -1, onRepeat:checkShouldStopSeven, duration: 3.8, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+        tleight.to('.dusteight', {
+            ease: "power1.in", y: 300, x: dustEightX, repeat: -1, onRepeat:checkShouldStopEight, duration: 3.9, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+        tlnine.to('.dustnine', {
+            ease: "power1.in", y: 300, x: dustNineX, repeat: -1, onRepeat:checkShouldStopNine, duration: 4.4, delay: 3, rotate: 90, opacity: 1,
+        }, 1)
+        tlten.to('.dustten', {
+            ease: "power1.in", y: 300, x: dustTenX, repeat: -1, onRepeat:checkShouldStopTen, duration: 4.2, delay: 0, rotate: 90, opacity: 1,
+        }, 1)
+    
+
+        function stopTimelineOne() {
+            console.log('stop');
+            shouldstopone = true;
+        }
+        function stopTimelineTwo() {
+            console.log('stop');
+            shouldstoptwo = true;
+        }
+        function stopTimelineThree() {
+            console.log('stop');
+            shouldstopthree = true;
+        }
+        function stopTimelineFour() {
+            console.log('stop');
+            shouldstopfour = true;
+        }
+        function stopTimelineFive() {
+            console.log('stop');
+            shouldstopfive = true;
+        }
+        function stopTimelineSix() {
+            console.log('stop');
+            shouldstopsix = true;
+        }
+        function stopTimelineSeven() {
+            console.log('stop');
+            shouldstopseven = true;
+        }
+        function stopTimelineEight() {
+            console.log('stop');
+            shouldstopeight = true;
+        }
+        function stopTimelineNine() {
+            console.log('stop');
+            shouldstopnine = true;
+        }
+        function stopTimelineTen() {
+            console.log('stop');
+            shouldstopten = true;
+        }
+        function checkShouldStopOne() {
+          if (shouldstopone)
+            tlone.pause();
+        }
+        function checkShouldStopTwo() {
+          if (shouldstoptwo)
+            tltwo.pause();
+        }
+        function checkShouldStopThree() {
+          if (shouldstopthree)
+            tlthree.pause();
+        }
+        function checkShouldStopFour() {
+          if (shouldstopfour)
+            tlfour.pause();
+        }
+        function checkShouldStopFive() {
+          if (shouldstopfive)
+            tlfive.pause();
+        }
+        function checkShouldStopSix() {
+          if (shouldstopsix)
+            tlsix.pause();
+        }
+        function checkShouldStopSeven() {
+          if (shouldstopseven)
+            tlseven.pause();
+        }
+        function checkShouldStopEight() {
+          if (shouldstopeight)
+            tleight.pause();
+        }
+        function checkShouldStopNine() {
+          if (shouldstopnine)
+            tlnine.pause();
+        }
+        function checkShouldStopTen() {
+          if (shouldstopten)
+            tlten.pause();
+        }
+        
+        // DUST - LEFT - END
+        
+        // DUST - RIGHT
+        
+        let tltwoone = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoOne,
+          }
+        });
+        let tltwotwo = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoTwo,
+          }
+        });
+        let tltwothree = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoThree,
+          }
+        });
+        let tltwofour = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoFour,
+          }
+        });
+        let tltwofive = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoFive,
+          }
+        });
+        let tltwosix = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoSix,
+          }
+        });
+        let tltwoseven = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoSeven,
+          }
+        });
+        let tltwoeight = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoEight,
+          }
+        });
+        let tltwonine = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoNine,
+          }
+        });
+        let tltwoten = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#plainnooch",
+            start: dustStart,
+            onEnter: repeatTimeline,
+            onLeaveBack: stopTimelineTwoTen,
           }
         });
 
-        tl.to('.dustone', {
-            ease: "power1.in", y: 300, x: 500, repeat: -1, onRepeat:checkShouldStop, duration: 4, delay: 0, rotate: 90,
+        tltwoone.to('.dusttwoone', {
+            ease: "power1.in", y: 300, x: -dustOneX, repeat: -1, onRepeat:checkShouldStopTwoOne, duration: 4, delay: 0, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dusttwo', {
-            ease: "power1.in", y: 300, x: 530, repeat: -1, onRepeat:checkShouldStop, duration: 4.2, delay: 0, rotate: 90,
+        tltwotwo.to('.dusttwotwo', {
+            ease: "power1.in", y: 300, x: -dustTwoX, repeat: -1, onRepeat:checkShouldStopTwoTwo, duration: 4.2, delay: 0, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustthree', {
-            ease: "power1.in", y: 300, x: 580, repeat: -1, onRepeat:checkShouldStop, duration: 5.5, delay: 2, rotate: 90,
+        tltwothree.to('.dusttwothree', {
+            ease: "power1.in", y: 300, x: -dustThreeX, repeat: -1, onRepeat:checkShouldStopTwoThree, duration: 5.5, delay: 2, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustfour', {
-            ease: "power1.in", y: 300, x: 550, repeat: -1, onRepeat:checkShouldStop, duration: 4.6, delay: 0, rotate: 90,
+        tltwofour.to('.dusttwofour', {
+            ease: "power1.in", y: 300, x: -dustFourX, repeat: -1, onRepeat:checkShouldStopTwoFour, duration: 4.6, delay: 0, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustfive', {
-            ease: "power1.in", y: 300, x: 670, repeat: -1, onRepeat:checkShouldStop, duration: 4.1, delay: 0, rotate: 90,
+        tltwofive.to('.dusttwofive', {
+            ease: "power1.in", y: 300, x: -dustFiveX, repeat: -1, onRepeat:checkShouldStopTwoFive, duration: 4.1, delay: 0, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustsix', {
-            ease: "power1.in", y: 300, x: 610, repeat: -1, onRepeat:checkShouldStop, duration: 3.7, delay: 1, rotate: 90,
+        tltwosix.to('.dusttwosix', {
+            ease: "power1.in", y: 300, x: -dustSixX, repeat: -1, onRepeat:checkShouldStopTwoSix, duration: 3.7, delay: 1, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustseven', {
-            ease: "power1.in", y: 300, x: 500, repeat: -1, onRepeat:checkShouldStop, duration: 3.8, delay: 0, rotate: 90,
+        tltwoseven.to('.dusttwoseven', {
+            ease: "power1.in", y: 300, x: -dustSevenX, repeat: -1, onRepeat:checkShouldStopTwoSeven, duration: 3.8, delay: 0, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dusteight', {
-            ease: "power1.in", y: 300, x: 480, repeat: -1, onRepeat:checkShouldStop, duration: 3.9, delay: 0, rotate: 90,
+        tltwoeight.to('.dusttwoeight', {
+            ease: "power1.in", y: 300, x: -dustEightX, repeat: -1, onRepeat:checkShouldStopTwoEight, duration: 3.9, delay: 0, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustnine', {
-            ease: "power1.in", y: 300, x: 450, repeat: -1, onRepeat:checkShouldStop, duration: 4.4, delay: 3, rotate: 90,
+        tltwonine.to('.dusttwonine', {
+            ease: "power1.in", y: 300, x: -dustNineX, repeat: -1, onRepeat:checkShouldStopTwoNine, duration: 4.4, delay: 3, rotate: 90, opacity: 1,
         }, 1)
-        tl.to('.dustten', {
-            ease: "power1.in", y: 300, x: 530, repeat: -1, onRepeat:checkShouldStop, duration: 4.2, delay: 0, rotate: 90,
+        tltwoten.to('.dusttwoten', {
+            ease: "power1.in", y: 300, x: -dustTenX, repeat: -1, onRepeat:checkShouldStopTwoTen, duration: 4.2, delay: 0, rotate: 90, opacity: 1,
         }, 1)
+    
 
         function repeatTimeline() {
             console.log('repeat');
-            shouldstop = false;
+            shouldstopone = false;
+            shouldstoptwo = false;
+            shouldstopthree = false;
+            shouldstopfour = false;
+            shouldstopfive = false;
+            shouldstopsix = false;
+            shouldstopseven = false;
+            shouldstopeight = false;
+            shouldstopnine = false;
+            shouldstopten = false;
+            shouldstoptwoone = false;
+            shouldstoptwotwo = false;
+            shouldstoptwothree = false;
+            shouldstoptwofour = false;
+            shouldstoptwofive = false;
+            shouldstoptwosix = false;
+            shouldstoptwoseven = false;
+            shouldstoptwoeight = false;
+            shouldstoptwonine = false;
+            shouldstoptwoten = false;
         }
-        function stopTimeline() {
+        function stopTimelineTwoOne() {
             console.log('stop');
-            shouldstop = true;
+            shouldstoptwoone = true;
         }
-        function checkShouldStop() {
-          if (shouldstop)
-            tl.pause();
+        function stopTimelineTwoTwo() {
+            console.log('stop');
+            shouldstoptwotwo = true;
+        }
+        function stopTimelineTwoThree() {
+            console.log('stop');
+            shouldstoptwothree = true;
+        }
+        function stopTimelineTwoFour() {
+            console.log('stop');
+            shouldstoptwofour = true;
+        }
+        function stopTimelineTwoFive() {
+            console.log('stop');
+            shouldstoptwofive = true;
+        }
+        function stopTimelineTwoSix() {
+            console.log('stop');
+            shouldstoptwosix = true;
+        }
+        function stopTimelineTwoSeven() {
+            console.log('stop');
+            shouldstoptwoseven = true;
+        }
+        function stopTimelineTwoEight() {
+            console.log('stop');
+            shouldstoptwoeight = true;
+        }
+        function stopTimelineTwoNine() {
+            console.log('stop');
+            shouldstoptwonine = true;
+        }
+        function stopTimelineTwoTen() {
+            console.log('stop');
+            shouldstoptwoten = true;
+        }
+        function checkShouldStopTwoOne() {
+          if (shouldstoptwoone)
+            tltwoone.pause();
+        }
+        function checkShouldStopTwoTwo() {
+          if (shouldstoptwotwo)
+            tltwotwo.pause();
+        }
+        function checkShouldStopTwoThree() {
+          if (shouldstoptwothree)
+            tltwothree.pause();
+        }
+        function checkShouldStopTwoFour() {
+          if (shouldstoptwofour)
+            tltwofour.pause();
+        }
+        function checkShouldStopTwoFive() {
+          if (shouldstoptwofive)
+            tltwofive.pause();
+        }
+        function checkShouldStopTwoSix() {
+          if (shouldstoptwosix)
+            tltwosix.pause();
+        }
+        function checkShouldStopTwoSeven() {
+          if (shouldstoptwoseven)
+            tltwoseven.pause();
+        }
+        function checkShouldStopTwoEight() {
+          if (shouldstoptwoeight)
+            tltwoeight.pause();
+        }
+        function checkShouldStopTwoNine() {
+          if (shouldstoptwonine)
+            tltwonine.pause();
+        }
+        function checkShouldStopTwoTen() {
+          if (shouldstoptwoten)
+            tltwoten.pause();
         }
         
+        // DUST - LEFT - END
         
-     
-        
-        
-        gsap.to('.toasted .dust', {
-          ease: "power1.in", y: 300,x: -500,repeat: -1,duration: 4, delay:2, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dusttwo', {
-          ease: "power1.in",y: 300,x: -530,repeat: -1,duration: 4.2, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustthree', {
-          ease: "power1.in",y: 300,x: -580,repeat: -1,duration: 5.5,delay:2, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustfour', {
-          ease: "power1.in",y: 300,x: -550,repeat: -1,duration: 4.6, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustfive', {
-          ease: "power1.in",y: 300,x: -670,repeat: -1,duration: 4.1, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustsix', {
-          ease: "power1.in",y: 300,x: -610,repeat: -1,duration: 3.7, delay:1, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustseven', {
-          ease: "power1.in",y: 300,x: -500,repeat: -1,duration: 3.8, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dusteight', {
-          ease: "power1.in",y: 300,x: -480,repeat: -1,duration: 3.9, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustnine', {
-          ease: "power1.in",y: 300,x: -450,repeat: -1,duration: 4.4,delay:3, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
-        gsap.to('.toasted .dustten', {
-          ease: "power1.in",y: 300,x: -530,repeat: -1,duration: 4.2, rotate: 90,
-          scrollTrigger: {
-            trigger: "#plainnooch",
-            start: "top bottom",
-            end: "bottom center",
-          }
-        })
+    
+//        gsap.to('.toasted .dust', {
+//          ease: "power1.in", y: 300,x: -500,repeat: -1,duration: 4, delay:2, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dusttwo', {
+//          ease: "power1.in",y: 300,x: -530,repeat: -1,duration: 4.2, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustthree', {
+//          ease: "power1.in",y: 300,x: -580,repeat: -1,duration: 5.5,delay:2, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustfour', {
+//          ease: "power1.in",y: 300,x: -550,repeat: -1,duration: 4.6, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustfive', {
+//          ease: "power1.in",y: 300,x: -670,repeat: -1,duration: 4.1, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustsix', {
+//          ease: "power1.in",y: 300,x: -610,repeat: -1,duration: 3.7, delay:1, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustseven', {
+//          ease: "power1.in",y: 300,x: -500,repeat: -1,duration: 3.8, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dusteight', {
+//          ease: "power1.in",y: 300,x: -480,repeat: -1,duration: 3.9, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustnine', {
+//          ease: "power1.in",y: 300,x: -450,repeat: -1,duration: 4.4,delay:3, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
+//        gsap.to('.toasted .dustten', {
+//          ease: "power1.in",y: 300,x: -530,repeat: -1,duration: 4.2, rotate: 90,
+//          scrollTrigger: {
+//            trigger: "#plainnooch",
+//            start: "top bottom",
+//            end: "bottom center",
+//          }
+//        })
 
     });
 }
