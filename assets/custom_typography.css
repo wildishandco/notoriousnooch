@@ -156,18 +156,23 @@ a,
         margin-left: 17px;
     }
 */
+/*
     .lettering span {
         display: block;
     }
+*/
     .lettering {
-        font-size: 85vw;
-        word-break: break-word;
+        top: 20px;
+        font-size: 50vw;
+/*        padding-left: 15px;*/
+/*        word-break: break-word;*/
+        transform: translate(0,0)!important;
     }
 }
 
 @media (max-width: 350px) {
     .lettering {
-        font-size: 84vw;
+/*        padding-left: 12px;*/
     }
     
 }

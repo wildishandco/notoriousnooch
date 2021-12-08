@@ -162,9 +162,10 @@ section.home-featured-product.cheese a.clear-button:hover {
     flex-wrap: wrap;
     align-content: center;
 }
-.content-container img {
-	max-height: 80%;
+.content-container img:not(.badge-pink):not(.badge-green) {
+	height: 80%;
 }
+
 .content-container .button-container {
 	z-index: 2;
     margin-top: 0;
@@ -396,8 +397,8 @@ section.home-video {
         right: -300px;
         left: 0;
     }
-    .content-container img {
-        max-height: 75%;
+    .content-container img:not(.badge-pink):not(.badge-green) {
+        height: 75%;
     }
     section.home-featured-product img.pink-star#pink-star-one {
         left: -600px;
@@ -477,12 +478,15 @@ section.home-video {
     section.home-video {
         height: 400px;
     }
+    .content-container img:not(.badge-pink):not(.badge-green) {
+        height: auto;
+    }
 }
 
 @media (max-width: 500px) {
     section.home-section .text-container img {
         left: 10px;
-        bottom: -20px;
+        bottom: 0px;
     }
     .home-image {
         max-width: 280px;
@@ -506,12 +510,20 @@ section.home-video {
     }
     section.home-section .text-container img {
         width: 250px;
-        bottom: -10px;
+        bottom: 0px;
     }
     section.home-section .text-container img#star-two {
         bottom: -50px;
         right: 30px;
         left: auto;
+    }
+    section.home-section .text-container img#nooch-home-man {
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0px;
+        top: auto;
+        max-width: 200px;
     }
     .home-blog .recipes-slider {
         height: 113px;
@@ -551,13 +563,15 @@ section.home-video {
         background-color: rgba(206, 15, 105, 0.75);
     }
     section.home-featured-product.cheese a.clear-button {
-        color: var(--pink);
-        border: 2px solid var(--pink);
+        color: var(--yellow);
+        border: 2px solid var(--yellow);
         background-color: rgba(0, 100, 80, 0.75);
     }
+/*
     .home-container .lettering {
         z-index: 2;
     }
+*/
     #nooch-home-man {
         z-index: 3;
     }
@@ -579,7 +593,9 @@ section.home-video {
     section.home-featured-product img.pink-star#pink-star-two {
         left: 200px;
     }
-    
+    section.home-section .text-container img#nooch-home-man {
+        max-width: 150px;
+    }
 }
 
 
