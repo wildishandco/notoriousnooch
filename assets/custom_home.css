@@ -271,9 +271,11 @@ body {
 }
 .home-blog .recipes-slider.marquee .track {
     animation: marquee 25s linear infinite;
+    -webkit-animation: marquee 25s linear infinite; 
 }
 .home-blog .recipes-slider.marquee.top .track {
     animation: marquee-left 25s linear infinite;
+    -webkit-animation: marquee-left 25s linear infinite;
     right: 0;
 }
 .home-blog .recipes-slider.marquee .track .content {
