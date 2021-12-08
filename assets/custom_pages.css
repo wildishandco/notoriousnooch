@@ -104,6 +104,8 @@
     height: 1300px;
     position: relative;
     overflow-x: clip;
+/*    clip: auto;*/
+/*    -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)*/
 }
 .story-pour > span:not(.voila) {
     position: relative;
