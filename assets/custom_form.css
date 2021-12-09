@@ -131,3 +131,8 @@ footer.footer .input-error-message span {
 .contact .form__message svg {
     display: none;
 }
+
+.contact-container .contact-right form .field--with-error input,
+.contact-container .contact-right form .field--with-error textarea {
+    border: 2px solid #600202;
+}
