@@ -113,3 +113,21 @@ footer.footer .input-error-message span {
 		flex-wrap: wrap;
 	}
 }
+
+
+
+
+
+.contact .form__message {
+    color: var(--yellow);
+    text-align: center;
+    line-height: 1.4;
+    font-family: ITCAvantGardeGothicStd;
+    display: block;
+}
+.contact .form__message h2 {
+    font-family: ITCAvantGardeGothicStd;
+}
+.contact .form__message svg {
+    display: none;
+}
