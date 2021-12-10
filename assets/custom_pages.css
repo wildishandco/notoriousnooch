@@ -645,6 +645,7 @@
     width: 30px;
     top: 23px;
     left: 20px;
+    height: auto;
 }
 #press-content .partner-container.quote .content-container .quote-star #quote-star-bg {
     width: 75px;
