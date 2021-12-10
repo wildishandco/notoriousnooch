@@ -378,6 +378,20 @@ section.home-video {
     #home-cheesy-nooch {
         top: -200px;
     }
+    #home-cheesy-nooch {
+        top: -600px;
+        bottom: 0;
+        margin: auto;
+        left: -200px;
+        right: 0;
+    }
+    #home-bacon-nooch {
+        right: -250px; 
+        top: 0;
+        left:0;
+        bottom: -445px;
+        margin: auto;
+    }
     section.home-section .text-container img {
         width: 300px;
         left: 80px;
@@ -417,18 +431,22 @@ section.home-video {
 }
 
 @media (max-width: 767px) {
+/*
     #home-cheesy-nooch {
         left: 50px;
     }
+*/
     .home-image {
         max-width: 250px;
     }
+/*
     #home-bacon-nooch {
         bottom: -50px;
     }
     #home-cheesy-nooch {
         top: -140px;
     }
+*/
     section.home-section .text-container img#star-two {
         left: 100px;
         bottom: -80px;
