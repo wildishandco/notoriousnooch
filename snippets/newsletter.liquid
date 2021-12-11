@@ -5,10 +5,16 @@
       {%- if form.posted_successfully? -%}
         <p class="newslettersendconfirmed success">Success!</p>
         <script>
+        
+            gsap.to(".success.popup", {
+                rotate: -3,
+                scale: 1,
+                duration: 0.5
+            });
 
             jQuery('.success.popup').show();
 
-        </script>
+        </script> 
 
       {%- endif -%}
 
