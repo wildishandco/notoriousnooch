@@ -14,12 +14,6 @@ function footerHeight() {
 }
 
 jQuery(document).ready(function(){ 
-    
-    gsap.to(".success.popup", {
-      rotate: -3,
-        scale: 1,
-        duration: 0.5
-    });
 
     const popuptimeline = gsap.timeline({});
     
@@ -29,11 +23,6 @@ jQuery(document).ready(function(){
             scale: 0
         });
     });
-    
-    
-    
-    
-    
     
 });
 
