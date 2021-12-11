@@ -121,6 +121,11 @@ body.blog main#MainContent {
     a.clear-button {
         font-size: 2rem;
     }
+    a.clear-button,
+button.clear-button,
+    .shopify-challenge__container .shopify-challenge__button {
+        height: 60px;
+    }
 }
 
 /*TABLE*/

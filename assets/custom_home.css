@@ -425,9 +425,11 @@ section.home-video {
     section.home-featured-product img.pink-star#pink-star-two {
         left: 600px;
     }
+/*
     section.home-video {
         height: 600px;
     }
+*/
 }
 
 @media (max-width: 767px) {
@@ -498,9 +500,11 @@ section.home-video {
     section.home-featured-product img.pink-star#pink-star-two {
         left: 450px;
     }
+/*
     section.home-video {
         height: 400px;
     }
+*/
     .content-container img:not(.badge-pink):not(.badge-green) {
         height: auto;
     }
@@ -587,9 +591,11 @@ section.home-video {
     section.home-featured-product img.pink-star#pink-star-two {
         left: 250px;
     }
+/*
     section.home-video {
         height: 300px;
     }
+*/
     .content-container .button-container {
         position: absolute;
         bottom: 50px;
