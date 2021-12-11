@@ -577,9 +577,11 @@ section.home-video {
         height: 110px;
         right: -60px;
         bottom: 6px;
+        display: none;
     }
     .home-blog .recipes-slider.marquee .track span {
-        margin: 10px!important;
+/*        margin: 10px!important;*/
+        margin: 0px!important;
     }
     section.home-featured-product.bacon .content-container img.badge-pink, section.home-featured-product.cheese .content-container img.badge-green {
         max-width: 125px;
