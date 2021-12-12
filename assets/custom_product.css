@@ -162,6 +162,7 @@ body.product .buy-buttons .product-form {
 }
 body.product .product-form__buttons {
     height: 100%;
+    position: relative;
 }
 
 body.product .product-form__buttons button {
@@ -176,6 +177,28 @@ body.product .product-form__buttons button {
     margin-bottom: 0;
     display: block;
     transition: 0.5s;
+}
+body.product .product-form__buttons button.unavailable {
+    pointer-events: none;
+    background-color: grey;
+}
+body.product .product-form__buttons .soldout {
+    position: absolute;
+    background-color: var(--darkpink);
+    color: var(--yellow);
+    padding: 10px 30px;
+    font-size: 2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 body.product .product-form__buttons button .button-price {
     margin-left: 5px;

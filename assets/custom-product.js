@@ -91,16 +91,38 @@ jQuery(document).ready(function(){
             var quantityNumber = quantityCheckedItem.match(/\d+/);
             var selectedString = flavourCheckedItem + ' ' + quantityNumber; 
             
+            
+            
             jQuery('.variant-container').each(function(){
                 
                 var selectedVar = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-id').html();
                 
                 var selectedVarPrice = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-cost').html();
                 
+                var selectedAvailability = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-availability').html();
+                
+                var varFalse = 'false';
+                
                 jQuery('button.mybutton').attr('data-cart-add', selectedVar);
                 jQuery('button.mybutton span.item-price').html(selectedVarPrice);
-                  
+                jQuery('button.mybutton span.item-price-availability').html(selectedAvailability);
+                
+//                setTimeout(function(){
+                
+                    var selectedAvailabilityHTML = jQuery('button.mybutton span.item-price-availability').html();
+
+                    if (selectedAvailabilityHTML == varFalse) {
+                        jQuery('button.mybutton').addClass('unavailable');
+                        jQuery('.soldout').css('display', 'flex');
+                     } else {
+                         jQuery('button.mybutton').removeClass('unavailable');
+                         jQuery('.soldout').hide();
+                     }
+                    
+//                }, 500);
             });
+            
+            
             
         }, 500);
     }
