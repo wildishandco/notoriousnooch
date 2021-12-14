@@ -133,9 +133,9 @@
 /*    background-color: #fbf5c4;*/
     display: block!important;
     position: absolute;
-    right: 0;
+    right: 100px;
     z-index: 1;
-    top: -160px;
+    top: -200px;
     transform-origin: -165px 96px;
     max-width: 11px;
 }
@@ -464,7 +464,7 @@
     top:-50px;
   }
     .dust {
-        right: 30px;
+        right: 85px;
     }
     .toasted .dust {
         right: 0;
@@ -509,11 +509,12 @@
     padding-bottom: 75px;
   }
     .dust {
-        top: -120px;
-        left: 50px;
+        top: -140px;
+        left: 35px;
     }
     .toasted .dust {
-        top:-80px;
+        top:-165px;
+        left: 20px
     }
 }
 
@@ -1103,6 +1104,7 @@
 }
 .gm-style .gm-style-iw-t::after {
     background: linear-gradient(45deg,rgba(206,15,105,1) 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
+    display: none;
 }
 #bodyContent {
     text-transform: uppercase;
