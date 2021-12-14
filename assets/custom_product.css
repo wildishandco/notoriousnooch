@@ -664,6 +664,9 @@ body.product span.product__media-icon.motion-reduce {
     body.product .product-form__input input[type='radio'] + label {
         padding: 12px 0 10px 0;
     }
+    body.product .product-form__buttons .soldout {
+        font-size: 1.4rem;
+    }
 }
 
 
