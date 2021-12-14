@@ -565,11 +565,19 @@ section.home-video {
         max-width: 200px;
     }
     .home-blog .recipes-slider {
-        height: 113px;
+        height: 134px;
     }
     .home-blog .recipes-slider span {
-        font-size: 7.75rem;
+        font-size: 10.75rem;
         line-height: 4.3rem;
+    }
+    .home-blog .recipes-slider.marquee .track {
+        animation: none;
+        -webkit-animation: none;
+    }
+    .home-blog .recipes-slider.marquee.top .track {
+        animation: none;
+        -webkit-animation: none;
     }
     .home-blog .recipes-slider.marquee .track img {
         height: 110px;

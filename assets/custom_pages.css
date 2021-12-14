@@ -103,7 +103,8 @@
 .story-pour {
     height: 1300px;
     position: relative;
-    overflow-x: clip;
+    overflow-x: hidden;
+    padding-top: 100px;
 /*    clip: auto;*/
 /*    -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%)*/
 }
@@ -118,7 +119,7 @@
     top: -50px;
 }
 .toasted {
-    top: 40px;
+/*    top: 40px;*/
     left: auto;
     right: -50px;
     position: absolute!important;
