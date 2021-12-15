@@ -515,7 +515,7 @@
     }
     .toasted .dust {
         top:-165px;
-        left: 20px
+        left: 40px
     }
 }
 
@@ -545,6 +545,7 @@
 }
 .main-page-content .rte a {
     color: var(--yellow);
+    word-break: break-word;
 }
 .main-page-content .rte a:hover {
     color: var(--pink);
@@ -691,6 +692,9 @@
     #press-content .partner-container.quote p {
         font-size: 15rem;
     }
+    .main-page-content h1 {
+        font-size: 15rem;
+    }
 }
 
 
@@ -740,6 +744,9 @@
     #press-content .partner-container.quote p {
         font-size: 10rem;
     }
+    .main-page-content h1 {
+        font-size: 10rem;
+    } 
 }
 
 @media (max-width: 500px) {
@@ -948,6 +955,7 @@
     #press-content .partner-container.trade-partners ul.trade-buttons {
         position: relative;
         margin-top: 30px;
+        max-width: 90%;
     }
     #press-content .partner-container.trade-partners h2,
     #press-content .partner-container.trade-partners p {
