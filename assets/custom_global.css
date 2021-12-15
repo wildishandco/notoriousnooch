@@ -152,3 +152,30 @@ table:not([class]) th {
     padding: 5px 10px 5px 0;
     
 }
+
+/*COOKIES*/
+
+    
+#shopify-privacy-banner-div {
+    background-color: var(--pink);
+    border-top: 1px solid var(--green);
+}
+#shopify-privacy-banner-div p {
+    color: var(--green);
+    font-family: ITCAvantGardeGothicStd;
+}
+#shopify-privacy-banner-div p a {
+    color: var(--green);
+}
+#shopify-privacy-banner-div button.accept {
+    background-color: var(--green);
+    color: var(--pink);
+    text-transform: uppercase;
+    border-color: var(--green);
+}
+#shopify-privacy-banner-div button.decline {
+    border-color: var(--green);
+    color: var(--green);
+    text-transform: uppercase;
+    background-color: var(--pink);
+}
