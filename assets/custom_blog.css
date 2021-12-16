@@ -389,7 +389,7 @@ ul.blog-buttons li a:hover {
 }
 
 .article-template {
-    min-height: 103vh;
+    min-height: 105vh;
     background-color: var(--green);
     display: flex;
     flex-wrap: wrap;
