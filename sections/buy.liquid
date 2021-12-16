@@ -564,110 +564,143 @@
       });
 
       GreensHealthFoodsMarker.addListener("click", () => {
+          closeInfoWindows();
         GreensHealthFoodsInfowindow.open({
           anchor: GreensHealthFoodsMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       HaelanCentreLtdMarker.addListener("click", () => {
+          closeInfoWindows();
         HaelanCentreLtdInfowindow.open({
           anchor: HaelanCentreLtdMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       NaturelleMarker.addListener("click", () => {
+          closeInfoWindows();
         NaturelleInfowindow.open({
           anchor: NaturelleMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       NaturesLarderMarker.addListener("click", () => {
+          closeInfoWindows();
         NaturesLarderInfowindow.open({
           anchor: NaturesLarderMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       OutofThisWorldMarker.addListener("click", () => {
+          closeInfoWindows();
         OutofThisWorldInfowindow.open({
           anchor: OutofThisWorldMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       PeppercornMarker.addListener("click", () => {
+          closeInfoWindows();
         PeppercornInfowindow.open({
           anchor: PeppercornMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       TheGroceryMarker.addListener("click", () => {
+          closeInfoWindows();
         TheGroceryInfowindow.open({
           anchor: TheGroceryMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       TheQualityDeliHealthFdsMarker.addListener("click", () => {
+          closeInfoWindows();
         TheQualityDeliHealthFdsInfowindow.open({
           anchor: TheQualityDeliHealthFdsMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       GreenBayMarker.addListener("click", () => {
+          closeInfoWindows();
         GreenBayInfowindow.open({
           anchor: GreenBayMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       TheVSpotMarker.addListener("click", () => {
+          closeInfoWindows();
         TheVSpotInfowindow.open({
           anchor: TheVSpotMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       SproutHealthFoodsMarker.addListener("click", () => {
+          closeInfoWindows();
         SproutHealthFoodsInfowindow.open({
           anchor: SproutHealthFoodsMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       TheVeganKindLtdMarker.addListener("click", () => {
+          closeInfoWindows();
         TheVeganKindLtdInfowindow.open({
           anchor: TheVeganKindLtdMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       EighthDayMarker.addListener("click", () => {
+          closeInfoWindows();
         EighthDayInfowindow.open({
           anchor: EighthDayMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       MightyWienersMarker.addListener("click", () => {
+          closeInfoWindows();
         MightyWienersInfowindow.open({
           anchor: MightyWienersMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
       GoodProperMarker.addListener("click", () => {
+          closeInfoWindows();
         GoodProperInfowindow.open({
           anchor: GoodProperMarker,
           map,
-          shouldFocus: false,
+          shouldFocus: true,
         });
       });
+        
+        function closeInfoWindows() {
+            GreensHealthFoodsInfowindow.close();
+            HaelanCentreLtdInfowindow.close();
+            NaturelleInfowindow.close();
+            NaturesLarderInfowindow.close();
+            OutofThisWorldInfowindow.close();
+            PeppercornInfowindow.close();
+            TheGroceryInfowindow.close();
+            TheQualityDeliHealthFdsInfowindow.close();
+            GreenBayInfowindow.close();
+            TheVSpotInfowindow.close();
+            SproutHealthFoodsInfowindow.close();
+            TheVeganKindLtdInfowindow.close();
+            EighthDayInfowindow.close();
+            MightyWienersInfowindow.close();
+            GoodProperInfowindow.close();
+        }
 
         const greenhealthfoodsLink = document.getElementById('greenhealthfoods');
         const haelancentreltdLink = document.getElementById('haelancentreltd');
@@ -684,6 +717,8 @@
         const theeigthdaycooperativeLink = document.getElementById('theeigthdaycooperative');
         const mightywienersLink = document.getElementById('mightywieners');
         const goodproperzeroLink = document.getElementById('goodproperzero');
+        
+        
 
 //         greenhealthfoodsLink.addEventListener("mouseover", () => {
 //             GreensHealthFoodsInfowindow.open({

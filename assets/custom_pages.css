@@ -553,6 +553,23 @@
 
 /*PRESS*/
 
+.top {
+    position: fixed;
+    right:-200px;
+    z-index: 10000;
+    bottom: 120px;
+    background-color: var(--darkpink);
+    color: var(--pink);
+    text-decoration: none;
+    font-family: "Balgin";
+    text-transform: uppercase;
+    padding: 8px 15px 5px 15px;
+    transition: 0.5s;
+}
+.top:hover {
+    background-color: var(--green);
+}
+
 .wrapper.trade-wrapper {
     position: relative;
     margin-top: 220px;
@@ -635,7 +652,7 @@
     color: var(--green);
     text-align: center;
     text-transform: uppercase;
-    font-size: 20rem;
+    font-size: 12rem;
     line-height: 0.75;
     margin: 0;
 }
@@ -1091,9 +1108,9 @@
     text-align: center
 }
 .popup-nooch img {
-    max-width: 180px;
+    max-width: 165px;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .popup-nooch img.bacon {
     max-width: 110px;
@@ -1107,7 +1124,7 @@
     padding: 0;
 }
 .gm-style .gm-style-iw-d {
-    padding: 20px 30px 20px 30px;
+    padding: 25px 35px 25px 35px;
     overflow: hidden!important;
     text-align: center;
 }
@@ -1121,16 +1138,17 @@
 button.gm-ui-hover-effect {
     background-image: url(box-close.png)!important;
     opacity: 1;
-    background-size: 13px auto!important;
+    background-size: 19px auto!important;
     background-repeat: no-repeat!important;
     background-position: center!important;
-    right: 5px!important;
-    top: 5px!important;
+    right: 15px!important;
+    top: 15px!important;
+    width: 20px!important;
+    height: 20px!important;
 }
 button.gm-ui-hover-effect img {
     display: none !important;
 }
-
 
 
 
