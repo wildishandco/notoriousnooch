@@ -157,6 +157,7 @@ footer.footer .footer-links ul li a svg * {
     right: 20px;
     top: 20px;
     transition: 1s;
+    max-width: 20px;
 }
 .success.popup img.close-success:hover {
     cursor: pointer;
