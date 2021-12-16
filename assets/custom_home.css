@@ -560,7 +560,7 @@ section.home-video {
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 0px;
+        bottom: -12px;
         top: auto;
         max-width: 200px;
     }
