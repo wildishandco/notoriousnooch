@@ -356,6 +356,11 @@ footer.footer .footer-links ul li a svg * {
         padding-left: 0;
         padding-right: 0;
     }
+    .success.popup img.close-success {
+        right: 10px;
+        top: 10px;
+        max-width: 17px;
+    }
 }
 
 @media (max-width: 340px) {
