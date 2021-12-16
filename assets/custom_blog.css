@@ -282,7 +282,7 @@ body.blog .logo.alt {
 .article-template__content {
     display: flex;
     padding: 30px 100px 100px 100px;
-    margin-top: 100vh!important;
+/*    margin-top: 100vh!important;*/
     margin-bottom: 0;
     background-color: var(--green);
 }
@@ -386,6 +386,18 @@ ul.blog-buttons li a {
 }
 ul.blog-buttons li a:hover {
     background-color: #a90753;
+}
+
+.article-template {
+    min-height: 105vh;
+    background-color: var(--green);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-top: 100vh;
+}
+.article-bottom-container {
+    width: 100%;
 }
 
 @media (max-width: 991px) {
