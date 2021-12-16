@@ -712,6 +712,9 @@
     .main-page-content h1 {
         font-size: 15rem;
     }
+    .top {
+        bottom: 78px;
+    }
 }
 
 
@@ -751,6 +754,9 @@
     }
     #press-content .partner-container.quote p {
         font-size: 15rem;
+    }
+    .top {
+        bottom: 78px;
     }
 }
 
