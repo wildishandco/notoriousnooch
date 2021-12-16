@@ -324,6 +324,19 @@ if (jQuery(presscontent).length > 0 ) {
     });
 
     //PRESS SIDE SCROLLING --- END
+    
+    jQuery(window).on('scroll', function() {
+        var y_scroll_pos = window.pageYOffset;
+        var scroll_pos_test = 350;             // set to whatever you want it to be
+
+        if(y_scroll_pos > scroll_pos_test) {
+            jQuery('.top').css('right','0');
+        } else {
+            jQuery('.top').css('right','-200px');
+        }
+    });
+    
+    
 }
 
 //STORY
