@@ -490,6 +490,104 @@
         "<p>Cheesy Immature Nooch</p></div>" +
         "</div>" +
         "</div>";
+      const WholefoodsClaphamContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Clapham Junction</h2>' +
+        '<div id="bodyContent">' +
+        "<p>305-311 Lavender Hill, " +
+        "London, " +
+        "SW11 1LN </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const WholefoodsCamdenContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Camden</h2>' +
+        '<div id="bodyContent">' +
+        "<p>49 Parkway, " +
+        "London, " +
+        "NW1 7PN </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const WholefoodsFulhamContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Fulham</h2>' +
+        '<div id="bodyContent">' +
+        "<p>2-6 Fulham Broadway, " +
+        "London, " +
+        "SW6 1AA </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const WholefoodsKensingtonContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Kensington</h2>' +
+        '<div id="bodyContent">' +
+        "<p>63-97 Kensington High St, " +
+        "London, " +
+        "W8 5SE </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const WholefoodsPiccadillyContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Piccadilly Circus</h2>' +
+        '<div id="bodyContent">' +
+        "<p>20 Glasshouse St, " +
+        "London, " +
+        "W1B 5AR </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const WholefoodsRichmondContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Richmond</h2>' +
+        '<div id="bodyContent">' +
+        "<p>1-3 George St, " +
+        "London, " +
+        "TW9 1AB </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const WholefoodsStokeContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Wholefoods Stoke Newington</h2>' +
+        '<div id="bodyContent">' +
+        "<p>32-40 Stoke Newington Church St, " +
+        "London, " +
+        "N16 0LU </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
 
       const GreensHealthFoodsInfowindow = new google.maps.InfoWindow({
         content: GreensHealthFoodsContentString,
@@ -554,6 +652,28 @@
       const SelfridgesTraffordInfowindow = new google.maps.InfoWindow({
         content: SelfridgesTraffordContentString,
       });
+      const WholefoodsClaphamInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsClaphamContentString,
+      });
+      const WholefoodsCamdenInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsCamdenContentString,
+      });
+      const WholefoodsFulhamInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsFulhamContentString,
+      });
+      const WholefoodsKensingtonInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsKensingtonContentString,
+      });
+      const WholefoodsPiccadillyInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsPiccadillyContentString,
+      });
+      const WholefoodsRichmondInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsRichmondContentString,
+      });
+      const WholefoodsStokeInfowindow = new google.maps.InfoWindow({
+        content: WholefoodsStokeContentString,
+      });
+      
 
       const GreensHealthFoodsMarker = new google.maps.Marker({
         position: new google.maps.LatLng(51.5425492,0.6530483),
@@ -647,6 +767,41 @@
       });
       const SelfridgesTraffordMarker = new google.maps.Marker({
         position: new google.maps.LatLng(53.466499,-2.347700),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsClaphamMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.463737,-0.166654),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsCamdenMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.53791,-0.144553),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsFulhamMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.479979,-0.196419),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsKensingtonMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.501697,-0.190509),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsPiccadillyMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.510622,-0.136321),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsRichmondMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.461012,-0.303179),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const WholefoodsStokeMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.56222,-0.075221),
         map,
         icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
       });
@@ -803,6 +958,63 @@
           shouldFocus: true,
         });
       });
+  		WholefoodsClaphamMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsClaphamInfowindow.open({
+          anchor: WholefoodsClaphamMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  WholefoodsCamdenMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsCamdenInfowindow.open({
+          anchor: WholefoodsCamdenMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  WholefoodsFulhamMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsFulhamInfowindow.open({
+          anchor: WholefoodsFulhamMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  WholefoodsKensingtonMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsKensingtonInfowindow.open({
+          anchor: WholefoodsKensingtonMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  WholefoodsPiccadillyMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsPiccadillyInfowindow.open({
+          anchor: WholefoodsPiccadillyMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  WholefoodsRichmondMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsRichmondInfowindow.open({
+          anchor: WholefoodsRichmondMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  WholefoodsStokeMarker.addListener("click", () => {
+          closeInfoWindows();
+        WholefoodsStokeInfowindow.open({
+          anchor: WholefoodsStokeMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+  
         
         function closeInfoWindows() {
             GreensHealthFoodsInfowindow.close();
@@ -824,6 +1036,13 @@
           SelfridgesBirminghamInfowindow.close();
           SelfridgesManchesterInfowindow.close();
           SelfridgesTraffordInfowindow.close();
+          WholefoodsClaphamInfowindow.close();
+          WholefoodsCamdenInfowindow.close();
+          WholefoodsFulhamInfowindow.close();
+          WholefoodsKensingtonInfowindow.close();
+          WholefoodsPiccadillyInfowindow.close();
+          WholefoodsRichmondInfowindow.close();
+          WholefoodsStokeInfowindow.close();
         }
 
         const greenhealthfoodsLink = document.getElementById('greenhealthfoods');
@@ -845,6 +1064,13 @@
   const selfridgesbirminghamLink = document.getElementById('selfridgesbirmingham');
   const selfridgesmanchesterLink = document.getElementById('selfridgesmanchester');
   const selfridgestraffordLink = document.getElementById('selfridgestrafford');
+  const wholefoodsclaphamLink = document.getElementById('wholefoodsclapham');
+  const wholefoodscamdenLink = document.getElementById('wholefoodscamden');
+  const wholefoodsfulhamLink = document.getElementById('wholefoodsfulham');
+  const wholefoodskensingtonLink = document.getElementById('wholefoodskensington');
+  const wholefoodspiccadillyLink = document.getElementById('wholefoodspiccadilly');
+  const wholefoodsrichmondLink = document.getElementById('wholefoodsrichmond');
+  const wholefoodsstokeLink = document.getElementById('wholefoodsstoke');
         
         
 
