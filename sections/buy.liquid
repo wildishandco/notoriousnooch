@@ -434,6 +434,62 @@
         "<p>Cheesy Immature Nooch</p></div>" +
         "</div>" +
         "</div>";
+      const SelfridgesLondonContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Selfridges &amp; Co</h2>' +
+        '<div id="bodyContent">' +
+        "<p>400 Oxford Street, " +
+        "London, " +
+        "W1A 1AB </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const SelfridgesBirminghamContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Selfridges &amp; Co</h2>' +
+        '<div id="bodyContent">' +
+        "<p>The Bullring, " +
+        "Upper Mall East Birmingham, " +
+        "B5 4BP </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const SelfridgesManchesterContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Selfridges &amp; Co</h2>' +
+        '<div id="bodyContent">' +
+        "<p>1 Exchange Square Central, " +
+        "Manchester, " +
+        "M3 1BD </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
+      const SelfridgesTraffordContentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h2 id="firstHeading" class="firstHeading">Selfridges &amp; Co</h2>' +
+        '<div id="bodyContent">' +
+        "<p>The Trafford Centre, " +
+        "Manchester, " +
+        "M17 8DA </p> " +
+        "<p>Available Flavours:</p> " +
+        "<div class='popup-nooch'><img src='https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/nooch-packets.png?v=1636019107'/><p>Smoky Bacon Nooch</p>" +
+        "<p>Cheesy Immature Nooch</p></div>" +
+        "</div>" +
+        "</div>";
 
       const GreensHealthFoodsInfowindow = new google.maps.InfoWindow({
         content: GreensHealthFoodsContentString,
@@ -485,6 +541,18 @@
       const GoodProperInfowindow = new google.maps.InfoWindow({
         content: GoodProperContentString,
         pixelOffset: new google.maps.Size(0, 300)
+      });
+      const SelfridgesLondonInfowindow = new google.maps.InfoWindow({
+        content: SelfridgesLondonContentString,
+      });
+      const SelfridgesBirminghamInfowindow = new google.maps.InfoWindow({
+        content: SelfridgesBirminghamContentString,
+      });
+      const SelfridgesManchesterInfowindow = new google.maps.InfoWindow({
+        content: SelfridgesManchesterContentString,
+      });
+      const SelfridgesTraffordInfowindow = new google.maps.InfoWindow({
+        content: SelfridgesTraffordContentString,
       });
 
       const GreensHealthFoodsMarker = new google.maps.Marker({
@@ -559,6 +627,26 @@
       });
       const GoodProperMarker = new google.maps.Marker({
         position: new google.maps.LatLng(51.3474412,-2.9776988),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const SelfridgesLondonMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.514633,-0.155015),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const SelfridgesBirminghamMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(52.478100,-1.892500),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const SelfridgesManchesterMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(53.4839615,-2.2437811),
+        map,
+        icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
+      });
+      const SelfridgesTraffordMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(53.466499,-2.347700),
         map,
         icon: "https://cdn.shopify.com/s/files/1/0606/1916/1805/t/3/assets/location-pin-yellow-small.png",
       });
@@ -683,6 +771,38 @@
           shouldFocus: true,
         });
       });
+  	  SelfridgesLondonMarker.addListener("click", () => {
+          closeInfoWindows();
+        SelfridgesLondonInfowindow.open({
+          anchor: SelfridgesLondonMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+      SelfridgesBirminghamMarker.addListener("click", () => {
+          closeInfoWindows();
+        SelfridgesBirminghamInfowindow.open({
+          anchor: SelfridgesBirminghamMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+      SelfridgesManchesterMarker.addListener("click", () => {
+          closeInfoWindows();
+        SelfridgesManchesterInfowindow.open({
+          anchor: SelfridgesManchesterMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
+      SelfridgesTraffordMarker.addListener("click", () => {
+          closeInfoWindows();
+        SelfridgesTraffordInfowindow.open({
+          anchor: SelfridgesTraffordMarker,
+          map,
+          shouldFocus: true,
+        });
+      });
         
         function closeInfoWindows() {
             GreensHealthFoodsInfowindow.close();
@@ -700,6 +820,10 @@
             EighthDayInfowindow.close();
             MightyWienersInfowindow.close();
             GoodProperInfowindow.close();
+          SelfridgesLondonInfowindow.close();
+          SelfridgesBirminghamInfowindow.close();
+          SelfridgesManchesterInfowindow.close();
+          SelfridgesTraffordInfowindow.close();
         }
 
         const greenhealthfoodsLink = document.getElementById('greenhealthfoods');
@@ -717,6 +841,10 @@
         const theeigthdaycooperativeLink = document.getElementById('theeigthdaycooperative');
         const mightywienersLink = document.getElementById('mightywieners');
         const goodproperzeroLink = document.getElementById('goodproperzero');
+  const selfridgeslondonLink = document.getElementById('selfridgeslondon');
+  const selfridgesbirminghamLink = document.getElementById('selfridgesbirmingham');
+  const selfridgesmanchesterLink = document.getElementById('selfridgesmanchester');
+  const selfridgestraffordLink = document.getElementById('selfridgestrafford');
         
         
 
