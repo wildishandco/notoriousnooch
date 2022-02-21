@@ -395,7 +395,7 @@ section.home-video {
         right: 0;
         margin: auto;
         left: -200px;
-        top: 600px;
+        top: 450px;
         bottom: 0;
     }
     #home-cheesy-nooch {
@@ -554,9 +554,9 @@ section.home-video {
 */
     }
     #home-super-nooch {
-        right: 50px; 
-        top: 0;
-        left:0;
+        right: auto; 
+        top: -80px;
+        left: -50px;
         bottom: -450px;
     }
     #home-bacon-nooch {
