@@ -368,3 +368,8 @@ footer.footer .footer-links ul li a svg * {
         border-width: 20px;
     }
 }
+
+localization-form,
+.footer__column.footer__localization{
+    display: none;
+}
