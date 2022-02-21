@@ -657,6 +657,11 @@ section.home-video {
     #nooch-home-man {
         z-index: 3;
     }
+    
+    .horizontal-container .module.home-featured-product.super .content-container img {
+        max-width: 200px;
+        
+    } 
 } 
 
 @media (max-width: 350px) {
