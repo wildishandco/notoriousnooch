@@ -18,6 +18,7 @@ section.home-section .text-container img {
 	width: 440px;
 	bottom:-30px;
 	left: 185px;
+    z-index: 2;
 }
 section.home-section .home-container {
 	width: 100%;
@@ -34,6 +35,11 @@ section.home-section .home-container {
 #home-bacon-nooch {
 	bottom: -200px;
 	right: 100px;
+}
+#home-super-nooch {
+	bottom: -150px;
+	left: 20px;
+    z-index: 1;
 }
 
 section.home-section .text-container img.star {
@@ -89,6 +95,14 @@ section.home-featured-product.bacon a.clear-button {
 }
 section.home-featured-product.bacon a.clear-button:hover {
     color: var(--green)
+}
+section.home-featured-product.super a.clear-button {
+	color: var(--blue);
+	border: 1px solid var(--blue); 
+}
+section.home-featured-product.super a.clear-button:hover {
+    color: var(--green);
+    border: 1px solid var(--pink); 
 }
 section.home-featured-product.bacon .content-container img {
 	transform-origin: -500px 800px;
@@ -187,9 +201,11 @@ body {
   height:100%;
   display:flex;
   width:100%;
-  background-color: var(--darkpink);
+/*  background-color: var(--darkpink);*/
 }
-
+.horizontal-container .module.home-featured-product {
+    background-color: var(--darkpink);
+}
 .home-blog {
 	background-color: var(--green);
     position: relative;
@@ -268,6 +284,7 @@ body {
 }
 .home-blog .recipes-slider.marquee.top {
     top: auto;
+    background-color: var(--lightblue);
 }
 .home-blog .recipes-slider.marquee .track {
     animation: marquee 25s linear infinite;
@@ -373,6 +390,14 @@ section.home-video {
     #home-bacon-nooch {
         bottom: -100px;
     }
+    #home-super-nooch {
+        bottom: -100px;
+        right: 0;
+        margin: auto;
+        left: -200px;
+        top: 600px;
+        bottom: 0;
+    }
     #home-cheesy-nooch {
         top: -200px;
     }
@@ -384,7 +409,7 @@ section.home-video {
         right: 0;
     }
     #home-bacon-nooch {
-        right: -250px; 
+        right: -450px; 
         top: 0;
         left:0;
         bottom: -445px;
@@ -528,6 +553,12 @@ section.home-video {
         left: -80px;
 */
     }
+    #home-super-nooch {
+        right: 50px; 
+        top: 0;
+        left:0;
+        bottom: -450px;
+    }
     #home-bacon-nooch {
 /*
         right: -100px;
@@ -537,7 +568,7 @@ section.home-video {
         right: -250px; 
         top: 0;
         left:0;
-        bottom: -300px;
+        bottom: -350px;
         margin: auto;
     }
     section.home-section .text-container img#star-one {
