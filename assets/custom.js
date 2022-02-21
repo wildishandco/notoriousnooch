@@ -276,6 +276,35 @@ if(jQuery('body').hasClass('home')) {
         });
         
         function homeCheeseDesktop() {
+            
+            var superrotate = gsap.timeline({
+                  scrollTrigger:{
+                    trigger: "main",
+                    scrub:0.2,
+                    start: 'top top',
+                    end:'+=10000',
+                  }
+                })
+                .to('.home-featured-product.super .content-container img', {
+                  rotation:360*7, ease:'none',
+                })
+            
+//            var horizontalWidth = jQuery('.horizontal-container').outerWidth();
+//            var horizontalWidthMultiplied = horizontalWidth*2;
+//            
+//            // HOME SUPER PACKET
+//            var superrotate = gsap.timeline({
+//              scrollTrigger:{
+//                trigger: ".home-featured-product.super .content-container img",
+//                scrub:0.5,
+//                start: () => `+=${horizontalWidth}`,
+//                end: () => `+=${horizontalWidthMultiplied}`
+//              }
+//            })
+//            .to('.home-featured-product.super .content-container img', {
+//              rotation:-360,ease:'none',
+//            })
+            
             if(jQuery(window).width() > 900) {
                 // HOME CHEESE PACKET
                 var rotate = gsap.timeline({
@@ -292,21 +321,11 @@ if(jQuery('body').hasClass('home')) {
                 })
                 
                 
-                var horizontalWidth = jQuery('.horizontal-container').outerWidth();
-                var horizontalWidthMultiplied = horizontalWidth*2;
+                
                                 
-                // HOME SUPER PACKET
-                var superrotate = gsap.timeline({
-                  scrollTrigger:{
-                    trigger: ".home-featured-product.super .content-container img",
-                    scrub:0.5,
-                    start: () => `+=${horizontalWidth}`,
-                    end: () => `+=${horizontalWidthMultiplied}`
-                  }
-                })
-                .to('.home-featured-product.super .content-container img', {
-                  rotation:-360,ease:'none',
-                })
+
+                
+                
             }
             if((jQuery(window).width() < 900) && (jQuery(window).width() > 767)) {
                 // HOME CHEESE PACKET
