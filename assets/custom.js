@@ -117,7 +117,17 @@ if(jQuery('body').hasClass('home')) {
             rotate: xPos * 10,
             ease: Power1.easeOut,
         });
-      })  
+      }) 
+        
+      jQuery("#home-super-nooch").each(function(index, element){
+        var box = element;
+        TweenLite.to(box, 1, {
+            x: xPos * 100, 
+            y: yPos * 100,
+            rotate: xPos * 10,
+            ease: Power1.easeOut,
+        });
+      }) 
 
       jQuery("#star-one").each(function(index, element){
         var box = element;
@@ -182,19 +192,61 @@ if(jQuery('body').hasClass('home')) {
     window.addEventListener("load", function() {
       const scrollColorElems = document.querySelectorAll(".horizontal-container .module");
       scrollColorElems.forEach((colorSection, i) => {
-        ScrollTrigger.create({
-          trigger: colorSection,
-          start: "bottom +50%",
-          onEnter: () => gsap.to(".home-featured-product", {backgroundColor: '#006450', overwrite: 'auto'}),
-          onLeaveBack: () => gsap.to(".home-featured-product", {backgroundColor: '#CE0F69', overwrite: 'auto'})
-        });
-        ScrollTrigger.create({
-          trigger: colorSection,
-          start: "bottom +50%",
-          onEnter: () => gsap.to(".lettering-container p", {color: '#FCDC3E', overwrite: 'auto'}),
-          onLeaveBack: () => gsap.to(".lettering-container p", {color: '#F7CED7', overwrite: 'auto'})
-        });
+//        ScrollTrigger.create({
+//          trigger: colorSection,
+//          start: "bottom +50%",
+//          onEnter: () => gsap.to(".home-featured-product", {backgroundColor: '#006450', overwrite: 'auto'}),
+//          onLeaveBack: () => gsap.to(".home-featured-product", {backgroundColor: '#CE0F69', overwrite: 'auto'}),
+//          markers:true
+//        });
+    
+//          ScrollTrigger.create({
+//          trigger: colorSection,
+//          start: "bottom +50%",
+//          onEnter: () => gsap.to(".home-featured-product", {backgroundColor: '#006450', overwrite: 'auto'}),
+//          onLeaveBack: () => gsap.to(".home-featured-product", {backgroundColor: '#CE0F69', overwrite: 'auto'}),
+//          markers:true
+//        });
+          
+//        ScrollTrigger.create({
+//          trigger: colorSection,
+//          start: "right 50%",
+//          onEnter: () => gsap.to(".home-featured-product", {backgroundColor: '#CE0F69', overwrite: 'auto'}),
+//          onLeaveBack: () => gsap.to(".home-featured-product", {backgroundColor: '#0b3a94', overwrite: 'auto'})
+//        });
+//          
+//        ScrollTrigger.create({
+//          trigger: colorSection,
+//          start: "bottom +50%",
+//          onEnter: () => gsap.to(".lettering-container p", {color: '#FCDC3E', overwrite: 'auto'}),
+//          onLeaveBack: () => gsap.to(".lettering-container p", {color: '#F7CED7', overwrite: 'auto'})
+//        });
       });
+        
+        
+        var horizontalWidth = jQuery('.horizontal-container').outerWidth();
+        var horizontalWidthMultiplied = horizontalWidth*2;
+        
+        console.log(horizontalWidthMultiplied);
+        
+        const myTimeline = gsap.timeline({
+  
+            scrollTrigger: {
+                trigger: ".horizontal-container",
+                pin: false,
+                scrub: true,
+                start: "top",   
+                end: () => `+=${horizontalWidthMultiplied}`
+            }
+
+        })
+
+         myTimeline
+         .to('.home-featured-product', { duration: 1, backgroundColor: '#006450', ease: "none" }, 0)
+         .to('.home-featured-product', { duration: 1, backgroundColor: '#0b3a94', ease: "none" }, 1)
+         .to('.lettering-container p', { duration: 1, color: '#FCDC3E', ease: "none" }, 0)
+         .to('.lettering-container p', { duration: 1, color: '#88c9d8', ease: "none" }, 1)
+        
 
       // HOME SMOKY PACKET
         var rotate = gsap.timeline({
@@ -213,7 +265,8 @@ if(jQuery('body').hasClass('home')) {
 
         gsap.set('.home-featured-product.cheese .content-container img', {rotate:-300});
 
-        
+        gsap.set('.home-featured-product.super .content-container img', {rotate:300});
+
         
         
         homeCheeseDesktop()
@@ -223,6 +276,35 @@ if(jQuery('body').hasClass('home')) {
         });
         
         function homeCheeseDesktop() {
+            
+            var superrotate = gsap.timeline({
+                  scrollTrigger:{
+                    trigger: "main",
+                    scrub:0.2,
+                    start: 'top top',
+                    end:'+=10000',
+                  }
+                })
+                .to('.home-featured-product.super .content-container img', {
+                  rotation:360*7, ease:'none',
+                })
+            
+//            var horizontalWidth = jQuery('.horizontal-container').outerWidth();
+//            var horizontalWidthMultiplied = horizontalWidth*2;
+//            
+//            // HOME SUPER PACKET
+//            var superrotate = gsap.timeline({
+//              scrollTrigger:{
+//                trigger: ".home-featured-product.super .content-container img",
+//                scrub:0.5,
+//                start: () => `+=${horizontalWidth}`,
+//                end: () => `+=${horizontalWidthMultiplied}`
+//              }
+//            })
+//            .to('.home-featured-product.super .content-container img', {
+//              rotation:-360,ease:'none',
+//            })
+            
             if(jQuery(window).width() > 900) {
                 // HOME CHEESE PACKET
                 var rotate = gsap.timeline({
@@ -237,6 +319,13 @@ if(jQuery('body').hasClass('home')) {
                   rotation:-360,
                   duration:1, ease:'none',
                 })
+                
+                
+                
+                                
+
+                
+                
             }
             if((jQuery(window).width() < 900) && (jQuery(window).width() > 767)) {
                 // HOME CHEESE PACKET

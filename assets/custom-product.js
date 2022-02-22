@@ -34,30 +34,55 @@ jQuery(document).ready(function(){
     jQuery('.flavours > label:nth-child(3)').addClass('cheese');
     jQuery('.flavours > label:nth-child(5)').addClass('bacon');
     jQuery('.flavours > label:nth-child(7)').addClass('both');
+    jQuery('.flavours > label:nth-child(9)').addClass('super');
     
     jQuery('.flavours > label.bacon').click(function(){
         jQuery('.product__media-list-inner-container').css('left','-100%');
-        jQuery('.product__media-list-inner-container').css('width','200%');
+        jQuery('.product__media-list-inner-container').css('width','300%');
         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('bacon');
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('both');
+        jQuery('body.product .product-form__input.flavours').removeClass('super');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.bacon_description').addClass('show');
     }); 
     jQuery('.flavours > label.cheese').click(function(){
         jQuery('.product__media-list-inner-container').css('left','0%');
-        jQuery('.product__media-list-inner-container').css('width','200%');
+        jQuery('.product__media-list-inner-container').css('width','300%');
         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('both');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
+        jQuery('body.product .product-form__input.flavours').removeClass('super');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.cheese_description').addClass('show');
     }); 
     jQuery('.flavours > label.both').click(function(){
-        jQuery('.product__media-list-inner-container').css('width','100%');
+        jQuery('.product__media-list-inner-container').css('width','150%');
         jQuery('.product__media-list-inner-container').css('left','0%');
         jQuery('.product__media-list-inner-container').addClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('both');
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
+        jQuery('body.product .product-form__input.flavours').removeClass('super');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.both_description').addClass('show');
+    }); 
+    jQuery('.flavours > label.super').click(function(){
+        jQuery('.product__media-list-inner-container').css('width','300%');
+        jQuery('.product__media-list-inner-container').css('left','-200%');
+        jQuery('.product__media-list-inner-container').removeClass('both-selected');
+        jQuery('body.product .product-form__input.flavours').addClass('super');
+        jQuery('body.product .product-form__input.flavours').removeClass('cheese');
+        jQuery('body.product .product-form__input.flavours').removeClass('bacon');
+        jQuery('body.product .product-form__input.flavours').removeClass('both');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.super_description').addClass('show');
     }); 
     
 //    jQuery('fieldset.flavours').prependTo('.product__info-container')

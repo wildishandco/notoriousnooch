@@ -112,7 +112,7 @@ body.product .product-form__input.flavours::after {
     content:'';
     position: absolute;
     left:0;
-    width:33.3%;
+    width:25%;
     height:100%;
     background-color: var(--green);
     transition:.5s;
@@ -122,10 +122,13 @@ body.product .product-form__input.flavours.cheese::after {
     left: 0;
 }
 body.product .product-form__input.flavours.bacon::after {
-    left: 33.3%;
+    left: 25%;
 }
 body.product .product-form__input.flavours.both::after {
-    left: 66.6%;
+    left: 50%;
+}
+body.product .product-form__input.flavours.super::after {
+    left: 75%;
 }
 
 body.product .product-form__input.quantity-selector input[type='radio'] + label {
@@ -234,6 +237,13 @@ body.product .product__description {
 body.product .product__description p, body.product .product__description p span {
     color: var(--green);
 }
+body.product .product__description p.hide {
+    display: none;
+}
+body.product .product__description p.show {
+    display: block;
+    margin-top: 0;
+}
 body.product .quantity-cart {
     display: flex;
     border: 1px solid var(--green);
@@ -309,12 +319,15 @@ body.product .product__media-item img {
 }
 .product__media-list-inner-container {
     display: flex;
-    width: 200%;
+/*    width: 200%;*/
+    width: 300%;
     left:0;
     position: relative;
     transition:0.5s;
     flex-wrap: wrap;
-    background: linear-gradient(90deg, var(--green) 0%, var(--green) 50%, var(--darkpink) 50%, var(--darkpink) 100%);
+/*    background: linear-gradient(90deg, var(--green) 0%, var(--green) 50%, var(--darkpink) 50%, var(--darkpink) 100%);*/
+    background:linear-gradient(to right, var(--green) 0, var(--green) 33.3%, var(--darkpink) 33.3%, var(--darkpink) 66.6%, var(--lightblue) 66.6%, var(--lightblue) 100%);
+
 }
 .product__media-list-inner-container.both-selected .ingredients-inner {
     max-width: 75%;
@@ -337,7 +350,7 @@ body.product ul.product__media-list {
     flex-wrap: wrap;
 }
 ul.product__media-list > li {
-    flex: 0 50%;
+    flex: 0 33.3%;
 }
 body.product .product__media-toggle {
     display: none;
@@ -416,6 +429,9 @@ body.product span.product__media-icon.motion-reduce {
     top:-140px;
     background-color:transparent;
 }
+.home-blog.product-recipes .recipes-slider.marquee.top {
+    background-color:transparent;
+}
 .home-blog.product-recipes .home-blog-bottom {
     padding-bottom: 0;
 }
@@ -439,6 +455,9 @@ body.product span.product__media-icon.motion-reduce {
 @media (max-width: 1199px) {
     .product-ingredients > div .ingredients-inner {
         max-width: 75%;
+    }
+    body.product .product-form__input input[type='radio'] + label {
+        font-size: 1.4rem;
     }
 }
 
@@ -476,6 +495,9 @@ body.product span.product__media-icon.motion-reduce {
     }
     .product-ingredients > div .ingredients-inner {
         max-width: 90%;
+    }
+    body.product .product-form__input input[type='radio'] + label {
+        font-size: 1.2rem;
     }
 }
 
@@ -545,6 +567,9 @@ body.product span.product__media-icon.motion-reduce {
     body.product .product-form__buttons button {
         font-size: 1.6rem;
     }
+    body.product .product-form__input input[type='radio'] + label {
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -593,6 +618,7 @@ body.product span.product__media-icon.motion-reduce {
     body.product .product-form__input input[type='radio'] + label {
         font-size: 1.4rem;
     }
+    
     body.product .product-form__buttons button {
         padding-left: 0;
         padding-right: 0;
