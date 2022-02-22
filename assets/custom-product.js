@@ -44,6 +44,9 @@ jQuery(document).ready(function(){
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('both');
         jQuery('body.product .product-form__input.flavours').removeClass('super');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.bacon_description').addClass('show');
     }); 
     jQuery('.flavours > label.cheese').click(function(){
         jQuery('.product__media-list-inner-container').css('left','0%');
@@ -53,6 +56,9 @@ jQuery(document).ready(function(){
         jQuery('body.product .product-form__input.flavours').removeClass('both');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
         jQuery('body.product .product-form__input.flavours').removeClass('super');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.cheese_description').addClass('show');
     }); 
     jQuery('.flavours > label.both').click(function(){
         jQuery('.product__media-list-inner-container').css('width','150%');
@@ -62,6 +68,9 @@ jQuery(document).ready(function(){
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
         jQuery('body.product .product-form__input.flavours').removeClass('super');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.both_description').addClass('show');
     }); 
     jQuery('.flavours > label.super').click(function(){
         jQuery('.product__media-list-inner-container').css('width','300%');
@@ -71,6 +80,9 @@ jQuery(document).ready(function(){
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
         jQuery('body.product .product-form__input.flavours').removeClass('both');
+        jQuery('body.product .product__description p').removeClass('show');
+        jQuery('body.product .product__description p').addClass('hide');
+        jQuery('body.product .product__description p.super_description').addClass('show');
     }); 
     
 //    jQuery('fieldset.flavours').prependTo('.product__info-container')

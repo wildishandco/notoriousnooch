@@ -237,6 +237,13 @@ body.product .product__description {
 body.product .product__description p, body.product .product__description p span {
     color: var(--green);
 }
+body.product .product__description p.hide {
+    display: none;
+}
+body.product .product__description p.show {
+    display: block;
+    margin-top: 0;
+}
 body.product .quantity-cart {
     display: flex;
     border: 1px solid var(--green);
