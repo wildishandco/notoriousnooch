@@ -462,7 +462,12 @@
                     {{ product.title | escape }}
                 </h1>
                 <div class="product__description rte">
-                    {{ product.description }}
+                    
+                    <p class="cheese_description show">{{ product.metafields.nooch.cheese_description }}</p>
+                    <p class="bacon_description hide">{{ product.metafields.nooch.bacon_description }}</p>
+                    <p class="both_description hide">{{ product.metafields.nooch.both_description }}</p>
+                    <p class="super_description hide">{{ product.metafields.nooch.super_description }}</p>
+
                 </div>
                   
             </div>
