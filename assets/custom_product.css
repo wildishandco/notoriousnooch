@@ -112,7 +112,7 @@ body.product .product-form__input.flavours::after {
     content:'';
     position: absolute;
     left:0;
-    width:25%;
+    width:33.33%;
     height:100%;
     background-color: var(--green);
     transition:.5s;
