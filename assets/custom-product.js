@@ -38,7 +38,7 @@ jQuery(document).ready(function(){
     
     jQuery('.flavours > label.bacon').click(function(){
         jQuery('.product__media-list-inner-container').css('left','-100%');
-        jQuery('.product__media-list-inner-container').css('width','200%');
+        jQuery('.product__media-list-inner-container').css('width','300%');
 //         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('bacon');
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
@@ -50,7 +50,7 @@ jQuery(document).ready(function(){
     }); 
     jQuery('.flavours > label.cheese').click(function(){
         jQuery('.product__media-list-inner-container').css('left','0%');
-        jQuery('.product__media-list-inner-container').css('width','200%');
+        jQuery('.product__media-list-inner-container').css('width','300%');
         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('cheese');
 //         jQuery('body.product .product-form__input.flavours').removeClass('both');
@@ -73,7 +73,7 @@ jQuery(document).ready(function(){
 //         jQuery('body.product .product__description p.both_description').addClass('show');
 //     }); 
     jQuery('.flavours > label.super').click(function(){
-        jQuery('.product__media-list-inner-container').css('width','200%');
+        jQuery('.product__media-list-inner-container').css('width','300%');
         jQuery('.product__media-list-inner-container').css('left','-200%');
         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('super');
