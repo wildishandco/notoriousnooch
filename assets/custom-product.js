@@ -113,7 +113,7 @@ jQuery(document).ready(function(){
             
 //             var quantityCheckedItem = jQuery('fieldset.quantity-selector').children("input:checked + label").html().trim();
             var flavourCheckedItem = jQuery('fieldset.flavours').children("input:checked + label").html().trim();
-            var quantityNumber = quantityCheckedItem.match(/\d+/);
+//             var quantityNumber = quantityCheckedItem.match(/\d+/);
             var selectedString = flavourCheckedItem + ' ' + quantityNumber; 
             
             
