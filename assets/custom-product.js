@@ -51,7 +51,7 @@ jQuery(document).ready(function(){
     jQuery('.flavours > label.cheese').click(function(){
         jQuery('.product__media-list-inner-container').css('left','0%');
         jQuery('.product__media-list-inner-container').css('width','300%');
-        jQuery('.product__media-list-inner-container').removeClass('both-selected');
+//         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('cheese');
 //         jQuery('body.product .product-form__input.flavours').removeClass('both');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
@@ -75,7 +75,7 @@ jQuery(document).ready(function(){
     jQuery('.flavours > label.super').click(function(){
         jQuery('.product__media-list-inner-container').css('width','300%');
         jQuery('.product__media-list-inner-container').css('left','-200%');
-        jQuery('.product__media-list-inner-container').removeClass('both-selected');
+//         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('super');
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
         jQuery('body.product .product-form__input.flavours').removeClass('bacon');
@@ -120,11 +120,14 @@ jQuery(document).ready(function(){
             
             jQuery('.variant-container').each(function(){
                 
-                var selectedVar = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-id').html();
+//                 var selectedVar = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-id').html();
+                var selectedVar = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + ')').parent().children('.variant-id').html();
                 
-                var selectedVarPrice = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-cost').html();
+//                 var selectedVarPrice = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-cost').html();
+                var selectedVarPrice = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + ')').parent().children('.variant-cost').html();
                 
-                var selectedAvailability = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-availability').html();
+//                 var selectedAvailability = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + '):contains(' + quantityNumber + ')').parent().children('.variant-availability').html();
+                var selectedAvailability = jQuery(this).children('.variant-title:contains(' + flavourCheckedItem + ')').parent().children('.variant-availability').html();
                 
                 var varFalse = 'false';
                 
