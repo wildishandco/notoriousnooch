@@ -39,10 +39,10 @@ jQuery(document).ready(function(){
     jQuery('.flavours > label.bacon').click(function(){
         jQuery('.product__media-list-inner-container').css('left','-100%');
         jQuery('.product__media-list-inner-container').css('width','200%');
-        jQuery('.product__media-list-inner-container').removeClass('both-selected');
+//         jQuery('.product__media-list-inner-container').removeClass('both-selected');
         jQuery('body.product .product-form__input.flavours').addClass('bacon');
         jQuery('body.product .product-form__input.flavours').removeClass('cheese');
-        jQuery('body.product .product-form__input.flavours').removeClass('both');
+//         jQuery('body.product .product-form__input.flavours').removeClass('both');
         jQuery('body.product .product-form__input.flavours').removeClass('super');
         jQuery('body.product .product__description p').removeClass('show');
         jQuery('body.product .product__description p').addClass('hide');
