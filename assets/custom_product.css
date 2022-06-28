@@ -122,13 +122,13 @@ body.product .product-form__input.flavours.cheese::after {
     left: 0;
 }
 body.product .product-form__input.flavours.bacon::after {
-    left: 25%;
+    left: 33.33%;
 }
-body.product .product-form__input.flavours.both::after {
+/* body.product .product-form__input.flavours.both::after {
     left: 50%;
-}
+} */
 body.product .product-form__input.flavours.super::after {
-    left: 75%;
+    left: 66.66%;
 }
 
 body.product .product-form__input.quantity-selector input[type='radio'] + label {
