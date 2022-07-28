@@ -755,6 +755,8 @@ body.collection-template .card-wrapper .card-information h3 a {
 .collection-hero,
 .collection-hero__description {
   text-align: center;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 
