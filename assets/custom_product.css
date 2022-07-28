@@ -760,6 +760,9 @@ body.collection-template .card-wrapper .card-information h3 a {
 }
 .collection-hero__description {
   font-family: Brice; 
+      font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 
