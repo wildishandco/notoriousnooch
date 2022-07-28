@@ -836,7 +836,9 @@
 #press-content .partner-container.trade-partners:nth-child(11),
 #press-content .partner-container.trade-partners:nth-child(13),
 #press-content .partner-container.trade-partners:nth-child(15),
-#press-content .partner-container.trade-partners:nth-child(17){
+#press-content .partner-container.trade-partners:nth-child(17),
+#press-content .partner-container.trade-partners:nth-child(19),
+#press-content .partner-container.trade-partners:nth-child(21){
     background-color:#004950;
 }
 #press-content .partner-container.trade-partners:nth-child(3) h2, 
@@ -854,7 +856,11 @@
 #press-content .partner-container.trade-partners:nth-child(15) h2, 
 #press-content .partner-container.trade-partners:nth-child(15) p,
 #press-content .partner-container.trade-partners:nth-child(17) h2, 
-#press-content .partner-container.trade-partners:nth-child(17) p {
+#press-content .partner-container.trade-partners:nth-child(17) p,
+#press-content .partner-container.trade-partners:nth-child(19) h2, 
+#press-content .partner-container.trade-partners:nth-child(19) p,
+#press-content .partner-container.trade-partners:nth-child(21) h2, 
+#press-content .partner-container.trade-partners:nth-child(21) p{
     color: var(--yellow);
 }
 #press-content .partner-container.trade-partners img {
