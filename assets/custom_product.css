@@ -760,6 +760,9 @@ body.collection-template .card-wrapper .card-information h3 a {
   margin-left:auto;
   margin-right: auto;
 }
+.collection-hero .collection-hero__inner {
+  margin-bottom: 0;
+}
 .collection-hero .collection-hero__inner .collection-hero__description {
   font-family: Brice; 
       font-size: 2.5rem;
