@@ -742,7 +742,9 @@ body.collection-template .card-wrapper .card-information h3 a {
 }
 
 /* BUNDLES COLLECTION STYLING */
-
+.collection-hero {
+  padding-top: 100px
+}
 .collection-hero.background-pink {
   background-color: var(--pink);
 }
