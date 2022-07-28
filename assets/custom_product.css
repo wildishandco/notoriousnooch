@@ -752,7 +752,8 @@ body.collection-template .card-wrapper .card-information h3 a {
 .collection-hero.background-pink .collection-hero__description {
   color: var(--green);
 }
-.collection-hero {
+.collection-hero,
+.collection-hero__description {
   text-align: center;
 }
 
