@@ -20,7 +20,8 @@
         "show_rating": false,
         "enable_filtering": false,
         "enable_sorting": false,
-        "collapse_on_larger_devices": false
+        "collapse_on_larger_devices": false,
+        "background_color": "pink"
       }
     }
   },
